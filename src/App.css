@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #8ec5c6;
+  height: 5vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header a {
+  text-decoration: auto;
+  color: inherit;
+}
+
+header img {
+  height: 1em;
+  width: 1em;
+  background-color: aliceblue;
+}
+
+@media screen and (min-width:70em) {
+  .App-header {
+    background-color: #8ec5c6;
+    height: 5vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    gap: 1em;
+  }
+
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav:nth-of-type(2){
+    gap: 2em;
+  }
+  header nav nav{
+    gap: 0.5em;
+  }
+
+}
+
+@media screen and (min-width:50em) and (max-width:70em) {
+  .App-header {
+    background-color: #8ec5c6;
+    height: 5vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    gap: 1em;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav:nth-of-type(2){
+    gap: 2em;
+  }
+  header nav nav{
+    gap: 0.5em;
+  }
+}
+
+@media screen and (max-width:50em){
+  .App-header {
+    background-color: #8ec5c6;
+    height: 5vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    gap: 1em;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav{
+    gap: 0.5em;
+  }
+}

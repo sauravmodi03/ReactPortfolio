@@ -1,0 +1,15 @@
+.Home{
+    background: #494040;
+    color: rgb(255, 254, 254);
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.Home::-webkit-scrollbar {
+    display: none;
+  }
+  .Home {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
