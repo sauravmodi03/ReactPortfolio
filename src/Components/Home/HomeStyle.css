@@ -30,14 +30,14 @@
   font-size: 5em;
   width: fit-content;
   opacity: 0;
-  animation: drop .5s linear forwards .4s;
+  animation: drop 1s linear forwards .4s;
 }
 
 .info-l2{
   font-size: 3em;
   width: fit-content;
   opacity: 0;
-  animation: drop .5s linear forwards .2s;
+  animation: drop 1s linear forwards .2s;
 }
 
 .info-l3{
@@ -45,7 +45,7 @@
   text-align: justify;
   padding: .5em;
   opacity: 0;
-  animation: drop .5s linear forwards;
+  animation: drop 1s linear forwards;
   font-weight: bold;
 }
 

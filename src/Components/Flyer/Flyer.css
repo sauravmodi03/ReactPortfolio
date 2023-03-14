@@ -1,7 +1,6 @@
 
 .flyer-wrapper{
     height: 100vh;
-    height: vh;
     position: absolute;
     display: flex;
     margin-left: 1em;
@@ -13,7 +12,7 @@
   flex-direction: column;
   width: 3em;
   justify-content: space-between;
-  background: #76756194;
+  background: #c5f9e894;
   padding: 1em 0 1em 0em;
   border-radius: 2.5em;
   animation: 1.5s ease-out 0s 1 slideInLeft;
@@ -25,9 +24,11 @@
 @keyframes slideInLeft {
   0% {
     transform: translateX(-150%);
+    left: -150%;
   }
   100% {
     transform: translateX(0);
+    left: 0;
   }
 }
 

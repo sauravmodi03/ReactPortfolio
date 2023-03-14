@@ -1,14 +1,18 @@
 .bg-main{
   background-image: url("./img/bg9.png"); 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-  color: rgb(255, 254, 254);
-  width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
+}
+
+.App{
+  animation: bg-blur 1s;
+}
+
+@keyframes bg-blur {
+  0% { filter: blur(5px);}
+  50% { filter: blur(4px);}
+  70% { filter: blur(2px);}
+  100% { filter: blur(0px);}
 }
 
 header a {
@@ -22,26 +26,45 @@ header img {
   background-color: transparent;
 }
 
+header{
+  animation: 2.5s ease-out 0s 1 slideInTop-head;
+}
+
+@keyframes slideInTop-head {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.App-header {
+  background-color: #76756194;
+  width: 100vw;
+  height: 5vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  box-shadow: 0 0 5px 4px #373825;
+  font-weight: bold;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 @media screen and (min-width:70em) {
   .App-header {
-    background-color: #76756194;
-    width: 100vw;
-    height: 5vh;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    display: flex;
-    align-items: center;
-    flex-flow: row-reverse;
-    gap: 1em;
-    position: absolute;
-    box-shadow: 0 0 5px 4px #373825;
-    font-weight: bold;
+    flex-flow: row-reverse; 
   }
 
   nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     width: 50vw;
   }
 
@@ -61,4 +84,31 @@ header img {
   }
 
 }
+
+@media screen and (min-width:50em) and (max-width:70em) {
+  .App-header {
+    flex-flow: row-reverse;
+  }
+
+  nav{
+    width: 100vw;
+  }
+
+  header nav:nth-of-type(2){
+    gap: 2em;
+  }
+  header nav nav{
+    gap: 0.5em;
+  }
+
+  a{
+    transition: transform .2s;
+  }
+
+  a:hover{
+    transform: scale(1.3);
+  }
+
+}
+
 
