@@ -1,5 +1,9 @@
 function Skills() {
-    return <h2>Hi, I am a Skills!</h2>;
+    return (
+        <div className='Skills bg-main'>
+
+        </div>
+    );
 }
 
 export default Skills;

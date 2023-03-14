@@ -1,0 +1,45 @@
+
+.flyer-wrapper{
+    height: 100vh;
+    height: vh;
+    position: absolute;
+    display: flex;
+    margin-left: 1em;
+}
+
+.link-flyer{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  justify-content: space-between;
+  background: #76756194;
+  padding: 1em 0 1em 0em;
+  border-radius: 2.5em;
+  animation: 1.5s ease-out 0s 1 slideInLeft;
+  gap: 1em;
+  align-items: center;
+  align-self: center;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.link-flyer img {
+  height: 2em;
+  width: 2em;
+}
+
+a{
+  transition: transform .2s;
+}
+
+a:hover{
+  transform: scale(1.3);
+}

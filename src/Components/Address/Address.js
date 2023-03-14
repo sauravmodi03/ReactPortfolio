@@ -1,6 +1,10 @@
 
 function Address() {
-    return <h2>Hi, I am a Address!</h2>;
+    return ( 
+        <div className='Address bg-main'>
+
+        </div>
+    );
 }
 
 

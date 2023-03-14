@@ -1,15 +1,83 @@
-.Home{
-    background: #494040;
-    color: rgb(255, 254, 254);
-    height: 100vh;
-    width: 100vw;
-    
-}
 
-.Home::-webkit-scrollbar {
+.Home-main::-webkit-scrollbar {
     display: none;
   }
-  .Home {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+
+.Home-main{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.Home-main img {
+  width: 25em;
+  height: 20em;
+}
+
+.info{
+  display: flex;
+  flex-direction: column  ;
+  color: #4a4743;
+  font-family: monospace;
+  gap: 0.5em;
+  display: flex;
+  height: 90vh;
+  max-width: 40em;
+  justify-content: flex-end;
+  padding-left: 10em;
+}
+
+.info-l1{
+  font-size: 5em;
+  width: fit-content;
+  opacity: 0;
+  animation: drop .5s linear forwards .4s;
+}
+
+.info-l2{
+  font-size: 3em;
+  width: fit-content;
+  opacity: 0;
+  animation: drop .5s linear forwards .2s;
+}
+
+.info-l3{
+  font-size: 2em;
+  text-align: justify;
+  padding: .5em;
+  opacity: 0;
+  animation: drop .5s linear forwards;
+  font-weight: bold;
+}
+
+.info-bg {
+  background: #ffffff73;
+  border-radius: 0.2em;
+}
+
+.avatar img{
+  transition: transform .2s;
+  animation: scale-in 4s ease-in;
+  animation-duration: .4s;
+}
+
+.avatar img:hover{
+  transform: scale(1.5);
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0,0);
   }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes drop {
+  0% {transform: translateY(-200px) scaleY(0.9); opacity: 0;}
+  5% {opacity: .7;}
+  50% {transform: translateY(0px) scaleY(1); opacity: 1;}
+  65% {transform: translateY(-17px) scaleY(.9); opacity: 1;}
+  75% {transform: translateY(-22px) scaleY(.9); opacity: 1;}
+  100% {transform: translateY(0px) scaleY(1); opacity: 1;}
+}
