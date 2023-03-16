@@ -12,13 +12,14 @@
   flex-direction: column;
   width: 3em;
   justify-content: space-between;
-  background: #c5f9e894;
-  padding: 1em 0 1em 0em;
+  background: #8f908b;
+  padding: .5em 0 .5em 0em;
   border-radius: 2.5em;
   animation: 1.5s ease-out 0s 1 slideInLeft;
-  gap: 1em;
+  gap: .5em;
   align-items: center;
   align-self: center;
+  transition: .5s;
 }
 
 @keyframes slideInLeft {
@@ -37,10 +38,51 @@
   width: 2em;
 }
 
-a{
-  transition: transform .2s;
+/* #flyer-links{
+  display: none;
+} */
+
+.show{
+  display: contents;
 }
 
-a:hover{
-  transform: scale(1.3);
+#carret-logo{
+  transition: .5s ease-out;
+}
+
+@media screen and (max-width:50em){
+  .link-flyer{
+    align-items: center;
+    align-self: flex-end;
+    margin-bottom: 2em;
+    animation: 1.5s ease-out 0s 1 slideInTop;
+    flex-direction: row;
+    width: 2em;
+    overflow: hidden;
+    padding: .3em;
+    height: 2em;
+    transition: .5s;
+  }
+
+  #flyer-links{
+    height: 2em;
+    /* overflow: hidden; */
+  }
+
+  .flyer-wrapper{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 }

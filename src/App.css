@@ -8,6 +8,10 @@
   animation: bg-blur 1s;
 }
 
+#nav-button{
+  display: none;
+}
+
 @keyframes bg-blur {
   0% { filter: blur(5px);}
   50% { filter: blur(4px);}
@@ -27,7 +31,7 @@ header img {
 }
 
 header{
-  animation: 2.5s ease-out 0s 1 slideInTop-head;
+  animation: 1.5s ease-out 0s 1 slideInTop-head;
 }
 
 @keyframes slideInTop-head {
@@ -42,56 +46,37 @@ header{
 .App-header {
   background-color: #76756194;
   width: 100vw;
-  height: 5vh;
+  height: 2.5em;
   font-size: calc(10px + 2vmin);
   color: white;
   display: flex;
-  align-items: center;
-  gap: 1em;
-  position: absolute;
+  gap: .5em;
+  position: fixed;
   box-shadow: 0 0 5px 4px #373825;
   font-weight: bold;
+  z-index: 1;
 }
 
 nav{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
-@media screen and (min-width:70em) {
-  .App-header {
-    flex-flow: row-reverse; 
-  }
 
-  nav{
-    width: 50vw;
-  }
 
-  header nav:nth-of-type(2){
-    gap: 2em;
-  }
-  header nav nav{
-    gap: 0.5em;
-  }
-
-  a{
-    transition: transform .2s;
-  }
-
-  a:hover{
-    transform: scale(1.3);
-  }
-
-}
-
-@media screen and (min-width:50em) and (max-width:70em) {
+@media screen and (min-width:80em) {
   .App-header {
     flex-flow: row-reverse;
+    align-items: center;
+  }
+
+  .bg-main{
+    background-position: right;
   }
 
   nav{
-    width: 100vw;
+    width: 60vw;
+    justify-content: space-evenly;
   }
 
   header nav:nth-of-type(2){
@@ -100,15 +85,116 @@ nav{
   header nav nav{
     gap: 0.5em;
   }
-
-  a{
+  #close-nav-btn{
+    display: none;
+  }
+  #nav-button{
+    display: none;
+  }
+  .scale{
     transition: transform .2s;
   }
-
-  a:hover{
+  
+  .scale:hover{
     transform: scale(1.3);
   }
 
+}
+
+@media screen and (min-width:50em) and (max-width:80em) {
+  .App-header {
+    flex-flow: row-reverse;
+    align-items: center;
+  }
+
+  .bg-main{
+    background-position: right;
+  }
+  nav{
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+  header nav nav{
+    gap: 0.5em;
+  }
+  #close-nav-btn{
+    display: none;
+  }
+  #nav-button{
+    display: none;
+  }
+  .scale{
+    transition: transform .2s;
+  }
+  .scale:hover{
+    transform: scale(1.3);
+  }
+}
+
+@media screen and (max-width:50em) {
+  .App-header {
+    flex-flow: column;
+    height: 3em;
+  }
+  #nav-menu a{
+    height: 3em;
+  }
+  .bg-main{
+    background-position: right;
+    display: flex;
+  }
+  .nav-menu{
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    /* padding: 0 2em 0 2em; */
+    background: #080807c7;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  #nav-button{
+    display: grid;
+    height: 3em;
+    padding-left: 1em;
+  }
+  header nav nav{
+    gap: 0.5em;
+  }
+  .nav-menu-show{
+    display: flex;
+    left:   0;
+  }
+  .nav-menu-close{
+    display: none;
+    left:   -100%;
+  }
+  #nav-menu a{
+    align-content: center;
+    display: grid;
+    margin-left: 2em;
+  }
+  #nav-button a{
+    align-self: center;
+  }
+
+  #close-nav-btn{
+    right: 0;
+    position: absolute;
+    padding-right: 2em;
+  }
+
+  @keyframes menuSlideInLeft {
+    0% {
+      transform: translateX(-100%);
+      left: -100%;
+    }
+    100% {
+      transform: translateX(0);
+      left: 0;
+    }
+  }
 }
 
 

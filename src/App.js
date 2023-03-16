@@ -1,5 +1,7 @@
 import './App.css';
 import homeLogo from './img/homewhite.png';
+import menuLogo from './img/menu.png';
+import closeLogo from './img/closew.png';
 
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import About from './Components/About/About';
@@ -10,18 +12,30 @@ import PersonalInfo from './Components/PersonalInfo/Personalnfo';
 import Contact from './Components/Contact/Contact';
 
 
+const openNav = () => {
+  var menu = document.getElementById("nav-menu");
+  menu.style.width="10em";
+}
+
+const closeNav = () => {
+  var menu = document.getElementById("nav-menu");
+  menu.style.width="0";
+}
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <header className="App-header">
-          <nav>
-            <Link to="/"><img src={homeLogo} alt="Home logo"/></Link>
-            <Link to="/about">About</Link>
-            <Link to="/address">Address</Link>
-            <Link to="/skills">Skills</Link>
-            <Link to="/personalinfo">Personal Info</Link>
-            <Link to="/contact">Contact</Link>
+          <nav id="nav-button"><Link onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
+          <nav id="nav-menu" className='nav-menu'>
+            <Link id="close-nav-btn" onClick={closeNav}><img alt="Close logo" src={closeLogo}/></Link>
+            <Link className='scale' to="/"><img src={homeLogo} alt="Home logo"/></Link>
+            <Link className='scale' to="/about">About</Link>
+            <Link className='scale' to="/address">Address</Link>
+            <Link className='scale' to="/skills">Skills</Link>
+            <Link className='scale' to="/personalinfo">Personal Info</Link>
+            <Link className='scale' to="/contact">Contact</Link>
           </nav>
         </header>
         <Routes>

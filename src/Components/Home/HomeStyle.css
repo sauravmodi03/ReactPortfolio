@@ -20,7 +20,6 @@
   font-family: monospace;
   gap: 0.5em;
   display: flex;
-  height: 90vh;
   max-width: 40em;
   justify-content: flex-end;
   padding-left: 10em;
@@ -62,6 +61,38 @@
 
 .avatar img:hover{
   transform: scale(1.5);
+}
+
+@media screen and (min-width:80em) {
+  .info{
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width:50em) and (max-width:80em) {
+  .info{
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width:50em) {
+  .info-l1{
+    font-size: 3em;
+  }
+  .info-l2{
+    font-size: 2em;
+  }
+  .info-l3{
+    font-size: 1.5em;
+  }
+  .info-bg{
+    background: #ffffffb0;
+  }
+  .info{
+    padding: 0em 3em 0 3em;
+    align-self: center;
+    margin-top: 20em;
+  }
 }
 
 @keyframes scale-in {
