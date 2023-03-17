@@ -10,7 +10,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 3em;
   justify-content: space-between;
   background: #8f908b;
   padding: .5em 0 .5em 0em;
@@ -20,6 +19,7 @@
   align-items: center;
   align-self: center;
   transition: .5s;
+  overflow: hidden;
 }
 
 @keyframes slideInLeft {
@@ -50,6 +50,15 @@
   transition: .5s ease-out;
 }
 
+@media screen and (min-width:50em) and (max-width:80em){
+  .link-flyer{
+    height: 2em;
+    overflow: hidden;
+  }
+
+}
+
+
 @media screen and (max-width:50em){
   .link-flyer{
     align-items: center;
@@ -60,29 +69,36 @@
     width: 2em;
     overflow: hidden;
     padding: .3em;
-    height: 2em;
+    
     transition: .5s;
   }
-
   #flyer-links{
     height: 2em;
     /* overflow: hidden; */
   }
-
   .flyer-wrapper{
     width: 100vw;
     position: absolute;
     display: flex;
     justify-content: center;
     margin: 0;
-}
+  }
+  .flyer-acordian{
+    width:"12em" !important;
+  }
+  .rotate-90{
+    transform:'rotate(90deg)';
+  }
+  .rotate-0{
+    transform:'rotate(90deg)';
+  }
 
-@keyframes slideInTop {
-  0% {
-    transform: translateY(200%);
+  @keyframes slideInTop {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  100% {
-    transform: translateY(0);
-  }
-}
 }

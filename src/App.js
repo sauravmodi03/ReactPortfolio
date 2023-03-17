@@ -14,7 +14,8 @@ import Contact from './Components/Contact/Contact';
 
 const openNav = () => {
   var menu = document.getElementById("nav-menu");
-  menu.style.width="10em";
+  menu.style.width="100%";
+  document.getElementById("App").style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 const closeNav = () => {
@@ -24,18 +25,18 @@ const closeNav = () => {
 
 function App() {
   return (
-    <div className="App">
+    <div id="App" className="App">
       <BrowserRouter>
         <header className="App-header">
           <nav id="nav-button"><Link onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
           <nav id="nav-menu" className='nav-menu'>
             <Link id="close-nav-btn" onClick={closeNav}><img alt="Close logo" src={closeLogo}/></Link>
-            <Link className='scale' to="/"><img src={homeLogo} alt="Home logo"/></Link>
-            <Link className='scale' to="/about">About</Link>
-            <Link className='scale' to="/address">Address</Link>
-            <Link className='scale' to="/skills">Skills</Link>
-            <Link className='scale' to="/personalinfo">Personal Info</Link>
-            <Link className='scale' to="/contact">Contact</Link>
+            <Link className='scale' onClick={closeNav} to="/"><img src={homeLogo} alt="Home logo"/></Link>
+            <Link className='scale' onClick={closeNav} to="/about">About</Link>
+            <Link className='scale' onClick={closeNav} to="/address">Address</Link>
+            <Link className='scale' onClick={closeNav} to="/skills">Skills</Link>
+            <Link className='scale' onClick={closeNav} to="/personalinfo">Personal Info</Link>
+            <Link className='scale' onClick={closeNav} to="/contact">Contact</Link>
           </nav>
         </header>
         <Routes>

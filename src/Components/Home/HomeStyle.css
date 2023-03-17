@@ -75,6 +75,18 @@
   }
 }
 
+@media screen and (min-width:50em) and (max-width:80em) and (max-height:50em){
+  .info-l1{
+    font-size: 3em;
+  }
+  .info-l2{
+    font-size: 2em;
+  }
+  .info-l3{
+    font-size: 1.5em;
+  }
+}
+
 @media screen and (max-width:50em) {
   .info-l1{
     font-size: 3em;
