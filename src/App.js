@@ -19,7 +19,6 @@ class App extends React.Component {
   openNav () {
     var menu = document.getElementById("nav-menu");
     menu.style.width="100%";
-    document.getElementById("App").style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
   closeNav () {

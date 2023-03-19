@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 import linkedin from '../../img/linkedinb.png';
 import git from '../../img/gitb.png';
@@ -8,28 +9,34 @@ import twitter from '../../img/twitterb.png';
 import carret from '../../img/carret.avif';
 import './Flyer.css';
 
-const toggleAccordian = () => {
-    console.log("hey");
-    var element = document.getElementById("flyer-links-wrap");
-    element.classList.add = "scale-column";
-    //element.style.height = "12em";
-    // if(element.style.width === "" || element.style.width === "2em"){
-    //     // element.style.width="12em";
-    //     element.classList.add = "scale-column";
-    //     document.getElementById('carret-logo').style.transform = 'rotate(90deg)';
-    // } else{
-    //     element.style.width="2em";
-    //     // element.classList.remove("flyer-acordian");
-    //     document.getElementById('carret-logo').style.transform = 'rotate(0deg)';
-    // }
-}
+class Flyer extends React.Component{
 
-function Flyer(){
-    return(
-        <div className="Flyer">
-            <div className='flyer-wrapper'>
-                <div id="flyer-wrap-in" className='link-flyer slide'>
-                    <Link id="accordian" onClick={toggleAccordian} ><img id="carret-logo" alt="Carret logo" src={carret}></img></Link>
+    constructor(props){
+        super(props);
+        this.state = {accordianFlag : false};
+        this.toggleAccordian = this.toggleAccordian.bind(this);
+    }
+
+    toggleAccordian () {
+        console.log("flyer" + this.state.accordianFlag);
+        document.getElementById("flyer-links-wrap").classList.toggle("expand-flyer");
+        document.getElementById("acc-img").classList.toggle("acc-border-clip");
+        document.getElementById('carret-logo').classList.toggle("rotate-carret");
+        // if(!this.state.accordianFlag){
+        //     document.getElementById('carret-logo').style.transform = "rotate(90deg)";
+        // } else{
+        //     document.getElementById('carret-logo').style.transform = "rotate(0deg)";
+        // }
+        this.setState({accordianFlag : !this.state.accordianFlag});
+    }
+
+    render(){
+        return(
+            <div id="Flyer" className="Flyer">
+                <div className='flyer-wrapper link-flyer slide'>
+                    <div id="acc-img" >
+                        <Link onClick={this.toggleAccordian}><img id="carret-logo" alt="Carret logo" src={carret}></img></Link>
+                    </div>
                     <div id="flyer-links-wrap">
                         <Link className='scale' to="https://www.linkedin.com/in/sauravmodi03/" target="_blank"><img alt="Linked logo" src={linkedin}/></Link>
                         <Link className='scale' to="https://github.com/sauravmodi03" target="_blank"><img alt="Git logo" src={git}/></Link>
@@ -38,8 +45,8 @@ function Flyer(){
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Flyer;
