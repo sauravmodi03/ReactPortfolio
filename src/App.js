@@ -1,20 +1,41 @@
-import './App.css';
-import './App.scss';
-import homeLogo from './img/homewhite.png';
-import menuLogo from './img/menu.png';
-import closeLogo from './img/closew.png';
 
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import About from './Components/About/About';
-import Address from './Components/Address/Address';
-import Home from './Components/Home/Home';
-import Skills from './Components/Skills/Skills';
-import PersonalInfo from './Components/PersonalInfo/Personalnfo';
-import Contact from './Components/Contact/Contact';
+import './App.scss';
+
+
+import {Link, Element}  from 'react-scroll';
+
+import Home from './pages/Home';
+
 import React from 'react';
+import Address from './pages/Address';
+import About from './pages/About';
+import NavMenu from './pages/NavMenu';
+import Skills from './pages/Skills';
+import Header from './pages/Header';
+import Contact from './pages/Contact';
+import Flyer from './Components/Flyer/Flyer';
 
 
 class App extends React.Component {
+  
+  constructor(props) {
+    super(props)
+    this.myRef = React.createRef()
+    this.state = {scrollTop: 0}
+  }
+
+  
+
+  onScroll = () => {
+    console.log("scrolled")
+    const scrollY = window.scrollY //Don't get confused by what's scrolling - It's not the window
+    const scrollTop = this.myRef.current.scrollTop
+    console.log(`onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${scrollTop}`)
+    this.setState({
+      scrollTop: scrollTop
+    })
+  }
+  
 
   openNav () {
     var menu = document.getElementById("nav-menu");
@@ -30,30 +51,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="App" className="App">
-        <BrowserRouter>
-          <header className="App-header">
-            <nav id="nav-button"><Link onClick={this.openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
-            <nav id="nav-menu" className='nav-menu'>
-              <Link id="close-nav-btn" onClick={this.closeNav}><img alt="Close logo" src={closeLogo}/></Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/"><img src={homeLogo} alt="Home logo"/></Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/about">About</Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/address">Address</Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/skills">Skills</Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/personalinfo">Personal Info</Link>
-              <Link className='nav-link scale' onClick={this.closeNav} to="/contact">Contact</Link>
-            </nav>
-          </header>
-          <Routes>
-            <Route path="/" element={<Home/>}></Route> 
-            <Route path="/about" element={<About/>}></Route>
-            <Route path="/address" element={<Address/>}></Route>
-            <Route path="/skills" element={<Skills/>}></Route>
-            <Route path="/personalinfo" element={<PersonalInfo/>}></Route>
-            <Route path="/contact" element={<Contact/>}></Route>
-          </Routes>
-        </BrowserRouter>
+      <div id="App" className="App" onScroll={this.onScroll}>
+          <Flyer/>
+          <Header/>
+          <Element>
+            <Home/>
+            <About/>
+            <Skills/>
+            <Address/>
+            <Contact/>
+          </Element>
       </div>
+      
     ); 
   }
 }
