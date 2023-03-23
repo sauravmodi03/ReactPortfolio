@@ -1,0 +1,117 @@
+$theme-color:rgb(43 193 193);
+
+.nav-link-wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: fit-content;
+  }
+
+  .scale{
+    transition: transform .2s;
+  }
+
+  .scale:hover{
+    transform: scale(1.3);
+  }
+
+  .active{
+    color: $theme-color;
+  }
+
+  #nav-button img{
+    width: 1em;
+    height: 1em;
+  }
+
+#nav-close-btn{
+    display: none;
+}
+
+  @media screen and (min-width:70em){
+    .NavMenu{
+        margin-right: 10%;
+    }
+    .nav-link-wrap{
+        margin-right: 20%;
+    }
+}
+
+@media screen and (min-width:40em) and (max-width:70em){
+    .nav-link-wrap{
+        padding-right: 1em;
+    }
+    .NavMenu{
+        margin-right: 10%;
+    }
+}
+
+  @media screen and (max-width:40em) {
+    .App-header {
+        flex-flow: column;
+        height: 3em;
+    }
+    .nav-centre{
+        display: grid;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    #nav-link-wrap a{
+        height: 3em;
+    }
+    .bg-main{
+        background-position: right;
+        display: flex;
+    }
+    .nav-link-wrap{
+        height: 3em;
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: 60vh;
+        background: #080807c7;
+        position: fixed;
+        overflow-x: hidden;
+        transition: 0.5s;
+        color: white;
+        border-radius: 20px;
+        left: 50%;
+        margin-top: 25%;
+        justify-content: center;
+    }
+    .nav-menu-show{
+        display: flex;
+    }
+    .nav-menu-close{
+        display: none;
+    }
+    #nav-link-wrap a{
+        align-content: center;
+        display: grid;
+        align-self: center;
+    }
+    #nav-close-btn{
+        right: 0;
+        position: absolute;
+        padding-right: 1em;
+        top: 0;
+    }
+    .active{
+        transform: scale(1.2);
+        }
+    // @keyframes menuSlideInLeft {
+    //   0% {
+    //     transform: translateX(100%);
+    //     left: -100%;
+    //   }
+    //   100% {
+    //     transform: translateX(0);
+    //     left: 0;
+    //   }
+    // }
+  }
+

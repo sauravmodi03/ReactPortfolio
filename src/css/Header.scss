@@ -1,0 +1,70 @@
+#header{
+    transition: .3s ease-in;
+}
+
+header{
+    animation: 1.5s ease-out 0s 1 slideInTop-head;
+}
+
+.head-on-scroll{
+    height: 1.8em !important;
+    box-shadow: 0 0 14px 0 #b2b2b2 !important;
+    background-color: rgb(186 186 186 / 30%) !important;
+}
+
+header{
+    animation: 1.5s ease-out 0s 1 slideInTop-head;
+}
+
+#header {
+    // background-color: rgba(230, 230, 230, 0.58);
+    width: 100%;
+    height: 2.2em;
+    font-size: calc(10px + 2vmin);
+    color: rgb(2, 2, 2);
+    display: flex;
+    gap: .5em;
+    position: fixed;
+    box-shadow: 0 0 2px 0 #b2b2b2;
+    z-index: 1;
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
+}
+
+#nav-button{
+    display: none;
+    margin-right: 10%;
+}
+
+#smodi{
+    margin-left: 20%;
+}
+
+@media screen and (min-width:70em) {
+    .App-header {
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 2em;
+    }
+    
+  }
+
+@media screen and (max-width:40em){
+    #header{
+        gap: 0;
+        justify-content: space-between;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: wrap;
+        height: 3em;
+    }
+    .head-on-scroll{
+        height: 2.5em !important;
+    }
+    #nav-button{
+        display: grid;
+    }
+    #smodi{
+        margin-left: 10%;
+    }
+}
