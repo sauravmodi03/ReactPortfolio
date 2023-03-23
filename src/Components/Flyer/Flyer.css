@@ -1,7 +1,7 @@
 
 #Flyer{
     height: 100%;
-    position: absolute;
+    position: fixed;
     display: flex;
     margin-left: 1em;
 }
@@ -137,15 +137,6 @@
   .rotate-carret {
     transform: rotate(0deg) !important;
   }
-  #Flyer{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    
-}
 
   @keyframes slideInTop {
     0% {
