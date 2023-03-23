@@ -1,15 +1,16 @@
+@use 'Media';
 
-.Home-main::-webkit-scrollbar {
+.Home::-webkit-scrollbar {
     display: none;
   }
 
-.Home-main{
+.Home{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  left: 10%;
-  position: relative;
-  min-height: 100vh;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10% 20% 0 20%;
 }
 
 .Home-main img {
@@ -18,15 +19,13 @@
 }
 
 .info{
-    display: flex;
-    flex-direction: column;
-    color: #4a4743;
-    font-family: monospace;
-    gap: 0.5em;
-    max-width: 40em;
-    justify-content: center;
-    left: 20%;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #4a4743;
+  font-family: monospace;
+  gap: 0.5em;
+  max-width: 40em;
+  justify-content: center;
 }
 
 .info-l1{
@@ -55,7 +54,7 @@
 .info-bg {
   background: #eeeeef;
   border-radius: 0.2em;
-  box-shadow: -10px 13px 12px 0px #b7b5b5a8;
+  filter: drop-shadow(2px 4px 6px grey);
 }
 
 .avatar img{
@@ -90,6 +89,7 @@
 
 #hire-nav{
   animation: hire-slideInLeft 1s ease-in;
+  transition: .2s;
 }
 
 @keyframes hire-slideInLeft {
@@ -97,21 +97,65 @@
   100%{transform: translateX(0);opacity: 1;}
 }
 
-@media screen and (min-width:80em) {
-  .info{
-    height: 80vh;
+#avatar{
+  filter: drop-shadow(2px 4px 6px grey);
+  animation: avatarScaleIn 1.5s ease-out;
+}
+
+/* #avatar:hover{
+  animation: avatarRotate 1.5s linear infinite;
+} */
+
+@keyframes avatarScaleIn {
+  0%{transform: scale(.2);
+      }
+  100%{transform: scale(1);
   }
 }
 
-@media screen and (min-width:50em) and (max-width:80em) {
-  .info{
-    height: 90vh;
+@keyframes avatarRotate {
+  0%{
+      transform: rotate(0deg);}
+  100%{
+      transform: rotate(350deg);}
+}
+
+@media #{Media.$ipad-pro-landscape}{
+  .Home{
+    padding: 10%;
+  }
+  .nav-link-wrap{
+    margin-right: 5%;
+  }
+  #avatar{
+    max-width: 25em;
   }
 }
 
-@media screen and (min-width:40em) and (max-width:80em)  and (max-height:30em){
-  .bg-main{
-    display: grid;
+@media #{Media.$ipad-pro-portrait}{
+  .Home{
+    padding: 20% 5% 10% 10%;
+  }
+  #avatar {
+    max-width: 15em;
+  }
+  .info{
+    padding: 10%;
+    max-width: 100%;
+  }
+  .Home{
+    flex-direction: column-reverse;
+    padding: 15% 0 0 0;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+    gap: 2em;
+  }
+}
+
+@media #{Media.$iphone-landscape}{
+  #avatar-container img{
+    max-width: 10em;
   }
   .info{
       display: flex;
@@ -129,10 +173,14 @@
   .info-l3{
       font-size: 1.2em;
   }
+  .Home{
+    padding:10%;
+    gap: 2em;
+  }
   
 }
 
-@media screen and (max-width:40em) {
+@media #{Media.$iphone-portrait}{
   .info-l1{
     font-size: 3em;
   }
@@ -146,16 +194,26 @@
     background: #ffffffb0;
   }
   .info{
-    padding: 0em 3em 0 3em;
     align-self: center;
     position: static;
-    padding-top: 25em;
+    max-width: 26em;
   }
   .Home-main{
     left: 0;
   }
   #Flyer{
     margin: 0;
+  }
+  #avatar-container img{
+    max-width: 15em;
+  }
+  .Home{
+    flex-direction: column-reverse;
+    padding: 25% 0 0 0;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+    gap: 2em;
   }
 }
 

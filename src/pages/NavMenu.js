@@ -12,6 +12,7 @@ const closeNav = () => {
     var menu = document.getElementById("nav-link-wrap");
     menu.style.width="0";
     menu.style.left="50%";
+    document.getElementById("nav-bg-portrait").classList.toggle("nav-greyout");
 }
 
 

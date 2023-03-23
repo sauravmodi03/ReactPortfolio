@@ -37,20 +37,15 @@ $theme-color:rgb(43 193 193);
     }
 }
 
-@media screen and (min-width:40em) and (max-width:70em){
-    .nav-link-wrap{
-        padding-right: 1em;
-    }
-    .NavMenu{
-        margin-right: 10%;
+@media screen and (min-width:40em) and (max-width:75em)  and (min-height:50){   
+    .nav-link-wrap {
+        width: fit-content;
+        padding-right: 5%;
+        gap: 1em;
     }
 }
 
   @media screen and (max-width:40em) {
-    .App-header {
-        flex-flow: column;
-        height: 3em;
-    }
     .nav-centre{
         display: grid;
         position: absolute;

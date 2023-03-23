@@ -8,7 +8,7 @@ import git from '../../img/gitb.png';
 import insta from '../../img/instab.png';
 import twitter from '../../img/twitterb.png';
 import carret from '../../img/carret.avif';
-import './Flyer.css';
+import './Flyer.scss';
 
 class Flyer extends React.Component{
 

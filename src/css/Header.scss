@@ -1,3 +1,5 @@
+@use 'Media';
+
 #header{
     transition: .3s ease-in;
 }
@@ -29,6 +31,8 @@ header{
     z-index: 1;
     background-color: rgb(255 255 255 / 30%);
     backdrop-filter: blur(10px);
+    justify-content: space-between;
+    align-items: center;
 }
 
 #nav-button{
@@ -40,16 +44,60 @@ header{
     margin-left: 20%;
 }
 
-@media screen and (min-width:70em) {
+//Ipad Pro Landscape
+@media #{Media.$ipad-pro-landscape}{
+    #smodi {
+        margin-left: 10%;
+    }
+    .nav-link-wrap{
+        padding-right: 10%;
+        margin: 0;
+    }
+    #avatar{
+        max-width: 20em;
+    }
+  }
+
+  //Ipad Pro Potrait
+  @media #{Media.$ipad-pro-portrait}{
+    #smodi {
+        margin-left: 5%;
+    }
+    .nav-link-wrap{
+        padding-right: 5%;
+        margin: 0;
+    }
+  }
+
+@media screen and (min-width:75em) {
     .App-header {
       align-items: center;
       justify-content: space-between;
       padding-right: 2em;
     }
-    
   }
 
-@media screen and (max-width:40em){
+// @media screen and (min-width:40em) and (max-width:80em) and (min-height:50){
+//     #smodi {
+//       margin-left: 5%;
+//     }
+// }
+
+@media #{Media.$iphone-landscape}{
+    #smodi{
+        margin-left: 10%;
+    }
+    .nav-link-wrap{
+        padding-right: 10%;
+        margin: 0;
+    }
+}
+
+@media #{Media.$iphone-portrait}{
+    .App-header {
+        flex-flow: column;
+        height: 3em;
+    }
     #header{
         gap: 0;
         justify-content: space-between;
@@ -63,8 +111,19 @@ header{
     }
     #nav-button{
         display: grid;
+        margin-right: 5%;
     }
     #smodi{
-        margin-left: 10%;
+        margin-left: 5%;
+    }
+    #nav-bg-portrait{
+        transition: .5s ease-in-out;
+    }
+    .nav-greyout{
+        width: 100vw;
+        height: 100vh;
+        background: #646464cc;
+        z-index: 6;
+        position: absolute;
     }
 }

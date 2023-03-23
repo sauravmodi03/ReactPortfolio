@@ -1,6 +1,6 @@
-
 import { Link } from 'react-scroll';
-import '../css/HomeStyle.css';
+import '../css/HomeStyle.scss';
+import manLogo from '../img/man.png';
 
 function Home() {
     return (
@@ -13,6 +13,9 @@ function Home() {
                         JavaScript, Java and framework knowledge such as Angular, React, and Bootstrap.
                     </span>
                     <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
+            </section>
+            <section id="avatar-container">
+                <img id="avatar" src={manLogo} alt="Avatar Logo"/>
             </section>
         </div>
     );
