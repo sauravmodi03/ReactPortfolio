@@ -23,7 +23,6 @@ function Header() {
     //     );
     //   }
 
-      console.log(navMobile);
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 
       setNavMobile(e.matches));
   
@@ -42,6 +41,13 @@ function Header() {
         document.getElementById("nav-bg-portrait").classList.toggle("nav-greyout");
     }
 
+    const handleNavMenu = () => {
+      var menu = document.getElementById("nav-link-wrap");
+      menu.style.width="0";
+      menu.style.left="50%";
+      document.getElementById("nav-bg-portrait").classList.toggle("nav-greyout");
+    }
+
 return( 
         <div className='Header'>
             <header id="header" className="App-header">
@@ -49,7 +55,7 @@ return(
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>
-            { navMobile && <div id='nav-bg-portrait'><NavMenu/></div>}
+            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait'><NavMenu/></div>}
         </div>
     );
 }

@@ -5,12 +5,15 @@
   }
 
 .Home{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10% 20% 0 20%;
+    padding: 0 20% 0 20%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+    height: 100vh;
 }
 
 .Home-main img {
@@ -122,7 +125,7 @@
 
 @media #{Media.$ipad-pro-landscape}{
   .Home{
-    padding: 10%;
+    padding: 0 10% 0 10%;
   }
   .nav-link-wrap{
     margin-right: 5%;
@@ -133,11 +136,12 @@
 }
 
 @media #{Media.$ipad-pro-portrait}{
-  .Home{
-    padding: 20% 5% 10% 10%;
-  }
   #avatar {
-    max-width: 15em;
+    max-width: 20em;
+  }
+  .nav-link-wrap{
+    padding-right: 10%;
+    margin: 0;
   }
   .info{
     padding: 10%;
@@ -145,11 +149,8 @@
   }
   .Home{
     flex-direction: column-reverse;
-    padding: 15% 0 0 0;
-    justify-items: center;
-    width: 100%;
-    align-items: center;
-    gap: 2em;
+    padding: 20% 0 20% 0;
+    height: auto;
   }
 }
 
@@ -196,7 +197,6 @@
   .info{
     align-self: center;
     position: static;
-    max-width: 26em;
   }
   .Home-main{
     left: 0;
@@ -209,9 +209,8 @@
   }
   .Home{
     flex-direction: column-reverse;
-    padding: 25% 0 0 0;
+    padding: 25% 5% 25% 5%;
     justify-items: center;
-    width: 100%;
     align-items: center;
     gap: 2em;
   }
