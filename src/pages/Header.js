@@ -1,5 +1,4 @@
 
-import Media from '../css/Media.scss';
 import '../css/Header.scss';
 import React, {useEffect, useState} from 'react';
 import NavMenu from './NavMenu';
@@ -16,12 +15,6 @@ function Header() {
         if(window.scrollY > 20) document.getElementById("header").classList.add("head-on-scroll");
         else document.getElementById("header").classList.remove("head-on-scroll");
       };
-
-    //   const handleMedia = () => {
-    //     window.matchMedia(Media.iphonePortrait).addEventListener("change", e=> 
-    //         setNavMobile(e.matches)
-    //     );
-    //   }
 
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 
       setNavMobile(e.matches));

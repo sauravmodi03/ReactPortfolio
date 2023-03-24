@@ -1,6 +1,8 @@
 
 import './App.scss';
 
+import bubbles from './img/bubbles.png';
+
 
 import {Link, Element}  from 'react-scroll';
 
@@ -52,6 +54,14 @@ class App extends React.Component {
   render() {
     return (
       <div id="App" className="App" onScroll={this.onScroll}>
+          <div class="bg-bubbles">
+            <div class="bg-square"></div>
+            <div class="bg-square"></div>
+            <div class="bg-square"></div>
+            <div class="bg-square"></div>
+            <div class="bg-square"></div>
+            <div class="bg-square"></div>
+          </div>
           <Flyer/>
           <Header/>
           <Element>

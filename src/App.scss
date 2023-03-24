@@ -65,4 +65,65 @@
     }
   }
   
+  .bg-bubbles{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    bottom: 0;
+    justify-content: space-around;
+  }
+
+  .bg-bubbles img{
+    width: 4em;
+    display: block;
+    border-radius: 20px;
+    animation: rotateBubble 1s linear infinite, flyBubble 7s linear infinite;
+  }
+
+  .bg-square{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3cd5ec, transparent);
+    animation: flyBubble 7s linear infinite;
+    opacity: 0;
+  }
+
+  #b1{
+    animation-delay: 2s;
+  }
+
+  .bg-bubbles div:nth-of-type(1){
+    animation-delay: 1s;
+  }
+  .bg-bubbles div:nth-of-type(2){
+    animation-delay: 4s;
+  }
+  .bg-bubbles div:nth-of-type(3){
+    animation-delay: 6s;
+  }
+  .bg-bubbles div:nth-of-type(4){
+    animation-delay: .5s;
+  }
+  .bg-bubbles div:nth-of-type(5){
+    animation-delay: 3s;
+  }
+  .bg-bubbles div:nth-of-type(6){
+    animation-delay: 2s;
+  }
+
+  @keyframes rotateBubble {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+  }
+
+  @keyframes flyBubble {
+    0%{transform: translateY(0);
+      opacity: 0;}
+    50%{opacity: 1;}
+    70%{opacity: 1;}
+    100%{transform: translateY(-80vh);
+      opacity: 0;}
+  }
   

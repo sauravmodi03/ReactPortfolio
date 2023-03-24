@@ -11,9 +11,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
     align-items: center;
-    height: 100vh;
+    height: auto;
 }
 
 .Home-main img {
@@ -48,7 +47,6 @@
 .info-l3{
   font-size: 2em;
   text-align: justify;
-  padding: .5em;
   opacity: 0;
   animation: drop 1s linear forwards;
   font-weight: bold;
@@ -58,6 +56,7 @@
   background: #eeeeef;
   border-radius: 0.2em;
   filter: drop-shadow(2px 4px 6px grey);
+  padding: 5px;
 }
 
 .avatar img{
@@ -71,13 +70,14 @@
 }
 
 #hire-me{
-    width: fit-content;
-    background: #2cc1c1;
+    background: #2cc1c100;
     padding: 10px;
     border-radius: 20px 0px 20px 0px;
-    COLOR: WHITE;
+    color: #636363;
     font-size: 2em;
-    transition: transform .5s;
+    border: 2px solid #24e2d7;
+    font-weight: bold;
+    transition: transform 0.5s;
 }
 
 #hire-nav:hover{
@@ -116,6 +116,12 @@
   }
 }
 
+@media only screen and (min-width:75em){
+  .Home{
+    height:100vh;
+  }
+}
+
 @keyframes avatarRotate {
   0%{
       transform: rotate(0deg);}
@@ -126,6 +132,7 @@
 @media #{Media.$ipad-pro-landscape}{
   .Home{
     padding: 0 10% 0 10%;
+    height: 100vh;
   }
   .nav-link-wrap{
     margin-right: 5%;
@@ -150,7 +157,6 @@
   .Home{
     flex-direction: column-reverse;
     padding: 20% 0 20% 0;
-    height: auto;
   }
 }
 
