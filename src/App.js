@@ -54,13 +54,13 @@ class App extends React.Component {
   render() {
     return (
       <div id="App" className="App" onScroll={this.onScroll}>
-          <div class="bg-bubbles">
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
-            <div class="bg-square"></div>
+          <div className="bg-bubbles">
+            <div className="bg-square"></div>
+            <div className="bg-square"></div>
+            <div className="bg-square"></div>
+            <div className="bg-square"></div>
+            <div className="bg-square"></div>
+            <div className="bg-square"></div>
           </div>
           <Flyer/>
           <Header/>

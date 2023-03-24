@@ -9,6 +9,15 @@
     min-height: 100vh;
   }
 
+  .bg-square{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3cd5ec, transparent);
+    animation: flyBubble 7s linear infinite;
+    opacity: 0;
+  }
+
   @keyframes bg-blur {
     0% { filter: blur(5px);}
     50% { filter: blur(4px);}
@@ -63,6 +72,31 @@
     .scale:hover{
       transform: scale(1.3);
     }
+    .bg-square {
+      width: 6em;
+      height: 6em;
+    }
+  }
+
+  @media #{Media.$ipad-pro-portrait} {
+    .bg-square {
+      width: 6em;
+      height: 6em;
+    }
+  }
+
+  @media #{Media.$iphone-landscape} {
+    .bg-square {
+      width: 4em;
+      height: 4em;
+    }
+  }
+
+  @media #{Media.$iphone-portrait} {
+    .bg-square {
+      width: 4em;
+      height: 4em;
+    }
   }
   
   .bg-bubbles{
@@ -81,14 +115,6 @@
     animation: rotateBubble 1s linear infinite, flyBubble 7s linear infinite;
   }
 
-  .bg-square{
-    width: 10em;
-    height: 10em;
-    border-radius: 50%;
-    background: linear-gradient(45deg, #3cd5ec, transparent);
-    animation: flyBubble 7s linear infinite;
-    opacity: 0;
-  }
 
   #b1{
     animation-delay: 2s;
@@ -110,7 +136,7 @@
     animation-delay: 3s;
   }
   .bg-bubbles div:nth-of-type(6){
-    animation-delay: 2s;
+    animation-delay: 1.5s;
   }
 
   @keyframes rotateBubble {
