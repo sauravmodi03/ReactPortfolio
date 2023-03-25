@@ -14,6 +14,14 @@ function Header() {
       const handleScroll = () => {
         if(window.scrollY > 20) document.getElementById("header").classList.add("head-on-scroll");
         else document.getElementById("header").classList.remove("head-on-scroll");
+
+
+      let scrollTop = window.scrollY;
+      let docHeight = document.body.offsetHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollTop / (docHeight - winHeight);
+      let scrollPercentRounded = Math.round(scrollPercent * 100);
+      document.getElementById("progress-bar-wrapper").style.width = scrollPercentRounded + '%';
       };
 
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 
@@ -43,8 +51,9 @@ function Header() {
 
 return( 
         <div className='Header'>
+            <div id="progress-bar-wrapper"></div>
             <header id="header" className="App-header">
-                <nav id="smodi"><Link className="scale" to="home" spy={true} smooth={true} duration={500}></Link>smodi</nav>
+                <nav id="smodi"><Link className="scale" to="#" spy={true} smooth={true} duration={500}></Link>smodi</nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>

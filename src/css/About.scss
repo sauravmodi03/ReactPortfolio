@@ -1,0 +1,104 @@
+@use '../css/Media';
+
+#about{
+    padding: 0 20% 0 20%;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section{
+    display: grid;
+}
+
+#label{
+    font-size: calc(20px + 3vmin);
+    align-self: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    font-style: italic;
+    justify-self: center;
+    gap: 0.5em;
+}
+
+#A{
+    animation: slideInLeft 2s linear forwards 1s;
+}
+#B{
+    animation: slideInLeft 2s linear forwards .8s;
+}
+#O{
+    animation: slideInLeft 2s linear forwards .6s;
+}
+#U{
+    animation: slideInLeft 2s linear forwards .4s;
+}
+#T{
+    animation: slideInLeft 2s linear forwards .2s;
+}
+
+.letter{
+    animation: slideInLeft 5s ease;
+}
+
+.about-info{
+    font-size: calc(10px + 2vmin);
+}
+.about-info-bg{
+    border-radius: 20px;
+    background: #d8d8d8b3;
+    padding: 10px;
+    text-align:justify;
+}
+
+@keyframes slideInLeft {
+    0%{transform: translateX(-250%);
+        opacity: 0;}
+    100%{transform: translateX(0);
+    opacity: 1;}
+}
+
+.about-info article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+@media #{Media.$ipad-pro-landscape}{
+    #about{
+        padding: 10%;
+        height: auto;
+        min-height: 100vh;
+    }
+  }
+
+  @media #{Media.$ipad-pro-portrait}{
+    #about{
+        padding: 0 10% 0 10%;
+        min-height: 100vh;
+    }
+    .about-info img{
+        width: 10em;
+    }
+  }
+
+  @media #{Media.$iphone-portrait}{
+    #about{
+        padding: 0 5% 0 5%;
+        min-height: 100vh;
+    }
+    .about-info img{
+        display: none;
+    }
+  }
+  @media #{Media.$iphone-landscape} {
+    #about{
+        padding: 10%;
+    }
+  }
+
+  

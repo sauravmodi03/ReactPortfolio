@@ -9,7 +9,7 @@ import {Link, Element}  from 'react-scroll';
 import Home from './pages/Home';
 
 import React from 'react';
-import Address from './pages/Address';
+import Address from './pages/Experience';
 import About from './pages/About';
 import NavMenu from './pages/NavMenu';
 import Skills from './pages/Skills';

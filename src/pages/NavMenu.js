@@ -23,7 +23,7 @@ function NavMenu() {
                 <Link activeClass="active" className="scale" to="home" spy={true} smooth={true} duration={500}>Home</Link>
                 <Link activeClass="active" className="scale" to="about" spy={true} smooth={true} duration={500}>About</Link>
                 <Link activeClass="active" className="scale" to="skills" spy={true} smooth={true} duration={500}>Skills</Link>
-                <Link activeClass="active" className="scale" to="address" spy={true} smooth={true} duration={500}>Address</Link>
+                <Link activeClass="active" className="scale" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
                 <Link activeClass="active" className="scale" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
             </nav>
     );

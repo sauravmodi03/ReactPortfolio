@@ -126,3 +126,10 @@ header{
         left: 0 !important;
     }
 }
+
+#progress-bar-wrapper{
+    height: 5px;
+    position: fixed;
+    background-color: #2bc1c1;
+    z-index: 2;
+}

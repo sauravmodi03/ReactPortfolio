@@ -1,0 +1,121 @@
+@use '../css/Media';
+
+#skills{
+    padding: 0 20% 0 20%;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.skills-container{
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.skills-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.skill{
+    
+    //background-color: rgb(74, 125, 127);
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.bar-wrapper{
+    background: #f8f8f8;
+    border-radius: 10px 0 10px 0;
+    padding: 2px;
+    border: 2px solid #7d7d9e;
+}
+.bar{
+    overflow: hidden;
+    border-radius: 10px 0 10px 0;
+    height: 2em;
+    text-align: center;
+    background: linear-gradient(45deg, #5ecbaf, #989c98);
+    align-content: center;
+    display: grid;
+}
+.skill-name{
+    width: fit-content;
+    background: rgb(22, 226, 237);
+    font-size: 1.2em;
+    border-radius: 10px 0 10px 0;
+    color: white;
+    padding: 5px;
+}
+
+@keyframes progress-bar-java {
+    0%{width: 0;}
+    100%{width: 90%;}
+}
+
+@keyframes progress-bar-html {
+    0%{width: 0;}
+    100%{width: 80%;}
+}
+
+@keyframes progress-bar-css {
+    0%{width: 0;}
+    100%{width: 70%;}
+}
+
+@keyframes progress-bar-javascript {
+    0%{width: 0;}
+    100%{width: 65%;}
+}
+
+.java{
+    animation: progress-bar-java 3s ease-in-out;
+    width: 90%;
+}
+.html{
+    animation: progress-bar-html 3s ease-in-out;
+    width: 80%;
+}
+.css{
+    animation: progress-bar-css 3s ease-in-out;
+    width: 70%;
+}
+.javascript{
+    animation: progress-bar-javascript 3s ease-in-out;
+    width: 65%;
+}
+
+@media #{Media.$ipad-pro-landscape}{
+    #skills{
+        padding: 10%;
+        height: auto;
+        min-height: 100vh;
+    }
+    .skills-wrapper{
+        width: 25em;
+    }
+
+  }
+
+  @media #{Media.$ipad-pro-portrait}{
+    
+  }
+
+  @media #{Media.$iphone-portrait}{
+    #skills{
+        padding: 0;
+    }
+    .skills-wrapper{
+        width: 20em;
+    }
+  }

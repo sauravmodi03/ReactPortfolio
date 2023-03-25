@@ -1,0 +1,108 @@
+@use '../css/Media';
+
+#contact{
+    padding: 0 20% 0 20%;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#contact article{
+    display: flex;
+    flex-direction: row;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    padding: 2em;
+    background-color: rgb(234 234 234);
+    border-radius: 20px 0;
+    box-shadow: 5px 5px 5px rgb(122, 122, 122);
+    gap: .5em;
+}
+.contact-form label{
+    align-self: center;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    width: 15em;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+textarea, input[type="text"], input[type="email"]{
+    height: 25px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 10px 0;
+    border: 1px solid grey;
+}
+textarea{
+    height: 250px;
+    font-size: 15px;
+    align-items: self-start;
+    resize: none;
+    overflow: hidden;
+}
+input[type="submit"]{
+    width: 100px;
+    align-self: flex-end;
+    border-radius: 10px 0;
+    border: 1px solid #38edd6;
+    background: white;
+    font-size: 20px;
+    padding: 5px;
+    transition: .5s;
+
+    &:hover{
+        transform: scale(1.3);
+    }
+    &:active{
+        background: #38edd6;
+    }
+}
+#textarea-label{
+    align-self: normal;
+    margin-top: 10px;
+}
+
+.email-confirmation{
+    position: fixed;
+    width: 100vh;
+    height: 50px;
+    top: 10%;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    animation: drop 1s linear forwards;
+    opacity: 0;
+}
+.email-confirmation span{
+    align-self: center;
+    border: 1px solid grey;
+    padding: 10px;
+    background: #d6fffe;
+    border-radius: 5px;
+}
+
+.show-confirm{
+    display: grid;
+    animation: dropFade 2s linear forwards;
+
+}
+
+@keyframes dropFade {
+    0%{ transform: translateY(-150%);
+        opacity: 0;}
+    80%{transform: translateY(0);
+    opacity: 1;}
+    100%{opacity: 0;}
+}
+

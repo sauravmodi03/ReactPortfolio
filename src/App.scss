@@ -5,7 +5,7 @@
   }
   
   .tab{
-    min-width: 100vw;
+    padding: 0 10% 0 10%;
     min-height: 100vh;
   }
 
@@ -83,6 +83,10 @@
       width: 6em;
       height: 6em;
     }
+    .tab{
+      padding: 0 10% 0 10%;
+      min-height: 100vh;
+    }
   }
 
   @media #{Media.$iphone-landscape} {
@@ -152,4 +156,3 @@
     100%{transform: translateY(-80vh);
       opacity: 0;}
   }
-  
