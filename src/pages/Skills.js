@@ -1,9 +1,8 @@
 import '../css/Skills.scss';
 
-
 function Skills() {
     return (
-        <div id="skills" className='Skills tab'>
+        <div id="skills" className='Skills'>
             <section>
                 <div id="label">
                     <div className="wrapper">

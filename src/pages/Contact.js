@@ -63,7 +63,7 @@ class Contact extends React.Component {
                     <div id="email-confirm" onAnimationEnd={this.resetAnimation} className='email-confirmation'>
                         <span>Message sent successfully !</span>
                     </div>
-                    <section>
+                    
                         <div id="label">
                             <div className="wrapper">
                                 <div data-inviewport="scale-in" id="S" className="letter">C</div>
@@ -115,7 +115,7 @@ class Contact extends React.Component {
                                 Please feel free to contact.
                             </div>
                         </article>
-                    </section>
+                    
                 </div>
         );
     };

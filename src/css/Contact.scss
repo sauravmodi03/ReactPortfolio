@@ -1,10 +1,11 @@
 @use '../css/Media';
 
-#contact{
+.Contact{
     padding: 0 20% 0 20%;
     display: flex;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column;
 }
 
 #contact article{
@@ -98,6 +99,11 @@ input[type="submit"]{
 
 }
 
+#contact article{
+    justify-content: space-between;
+    width: 100%;
+}
+
 @keyframes dropFade {
     0%{ transform: translateY(-150%);
         opacity: 0;}
@@ -105,4 +111,43 @@ input[type="submit"]{
     opacity: 1;}
     100%{opacity: 0;}
 }
+
+@media #{Media.$ipad-pro-landscape}{
+    .Contact{
+        padding: 10%;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .contact-form{
+        width: fit-content;
+    }
+    
+    textarea{
+        height: 180px;
+    }
+  }
+
+  @media #{Media.$ipad-pro-portrait}{
+    .Contact{
+        padding: 10%;
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: flex-start;
+    }
+    .contact-form{
+        width: fit-content;
+    }
+    #contact article{
+        flex-direction: column-reverse;
+    }
+  }
+
+  @media #{Media.$iphone-portrait}{
+    
+  }
+  @media #{Media.$iphone-landscape} {
+    
+  }
 
