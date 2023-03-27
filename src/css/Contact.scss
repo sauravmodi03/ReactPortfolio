@@ -8,25 +8,23 @@
     flex-direction: column;
 }
 
-#contact article{
-    display: flex;
-    flex-direction: row;
-}
+// #contact article{
+//     display: flex;
+//     flex-direction: row;
+// }
 .contact-form{
     display: flex;
     flex-direction: column;
-    width: 40em;
+    width: 60%;
     padding: 2em;
     background-color: rgb(234 234 234);
-    border-radius: 20px 0;
-    box-shadow: 5px 5px 5px rgb(122, 122, 122);
+    // box-shadow: 5px 5px 5px rgb(122, 122, 122);
     gap: .5em;
 }
 .contact-form label{
     align-self: center;
-    font-size: 1.5em;
-    font-family: sans-serif;
-    width: 15em;
+    font-size: 20px;
+    width: 200px;
 }
 
 .inputs{
@@ -39,9 +37,8 @@ textarea, input[type="text"], input[type="email"]{
     height: 25px;
     width: 100%;
     max-width: 100%;
-    padding: 10px;
+    padding: 5px;
     font-size: 15px;
-    font-family: sans-serif;
     border-radius: 10px 0;
     border: 1px solid grey;
 }
@@ -99,10 +96,37 @@ input[type="submit"]{
 
 }
 
-#contact article{
+.contact-info-wrapper{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+#contact main{
+    display: flex;
     justify-content: space-between;
     width: 100%;
+    border-radius: 20px 0;
+    background: #d9a6a6;
+    overflow: hidden;
 }
+
+.info-article{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info{
+    display: flex;
+    gap: 1em;
+}
+
+.contact-info img{
+    width: 25px;
+}
+
+
 
 @keyframes dropFade {
     0%{ transform: translateY(-150%);

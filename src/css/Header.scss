@@ -33,6 +33,7 @@ header{
     backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
+    margin-top: 5px;
 }
 
 #nav-button{
@@ -128,6 +129,15 @@ header{
 }
 
 #progress-bar-wrapper{
+    height: 5px;
+    position: fixed;
+    
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+#progress-bar{
     height: 5px;
     position: fixed;
     background-color: #2bc1c1;

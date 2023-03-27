@@ -8,6 +8,7 @@ import git from '../../img/gitb.png';
 import insta from '../../img/instab.png';
 import twitter from '../../img/twitterb.png';
 import carret from '../../img/carret.avif';
+import gearw from '../../img/gear-white.png';
 import './Flyer.scss';
 
 class Flyer extends React.Component{
@@ -32,7 +33,7 @@ class Flyer extends React.Component{
                 <div id="Flyer" className="Flyer">
                     <div className='flyer-wrapper link-flyer slide'>
                         <div id="acc-img" >
-                            <Link onClick={this.toggleAccordian}><img id="carret-logo" alt="Carret logo" src={carret}></img></Link>
+                            <Link onClick={this.toggleAccordian}><img id="carret-logo" alt="Carret logo" src={gearw}></img></Link>
                         </div>
                         <nav id="flyer-links-wrap">
                             <Link className='scale' to="https://www.linkedin.com/in/sauravmodi03/" target="_blank"><img alt="Linked logo" src={linkedin}/></Link>
