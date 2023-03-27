@@ -57,15 +57,21 @@ export default function About() {
             </div>
             <span className='about-info'>
                 <article>
-                    <p className='about-info-bg'>As a full stack developer, I possess a comprehensive understanding of programming languages like HTML, CSS, JavaScript, 
-                        and Java. Additionally, I am proficient in using popular frameworks such as Angular, React, and Bootstrap to deliver effective solutions.</p>
+                    <p className='about-info-bg'>As a full stack developer, I have a deep understanding of multiple programming 
+                        languages including HTML, CSS, JavaScript, and Java. Along with my proficiency in these languages, I am also 
+                        experienced in utilizing popular frameworks like Angular, React, and Bootstrap to create robust and efficient 
+                        solutions. My skillset allows me to deliver high-quality solutions that meet the needs of clients and end-users 
+                        alike. I stay up-to-date with the latest trends and technologies to ensure that my work remains innovative 
+                        and effective.</p>
                     <img src={coding} alt="Coding logo"></img>
                 </article>
-                <p className='about-info-bg'>In addition to my technical skills, I also possess the following qualities:</p>
-                <p className='about-info-bg'>Attention to detail.</p>
-                <p className='about-info-bg'>Problem-solving skills.</p>
-                <p className='about-info-bg'>Collaboration.</p>
-                <p className='about-info-bg'>Continuous learning.</p>
+                <section className='about-info-bg'>
+                    <p className=''>In addition to my technical skills, I also possess the following qualities:</p>
+                    <p className=''>Attention to detail.</p>
+                    <p className=''>Problem-solving skills.</p>
+                    <p className=''>Collaboration.</p>
+                    <p className=''>Continuous learning.</p>
+                </section>
             </span>
          </section>
     </div>

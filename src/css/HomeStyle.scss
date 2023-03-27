@@ -1,18 +1,12 @@
 @use 'Media';
 
-.Home::-webkit-scrollbar {
-    display: none;
-  }
 
 .Home{
-    padding: 0 20% 0 20%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
+  height: calc(100vh - 200px);
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
 }
 
 .Home-main img {
@@ -26,7 +20,7 @@
   color: #4a4743;
   font-family: monospace;
   gap: 0.5em;
-  max-width: 40em;
+  width: 40em;
   justify-content: center;
 }
 
@@ -49,14 +43,13 @@
   text-align: justify;
   opacity: 0;
   animation: drop 1s linear forwards;
-  font-weight: bold;
 }
 
 .info-bg {
   background: #eeeeef;
-  border-radius: 0.2em;
+  border-radius: 20px 0;
   filter: drop-shadow(2px 4px 6px grey);
-  padding: 5px;
+  padding: 10px;
 }
 
 .avatar img{
@@ -78,6 +71,11 @@
     border: 2px solid #24e2d7;
     font-weight: bold;
     transition: transform 0.5s;
+   
+
+    &:active{
+      background: rgb(106, 216, 235);
+    }
 }
 
 #hire-nav:hover{
@@ -116,12 +114,6 @@
   }
 }
 
-@media only screen and (min-width:75em){
-  .Home{
-    height:100vh;
-  }
-}
-
 @keyframes avatarRotate {
   0%{
       transform: rotate(0deg);}
@@ -131,14 +123,14 @@
 
 @media #{Media.$ipad-pro-landscape}{
   .Home{
-    padding: 0 10% 0 10%;
-    height: 100vh;
+    padding: 0;
+    min-height: 100vh;
   }
   .nav-link-wrap{
     margin-right: 5%;
   }
   #avatar{
-    max-width: 25em;
+    max-width: 350px;
   }
 }
 
@@ -146,17 +138,15 @@
   #avatar {
     max-width: 20em;
   }
+  .info{
+    width: auto;
+  }
   .nav-link-wrap{
     padding-right: 10%;
     margin: 0;
   }
-  .info{
-    padding: 10%;
-    max-width: 100%;
-  }
   .Home{
     flex-direction: column-reverse;
-    padding: 20% 0 20% 0;
   }
 }
 

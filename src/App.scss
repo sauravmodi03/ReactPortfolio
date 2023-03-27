@@ -1,5 +1,14 @@
   @use './css/Media';
 
+  
+  .-fl-r-c {display: flex; flex-direction: row; justify-content: center;}
+  .-fl-r-sb {display: flex; flex-direction: row; justify-content: space-between;}
+  .-fl-r-sa {display: flex; flex-direction: row; justify-content: space-around;}
+  .-fl-c-c {display: flex; flex-direction: row; justify-content: center;}
+  .-fl-c-sb {display: flex; flex-direction: row; justify-content: space-between;}
+  .-fl-c-sa {display: flex; flex-direction: row; justify-content: space-around;}
+  
+
   /* Hide scrollbar for Chrome, Safari and Opera */
 .App::-webkit-scrollbar {
   display: none;
@@ -9,12 +18,15 @@
 .App {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  transition: background-color .5s;
 }
 
+.App main{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
 
-  .App{
-    transition: background-color .5s;
-  }
   
   .tab{
     padding: 0 10% 0 10%;
@@ -41,6 +53,9 @@
     cursor: pointer;
   }
     
+
+
+  
   @keyframes slideInTop-head {
     0% {
       transform: translateY(-150%);

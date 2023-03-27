@@ -23,7 +23,7 @@
     gap: .5em;
 }
 #contact main label{
-    font-size: calc(20px + 2vmin);
+    font-size: calc(10px + 2vmin);
     padding: 5px;
     font-family: monospace;
 }
@@ -45,7 +45,7 @@ textarea{
     height: 250px;
     font-size: 15px;
     align-items: self-start;
-    resize: none;
+    resize:vertical;
     overflow: hidden;
     padding: 5px;
 }
@@ -108,8 +108,9 @@ input[type="submit"]{
     justify-content: space-between;
     width: 80%;
     border-radius: 20px 0;
-    background: #d9a6a6;
+    background: #bbbbbb;
     overflow: hidden;
+    box-shadow: 5px 5px 10px grey;
 }
 
 .info-article{

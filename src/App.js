@@ -54,6 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="App" className="App" onScroll={this.onScroll}>
+        <section>
           <div className="bg-bubbles">
             <div className="bg-square"></div>
             <div className="bg-square"></div>
@@ -62,8 +63,10 @@ class App extends React.Component {
             <div className="bg-square"></div>
             <div className="bg-square"></div>
           </div>
-          <Flyer/>
           <Header/>
+          <Flyer/>
+        </section>
+        <main>
           <Element>
             <Home/>
             <About/>
@@ -72,6 +75,7 @@ class App extends React.Component {
             <Contact/>
           </Element>
           <footer></footer>
+        </main>
       </div>
       
     ); 
