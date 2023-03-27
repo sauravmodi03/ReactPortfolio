@@ -71,6 +71,7 @@ class App extends React.Component {
             <Address/>
             <Contact/>
           </Element>
+          <footer></footer>
       </div>
       
     ); 

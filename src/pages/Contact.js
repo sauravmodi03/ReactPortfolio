@@ -62,7 +62,7 @@ class Contact extends React.Component {
 
     render (){
         return(
-                <div id="contact" className='Contact tab'>
+                <div id="contact" className='Contact'>
                     <div id="email-confirm" onAnimationEnd={this.resetAnimation} className='email-confirmation'>
                         <span>Message sent successfully !</span>
                     </div>
@@ -91,33 +91,16 @@ class Contact extends React.Component {
                     </div>
                     <main>
                         <form ref={this.form} className="contact-form" onSubmit={this.sendEmail}>
-                            <section className='inputs'>
-                            <label>Write me</label>
-                            </section>
-                            <section className='inputs'>
-                                <label>First Name:</label>
-                                <input type="text" name="fname" required placeholder="Your first name..." value={this.state.fname} onChange={this.handleChange} />
-                            </section>
-                            <section className='inputs'>
-                                <label>Last Name:</label>
-                                <input type="text" name="lname" required placeholder="Your last name.." value={this.state.lname} onChange={this.handleChange} />
-                            </section>
-                            <section className='inputs'>
-                                <label>Subject:</label>
-                                <input type="text" name="subject" required placeholder="Subject..." value={this.state.subject} onChange={this.handleChange} />
-                            </section>
-                            <section className='inputs'>
-                                <label> Email: </label>
-                                <input type="email" name='email' placeholder="Your email.." required value={this.state.email} onChange={this.handleChange} />
-                            </section>
-                            <section className='inputs'>
-                                <label id="textarea-label"> Message:</label>
-                                <textarea name='message' value={this.state.message} onChange={this.handleChange} />
-                            </section>
+                            <label className='inputs'>Write me</label>
+                            <input type="text" name="fname" required placeholder="First Name" value={this.state.fname} onChange={this.handleChange} />
+                            <input className='inputs' type="text" name="lname" required placeholder="Last Name" value={this.state.lname} onChange={this.handleChange} />
+                            <input className='inputs' type="text" name="subject" required placeholder="Subject" value={this.state.subject} onChange={this.handleChange} />
+                            <input className='inputs' type="email" name='email' placeholder="Email" required value={this.state.email} onChange={this.handleChange} />
+                            <textarea className='inputs' name='message' value={this.state.message} onChange={this.handleChange} />
                             <input type="submit" value="Send" />
                         </form>
                         <div className="contact-info-wrapper">
-                            <span>Contact information.</span>
+                            <label>Contact information.</label>
                             <span>Please feel free to contact.</span>
                             <article className='info-article'>
                                 <div className="contact-info">
