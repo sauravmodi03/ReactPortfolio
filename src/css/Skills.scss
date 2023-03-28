@@ -1,10 +1,11 @@
 @use '../css/Media';
 
 .Skills{
-    padding: 0 20% 0 20%;
     display: flex;
-    align-items: center;
     min-height: 100vh;
+    padding: 100px 0;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .skills-container{
@@ -31,7 +32,6 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    color: black;
 }
 .bar-wrapper{
     background: #f8f8f8;
@@ -44,16 +44,16 @@
     border-radius: 10px 0 10px 0;
     height: 2em;
     text-align: center;
-    background: linear-gradient(45deg, #5ecbaf, #989c98);
     align-content: center;
     display: grid;
-}
+    background: linear-gradient(77.1deg, rgb(245, 220, 168) 11.5%, rgb(22, 220, 236) 100.2%);
+    }
 .skill-name{
     width: fit-content;
     font-size: 20px;
     border-radius: 10px 0;
     padding: 5px;
-    border: 2px solid #728781;
+    // border: 2px solid #728781;
     font-family: serif;
 }
 
@@ -103,17 +103,24 @@
     .skills-wrapper{
         width: 25em;
     }
-  }
-
-  @media #{Media.$ipad-pro-portrait}{
     
   }
 
-  @media #{Media.$iphone-portrait}{
-    #skills{
-        padding: 0;
+  @media #{Media.$ipad-pro-portrait}{
+    .skills-container{
+        flex-flow: column;
+        align-items: center;
     }
+  }
+
+  @media #{Media.$iphone-portrait}{
     .skills-wrapper{
-        width: 20em;
+        width: 22em;
+    }
+  }
+
+  @media #{Media.$iphone-landscape}{
+    .skills-wrapper{
+        width: 22em;
     }
   }

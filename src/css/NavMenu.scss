@@ -1,4 +1,4 @@
-$theme-color:rgb(43 193 193);
+@use '../css/Media.scss';
 
 .nav-link-wrap{
     display: flex;
@@ -16,7 +16,7 @@ $theme-color:rgb(43 193 193);
   }
 
   .active{
-    color: $theme-color;
+    color: #{Media.$bg-color-1};
   }
 
   #nav-button img{

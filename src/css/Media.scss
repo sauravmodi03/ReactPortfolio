@@ -1,9 +1,33 @@
+
+//Media query for Ipad Landscape and portrait
 $ipad-pro: "only screen and (min-device-width: 724px) and (max-device-width: 1200px) and (min-height:724px) and (-webkit-min-device-pixel-ratio: 2)";
+
+//Media query for Ipad Landscape
 $ipad-pro-landscape: "only screen and (min-device-width: 724px) and (max-device-width: 1200px) and (min-height:724px) and (-webkit-min-device-pixel-ratio: 2) and (orientation : landscape)";
+
+//Media query for Ipad Portrait
 $ipad-pro-portrait: "only screen and (min-device-width: 724px) and (max-device-width: 1200px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)";
+
+//Media query for iphone Landscape and portrait
 $iphone-: "only screen and (min-width: 320px) and (max-height: 640px)";
+
+//Media query for iphone Landscape
 $iphone-landscape: "only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape)";
+
+//Media query for iphone Portrait
 $iphone-portrait: "only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)";
+
+
+//Color palettes
+$bg-color-1:"#1cb3c8";
+$bg-color-2:"#3c415e";
+$bg-color-3:"#738598";
+$bg-color-4:"#dfe2e2";
+
+
+//Font color for light theme
+$font-dark:"#3c415e";
+
 
 :export{
     ipadLandscape:$ipad-pro-landscape;

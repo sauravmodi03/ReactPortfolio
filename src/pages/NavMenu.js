@@ -18,14 +18,15 @@ const closeNav = () => {
 
 function NavMenu() {
     return (
-            <nav id="nav-link-wrap" className='nav-link-wrap'>
-                <Link id="nav-close-btn" to="#" onClick={closeNav}>Close</Link>
-                <Link activeClass="active" className="scale" to="home" spy={true} smooth={true} duration={500}>Home</Link>
-                <Link activeClass="active" className="scale" to="about" spy={true} smooth={true} duration={500}>About</Link>
-                <Link activeClass="active" className="scale" to="skills" spy={true} smooth={true} duration={500}>Skills</Link>
-                <Link activeClass="active" className="scale" to="experience" spy={true} smooth={true} duration={500}>Experience</Link>
-                <Link activeClass="active" className="scale" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
-            </nav>
+        <nav id="nav-link-wrap" className='nav-link-wrap'>
+            <Link id="nav-close-btn" to="#" onClick={closeNav}>Close</Link>
+            <Link activeClass="active" className="scale" to="home" spy={true} smooth={true} duration={500}>Home</Link>
+            <Link activeClass="active" className="scale" to="about" spy={true} smooth={true} duration={500}>About</Link>
+            <Link activeClass="active" className="scale" to="skills" spy={true} smooth={true} duration={500}>Skills</Link>
+            <Link activeClass="active" className="scale" to="education" spy={true} smooth={true} duration={500}>Education</Link>
+            <Link activeClass="active" className="scale" to="project" spy={true} smooth={true} duration={500}>Project</Link>
+            <Link activeClass="active" className="scale" to="contact" spy={true} smooth={true} duration={500}>Contact</Link>
+        </nav>
     );
 }
 

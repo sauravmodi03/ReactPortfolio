@@ -9,9 +9,9 @@ import {Link, Element}  from 'react-scroll';
 import Home from './pages/Home';
 
 import React from 'react';
-import Address from './pages/Experience';
+import Education from './pages/Education';
+import Project from './pages/Projects';
 import About from './pages/About';
-import NavMenu from './pages/NavMenu';
 import Skills from './pages/Skills';
 import Header from './pages/Header';
 import Contact from './pages/Contact';
@@ -66,12 +66,13 @@ class App extends React.Component {
           <Header/>
           <Flyer/>
         </section>
-        <main>
+        <main className='main'>
           <Element>
             <Home/>
             <About/>
             <Skills/>
-            <Address/>
+            <Education/>
+            <Project/>
             <Contact/>
           </Element>
           <footer></footer>

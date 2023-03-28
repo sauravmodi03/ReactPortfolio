@@ -5,7 +5,7 @@
 }
 
 header{
-    animation: 1.5s ease-out 0s 1 slideInTop-head;
+    animation: slideInTop-head 2s ease-in-out ;
 }
 
 .head-on-scroll{
@@ -23,17 +23,17 @@ header{
     width: 100%;
     height: 2.2em;
     font-size: calc(10px + 2vmin);
-    color: rgb(2, 2, 2);
+    color: #{Media.$font-dark};
     display: flex;
     gap: .5em;
     position: fixed;
-    box-shadow: 0 0 2px 0 #b2b2b2;
-    z-index: 1;
-    background-color: rgb(255 255 255 / 30%);
+    // background-color: rgb(255 255 255 / 30%);
+    // box-shadow: 0 0 2px 0 #b2b2b2;
     backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
     margin-top: 5px;
+    z-index: 1;
 }
 
 #nav-button{
@@ -43,6 +43,21 @@ header{
 
 #smodi{
     margin-left: 20%;
+}
+
+#progress-bar-wrapper{
+    height: 5px;
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+#progress-bar{
+    height: 5px;
+    position: fixed;
+    background-color: #{Media.$bg-color-1};
+    z-index: 2;
 }
 
 //Ipad Pro Landscape
@@ -113,8 +128,8 @@ header{
     #smodi{
         margin-left: 5%;
     }
-    #nav-bg-portrait{
-        height: 100vh;
+    .nav-bg-portrait{
+        height: 100%;
         width: 0;
         transition: .5s ease-in-out;
         background: #646464cc;
@@ -123,23 +138,8 @@ header{
         left: 50%;
     }
     .nav-greyout{
-        width: 100vw !important;   
+        width: 100%;   
         left: 0 !important;
     }
 }
 
-#progress-bar-wrapper{
-    height: 5px;
-    position: fixed;
-    
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    width: 100%;
-}
-
-#progress-bar{
-    height: 5px;
-    position: fixed;
-    background-color: #2bc1c1;
-    z-index: 2;
-}

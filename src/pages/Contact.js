@@ -91,7 +91,7 @@ class Contact extends React.Component {
                     </div>
                     <main>
                         <form ref={this.form} className="contact-form" onSubmit={this.sendEmail}>
-                            <label className='inputs'>Write me</label>
+                            <label className='inputs'>Get in touch?</label>
                             <input type="text" name="fname" required placeholder="First Name" value={this.state.fname} onChange={this.handleChange} />
                             <input className='inputs' type="text" name="lname" required placeholder="Last Name" value={this.state.lname} onChange={this.handleChange} />
                             <input className='inputs' type="text" name="subject" required placeholder="Subject" value={this.state.subject} onChange={this.handleChange} />
@@ -101,7 +101,7 @@ class Contact extends React.Component {
                         </form>
                         <div className="contact-info-wrapper">
                             <label>Contact information.</label>
-                            <span>Please feel free to contact.</span>
+                            <p>Please feel free to contact.</p>
                             <article className='info-article'>
                                 <div className="contact-info">
                                     <div><img src={markerblack} alt=''/></div>

@@ -3,7 +3,7 @@ import '../css/Skills.scss';
 function Skills() {
     return (
         <div id="skills" className='Skills'>
-            <section>
+            
                 <div id="label">
                     <div className="wrapper">
                         <div data-inviewport="scale-in" id="S" className="letter">S</div>
@@ -42,7 +42,7 @@ function Skills() {
                         <div className='bar-wrapper'><div className='bar javascript'>20%</div></div>
                     </div>
                 </div>
-                </section>
+                
         </div>
     );
 }

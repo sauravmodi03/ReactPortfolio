@@ -12,9 +12,13 @@ function Header() {
 
     useEffect(() => {
       const handleScroll = () => {
-        if(window.scrollY > 20) document.getElementById("header").classList.add("head-on-scroll");
-        else document.getElementById("header").classList.remove("head-on-scroll");
-
+        if(window.scrollY > 20) {
+          document.getElementById("header").classList.add("head-on-scroll");
+          document.getElementById("scroller-wrapper").style.display = "none";
+        } else {
+          document.getElementById("header").classList.remove("head-on-scroll");
+          document.getElementById("scroller-wrapper").style.display = "grid";
+        }
 
       let scrollTop = window.scrollY;
       let docHeight = document.body.offsetHeight;
@@ -57,7 +61,7 @@ return(
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>
-            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait'><NavMenu/></div>}
+            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu/></div>}
         </div>
     );
 }

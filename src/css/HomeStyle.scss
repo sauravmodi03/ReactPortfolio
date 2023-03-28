@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-around;
   min-height: 100vh;
+  flex-flow: column;
 }
 
 .Home-main img {
@@ -14,10 +15,15 @@
   height: 20em;
 }
 
+.Home article{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .info{
   display: flex;
   flex-direction: column;
-  color: #4a4743;
   font-family: monospace;
   gap: 0.5em;
   width: 40em;
@@ -46,7 +52,6 @@
 }
 
 .info-bg {
-  background: #eeeeef;
   border-radius: 20px 0;
   filter: drop-shadow(2px 4px 6px grey);
   padding: 10px;
@@ -66,9 +71,8 @@
     background: #2cc1c100;
     padding: 10px;
     border-radius: 20px 0px 20px 0px;
-    color: #636363;
     font-size: 2em;
-    border: 2px solid #24e2d7;
+    border: 2px solid #{Media.$bg-color-2};
     font-weight: bold;
     transition: transform 0.5s;
    
@@ -121,6 +125,41 @@
       transform: rotate(350deg);}
 }
 
+.scroller-wrapper{
+    border: 2px solid #{Media.$bg-color-2};
+    border-radius: 20px;
+    width: 30px;
+    height: 40px;
+    display: grid;
+    text-align: center;
+    padding: 5px 0;
+    animation: scrollerScaleUp 2s ease-in-out;
+}
+
+.scroller{
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 5px;
+    height: 0px;
+    display: grid;
+    padding: 5px 0;
+    animation: scrollerDrop 1s linear 2s infinite;
+}
+
+@keyframes scrollerDrop {
+  0%{ transform: translateY(0);}
+  100%{ transform: translateY(35px);
+        opacity: 0;}
+}
+
+@keyframes scrollerScaleUp {
+  0%{transform: translateY(200%);
+    opacity: 0;}
+  100%{transform: translateY(0);
+  opacity: 1;}
+}
+
 @media #{Media.$ipad-pro-landscape}{
   .Home{
     padding: 0;
@@ -169,12 +208,7 @@
   }
   .info-l3{
       font-size: 1.2em;
-  }
-  .Home{
-    padding:10%;
-    gap: 2em;
-  }
-  
+  } 
 }
 
 @media #{Media.$iphone-portrait}{
@@ -193,6 +227,7 @@
   .info{
     align-self: center;
     position: static;
+    width: auto;
   }
   .Home-main{
     left: 0;
@@ -205,7 +240,6 @@
   }
   .Home{
     flex-direction: column-reverse;
-    padding: 25% 5% 25% 5%;
     justify-items: center;
     align-items: center;
     gap: 2em;

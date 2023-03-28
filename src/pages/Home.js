@@ -5,17 +5,21 @@ import manLogo from '../img/man.png';
 function Home() {
     return (
         <div id="home" className="Home">
-            <section className="info">
-                <span className='info-l1 info-bg'>Hi,</span>
-                <span className='info-l2 info-bg'>I am Saurav!</span>
-                <span className='info-l3 info-bg'>Crafting innovative solutions through code.</span>
-                <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
-            </section>
-            <section id="avatar-container">
-                <span>
+            <article>
+                <section className="info">
+                    <span className='info-l1 info-bg'>Hi,</span>
+                    <span className='info-l2 info-bg'>I'm Saurav!</span>
+                    <span className='info-l3 info-bg'>I design and build innovative software solutions to help 
+                                businesses streamline their processes and achieve their goals.</span>
+                    <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
+                </section>
+                <section id="avatar-container">
                     <img id="avatar" src={manLogo} alt="Avatar Logo"/>
-                </span>
-            </section>
+                </section>
+            </article>
+            <Link id="scroller-wrapper" className='scroller-wrapper' to='about' spy={true} smooth={true} duration={500}>
+                <div className='scroller'></div>
+            </Link>
         </div>
     );
 }
