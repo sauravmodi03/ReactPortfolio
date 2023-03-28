@@ -2,8 +2,7 @@ import '../css/Skills.scss';
 
 function Skills() {
     return (
-        <div id="skills" className='Skills'>
-            
+        <div id="skills" className='Skills flex-top-padding'>
                 <div id="label">
                     <div className="wrapper">
                         <div data-inviewport="scale-in" id="S" className="letter">S</div>

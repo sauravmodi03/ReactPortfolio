@@ -4,7 +4,7 @@ import manLogo from '../img/man.png';
 
 function Home() {
     return (
-        <div id="home" className="Home">
+        <div id="home" className="Home flex-top-padding">
             <article>
                 <section className="info">
                     <span className='info-l1 info-bg'>Hi,</span>

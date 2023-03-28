@@ -1,19 +1,14 @@
 @use '../css/Media';
 
-.Skills{
-    display: flex;
-    min-height: 100vh;
-    padding: 100px 0;
-    flex-direction: column;
-    gap: 1em;
-}
 
 .skills-container{
     display: flex;
     flex-flow: row wrap;
     flex-wrap: wrap;
     gap: 1em;
-    justify-content: space-between;
+    justify-content: space-around;
+    max-width: 1200px;
+    align-self: center;
 }
 
 .skills-wrapper{

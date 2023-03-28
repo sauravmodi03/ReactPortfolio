@@ -62,7 +62,7 @@ class Contact extends React.Component {
 
     render (){
         return(
-                <div id="contact" className='Contact'>
+                <div id="contact" className='Contact flex-top-padding'>
                     <div id="email-confirm" onAnimationEnd={this.resetAnimation} className='email-confirmation'>
                         <span>Message sent successfully !</span>
                     </div>

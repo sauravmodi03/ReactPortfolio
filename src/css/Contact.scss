@@ -1,14 +1,5 @@
 @use '../css/Media';
 
-.Contact{
-    padding: 100px 200px;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    gap: 1em;
-}
-
 // #contact article{
 //     display: flex;
 //     flex-direction: row;
@@ -128,6 +119,7 @@ input[type="submit"]{
     background: linear-gradient(135deg, #a7bcb9, #faefea);
     box-shadow: 5px 5px 10px grey;
     animation: contact-fadeIn 1.5s ease-in-out;
+    max-width: 900px;
 }
 @keyframes contact-fadeIn {
     0%{transform: scale(.8);

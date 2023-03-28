@@ -3,7 +3,7 @@ import '../css/Education.scss';
 
 function Education() {
     return ( 
-        <div id="education" className='Education'>
+        <div id="education" className='Education flex-top-padding'>
             <div id="label">
                     <div className="wrapper">
                         <div data-inviewport="scale-in" id="S" className="letter">E</div>

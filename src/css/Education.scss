@@ -1,12 +1,5 @@
 @use '../css/Media';
 
-.Education{
-    display: flex;
-    min-height: 100vh;
-    padding: 100px 0;
-    flex-direction: column;
-    gap: 1em;
-}
 
 .timeline {
     position: relative;
@@ -46,12 +39,6 @@
     }
 }
 
-span[timeline-circle] {
-    position: relative;
-    width: 30px;
-    background-color: red;
-}
-
 .right::after{
     left: -15px;
 }
@@ -61,7 +48,8 @@ span[timeline-circle] {
     border-radius: 5px;
     margin: 30px 40px;
     padding: 15px;
-    border: 1px solid grey;
+    border: 1px solid rgb(128, 128, 128);
+    background: #f9efea;
 
    
 }

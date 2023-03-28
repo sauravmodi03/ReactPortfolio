@@ -28,6 +28,9 @@ $bg-color-4:"#dfe2e2";
 //Font color for light theme
 $font-dark:"#3c415e";
 
+//App background light theme
+$app-bg-light:"linear-gradient(to right, #fff1eb 0%, #{$bg-color-4} 100%)";
+
 
 :export{
     ipadLandscape:$ipad-pro-landscape;

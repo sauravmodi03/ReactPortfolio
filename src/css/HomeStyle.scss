@@ -3,11 +3,7 @@
 
 .Home{
   height: calc(100vh - 200px);
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  min-height: 100vh;
-  flex-flow: column;
+  gap: 5em;
 }
 
 .Home-main img {
@@ -133,7 +129,11 @@
     display: grid;
     text-align: center;
     padding: 5px 0;
-    animation: scrollerScaleUp 2s ease-in-out;
+    animation: scrollerScaleUp 1s ease-out;
+    position: fixed;
+    bottom: 70px;
+    opacity: 1;
+    align-self: center;
 }
 
 .scroller{
@@ -144,7 +144,7 @@
     height: 0px;
     display: grid;
     padding: 5px 0;
-    animation: scrollerDrop 1s linear 2s infinite;
+    animation: scrollerDrop 1s linear 1s infinite;
 }
 
 @keyframes scrollerDrop {

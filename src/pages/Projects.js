@@ -1,7 +1,8 @@
+import '../css/Education.scss';
 
 function Project(){
     return(
-        <div id="project" className="Project">
+        <div id="project" className="Project flex-top-padding">
             <div id="label">
                     <div className="wrapper">
                         <div data-inviewport="scale-in" id="S" className="letter">P</div>

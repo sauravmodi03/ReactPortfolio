@@ -36,8 +36,7 @@ export default function About() {
 
 
     return (
-    <div id="about" className='About'>
-        <section>
+    <div id="about" className='About flex-top-padding'>
             <div id="label">
                 <div className="wrapper">
                     <div data-inviewport="scale-in" id="A" className="letter">A</div>
@@ -73,7 +72,6 @@ export default function About() {
                     <p className=''>Continuous learning.</p>
                 </section>
             </span>
-         </section>
     </div>
     );
 }
