@@ -23,6 +23,15 @@ function Skills() {
                         <div data-inviewport="scale-in" id="S-s" className="letter">S</div>
                     </div>
                 </div>
+                <div className='education-container'>
+                    <h1>Education</h1>
+                    <div className='ed-wrapper'>
+                        <h2>Date</h2>
+                        <div className='ed-info'>
+                            information
+                        </div>
+                    </div>
+                </div>
                 <div className='skills-container'>
                     <div className='skills-wrapper'>
                         <span className=" skill skill-name">JAVA</span>
@@ -41,7 +50,6 @@ function Skills() {
                         <div className='bar-wrapper'><div className='bar javascript'>20%</div></div>
                     </div>
                 </div>
-                
         </div>
     );
 }
