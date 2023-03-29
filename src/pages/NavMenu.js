@@ -18,7 +18,7 @@ const closeNav = () => {
 
 function NavMenu() {
     return (
-        <nav id="nav-link-wrap" className='nav-link-wrap'>
+        <nav id="nav-link-wrap" className='nav-link-wrap -drop-shadow'>
             <Link id="nav-close-btn" to="#" onClick={closeNav}>Close</Link>
             <Link activeClass="active" className="scale" to="home" spy={true} smooth={true} duration={500}>Home</Link>
             <Link activeClass="active" className="scale" to="about" spy={true} smooth={true} duration={500}>About</Link>

@@ -132,11 +132,17 @@ input[type="submit"]{
 .info-article{
     display: flex;
     flex-direction: column;
+    gap: 1em;
 }
 
 .contact-info{
     display: flex;
     gap: 1em;
+    align-items: center;
+
+    &::hover{
+        transform: scale(1.2);
+    }
 }
 
 .contact-info img{

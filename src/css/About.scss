@@ -15,6 +15,7 @@ section{
     font-style: italic;
     justify-self: center;
     gap: 0.5em;
+    filter: drop-shadow(2px 4px 6px grey);
 }
 
 #A{
@@ -42,9 +43,11 @@ section{
 }
 .about-info-bg{
     border-radius: 20px;
-    padding: 20px;
+    padding: 25px;
     text-align:justify;
     height: fit-content;
+    width: 50%;
+    font-size: calc(15px + 2vmin);
 }
 
 @keyframes slideInLeft {
@@ -57,7 +60,7 @@ section{
 .about-info article{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
 
