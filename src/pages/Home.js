@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
+import arrow from '../img/arrowup.png';
 
 function Home() {
     return (
@@ -19,6 +20,9 @@ function Home() {
             </article>
             <Link id="scroller-wrapper" className='scroller-wrapper' to='about' spy={true} smooth={true} duration={500}>
                 <div className='scroller'></div>
+            </Link>
+            <Link id="top-scroll-wrapper" className='top-scroll-wrapper' to='home' spy={true} smooth={true} duration={500}>
+                <div className='top-scroll'><img src={arrow} alt="Arrow logo"/></div>
             </Link>
         </div>
     );

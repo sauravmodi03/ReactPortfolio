@@ -2,6 +2,8 @@
 import '../css/About.scss';
 import React, {useEffect,  useRef } from 'react';
 import about from '../img/about.png';
+import arrow from '../img/arrow-white.png';
+import download from '../img/download-white.png';
 import {Link}  from "react-router-dom";
 import Resume from '../data/Resume.pdf';
 
@@ -68,7 +70,12 @@ export default function About() {
                         <img src={about} alt="About logo"></img>
                     </span>
                 </article>
-                <a href={Resume} download="Resume_SauravModi">Get Resume</a>
+                <a href={Resume} className="resumeLink scale" download="Resume_SauravModi">
+                    <span>Resume</span>
+                    <div className='download-wrapper'>
+                        <img src={arrow} alt="arrow logo"/>
+                    </div>
+                </a>
             </span>
             
     </div>

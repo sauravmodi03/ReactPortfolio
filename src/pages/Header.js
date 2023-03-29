@@ -15,9 +15,11 @@ function Header() {
         if(window.scrollY > 20) {
           document.getElementById("header").classList.add("head-on-scroll");
           document.getElementById("scroller-wrapper").style.display = "none";
+          document.getElementById("top-scroll-wrapper").style.right = "0";
         } else {
           document.getElementById("header").classList.remove("head-on-scroll");
           document.getElementById("scroller-wrapper").style.display = "grid";
+          document.getElementById("top-scroll-wrapper").style.right = "-100%";
         }
 
       let scrollTop = window.scrollY;
@@ -57,7 +59,7 @@ return(
         <div className='Header'>
             <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
             <header id="header" className="App-header">
-                <nav id="smodi"><Link className="scale" to="#" spy={true} smooth={true} duration={500}></Link>smodi</nav>
+                <nav id="smodi"><Link className="scale" to="#" spy={true} smooth={true} duration={500}></Link>SMODI</nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>

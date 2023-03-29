@@ -75,7 +75,6 @@ class App extends React.Component {
             <Contact/>
         </main>
         <footer>
-          
         </footer>
       </div>
       
