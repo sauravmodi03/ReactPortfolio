@@ -22,6 +22,7 @@
   transition: background-color .5s;
   background: #{Media.$app-bg-light};
   color: #{Media.$font-dark};
+  overflow: hidden;
 }
 
 .App main{
@@ -30,12 +31,6 @@
   padding: 0 50px;
   z-index: 1;
   position: relative;
-}
-
-footer{
-    height: calc(200px + 2vmin);
-    width: 100%;
-    background: #{Media.$bg-color-3};
 }
 
 .flex-top-padding{
@@ -208,4 +203,59 @@ footer{
     70%{opacity: 1;}
     100%{transform: translateX(200%) translateY(-90vh) rotate(360deg) ;
       opacity: 0;}
+  }
+
+  footer{
+    min-height: fit-content;
+    width: 100%;
+    background: #{Media.$bg-color-3};
+  }
+
+  .foot-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .foo-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .foot-links-wrap img {
+    height: 2em;
+    width: 2em;
+  }
+
+  .foot-links-wrap{
+    display: flex;
+    gap: 1em;
+
+    &-a:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  .foo-contact{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+  }
+
+  .foo-c-w{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    
+    img{
+      width: 20px;
+      height: 20px;
+    }
   }

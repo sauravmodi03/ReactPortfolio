@@ -1,10 +1,17 @@
 
 import './App.scss';
+import {Link} from 'react-scroll';
 
-import bubbles from './img/bubbles.png';
+import linkedin from './img/linkedinb.png';
+import git from './img/gitb.png';
+import insta from './img/instab.png';
+import twitter from './img/twitterb.png';
+import gearw from './img/gear-white.png';
+import phoneblack from './img/phoneblack.png';
+import markerblack from './img/markerblack.png';
+import mailblack from './img/mailblack.png';
 
-
-import {Link, Element}  from 'react-scroll';
+import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
 import Home from './pages/Home';
 
@@ -16,7 +23,6 @@ import Header from './pages/Header';
 import Contact from './pages/Contact';
 import Flyer from './Components/Flyer/Flyer';
 
-
 class App extends React.Component {
   
   constructor(props) {
@@ -24,8 +30,6 @@ class App extends React.Component {
     this.myRef = React.createRef()
     this.state = {scrollTop: 0}
   }
-
-  
 
   onScroll = () => {
     console.log("scrolled")
@@ -73,6 +77,53 @@ class App extends React.Component {
             <Contact/>
         </main>
         <footer>
+          <div className='foot-container'>
+            <div className='foo-sec s-1'>
+                <span>WORK WITH ME</span>
+                <span>Hi There</span>
+                <nav id="hire-nav">
+                  <Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link>
+                </nav>
+            </div>
+            <div className="foo-sec s-2">
+                            <label>Contact information.</label>
+                            <article className='foo-contact'>
+                                <div className="foo-c-w">
+                                    <img src={markerblack} alt=''/>
+                                    <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
+                                </div>
+                                <div className="foo-c-w">
+                                    <img src={mailblack} alt=''/>
+                                    <div className='info-val'>sauravmodi03@gmail.com</div>
+                                </div>
+                                <div className="foo-c-w">
+                                    <img src={markerblack} alt=''/>
+                                    <div className='info-val'>Website</div>
+                                </div>
+                                <div className="foo-c-w">
+                                    <img src={phoneblack} alt=''/>
+                                    <div className='info-val'>+1 312 478 1958</div>
+                                </div>
+                            </article>
+                        </div>
+            <div className='foo-sec s-3'>
+                <span>Connect</span>
+                <span>
+                  <BrowserRouter>
+                      <nav id="foot-links-wrap" className='foot-links-wrap'>
+                          <RouterLink className='scale' to="https://www.linkedin.com/in/sauravmodi03/" target="_blank"><img alt="Linked logo" src={linkedin}/></RouterLink>
+                          <RouterLink className='scale' to="https://github.com/sauravmodi03" target="_blank"><img alt="Git logo" src={git}/></RouterLink>
+                          <RouterLink className='scale' to="https://www.instagram.com/saurav.modi/" target="_blank"><img alt="Insta logo" src={insta}/></RouterLink>
+                          <RouterLink className='scale' to="https://twitter.com/sauravmodi03" target="_blank"><img alt="Twitter logo" src={twitter}/></RouterLink>
+                      </nav>
+                  </BrowserRouter>
+                </span>
+                <span>Copyright</span>
+            </div>
+            <div className='foo-sec s-4'>
+
+            </div>
+          </div>
         </footer>
       </div>
       
