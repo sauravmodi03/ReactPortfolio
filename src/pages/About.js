@@ -14,13 +14,23 @@ export default function About() {
     const innerHeight = document.documentElement.clientHeight;
 
     document.addEventListener('scroll',function(){
-        var label = document.querySelector(".about-info-bg");
-        const labelY = label.getBoundingClientRect().y;
-        const elementHeight = label.getBoundingClientRect().height;
+        var info = document.querySelector(".about-info-bg");
+        var pic = document.querySelector(".about-pic");
+        const infoY = info.getBoundingClientRect().y;
+        const elementHeight = info.getBoundingClientRect().height;
 
-        if(innerHeight > labelY + elementHeight * 2/3){
-            label.style.animation = "slideInLeft-aboutinfo 1.5s forwards";
+        if(innerHeight > infoY + elementHeight * 2/3){
+            info.style.animation = "slideInLeft-aboutinfo 1.5s forwards";
+            pic.style.animation = "slideInLeft-aboutpic 1.5s forwards";
         }
+
+        var resumeLink = document.querySelector(".resumeLink");
+        const resumeLinkY = resumeLink.getBoundingClientRect().y;
+        const resumeHeight = resumeLink.getBoundingClientRect().height;
+        if(innerHeight > resumeLinkY + resumeHeight * 2/3){
+            resumeLink.style.animation = "resumeSlideInBottom 1.5s forwards";
+        }
+
     });
 
     return (
@@ -35,7 +45,7 @@ export default function About() {
                         alike. I stay up-to-date with the latest trends and technologies to ensure that my work remains innovative 
                         and effective.
                     </span>
-                    <span>
+                    <span className='about-pic'>
                         <img src={about} alt="About logo"></img>
                     </span>
                 </article>
