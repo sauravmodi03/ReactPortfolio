@@ -51,9 +51,6 @@ class Contact extends React.Component {
         });
     }
 
-    useEffect
-
-
     sendEmail = (e) => {
         e.preventDefault();
         console.log("contact form");
