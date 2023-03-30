@@ -12,7 +12,9 @@ function Home() {
                     <span className='info-l2 info-bg'>I'm Saurav!</span>
                     <span className='info-l3 info-bg'>I design and build innovative software solutions to help 
                                 businesses streamline their processes and achieve their goals.</span>
-                    <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
+                    <span className='hire-link-wrap'>
+                        <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
+                    </span>
                 </section>
                 <section id="avatar-container">
                     <img id="avatar" src={manLogo} alt="Avatar Logo"/>

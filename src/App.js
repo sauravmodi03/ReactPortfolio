@@ -2,10 +2,10 @@
 import './App.scss';
 import {Link} from 'react-scroll';
 
-import linkedin from './img/linkedinb.png';
+import linkedin from './img/in-round-b.png';
 import git from './img/gitb.png';
-import insta from './img/instab.png';
-import twitter from './img/twitterb.png';
+import insta from './img/insta-round-b.png';
+import twitter from './img/twit-round-b.png';
 import gearw from './img/gear-white.png';
 import phoneblack from './img/phoneblack.png';
 import markerblack from './img/markerblack.png';

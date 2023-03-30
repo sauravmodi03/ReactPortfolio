@@ -66,12 +66,29 @@
 #hire-me{
     background: #2cc1c100;
     padding: 10px;
-    border-radius: 20px 0px 20px 0px;
     font-size: 2em;
-    border: 2px solid #{Media.$bg-color-2};
     font-weight: bold;
     transition: transform 0.5s;
-   
+}
+
+// #hire-nav:hover{
+//     transform: scale(1.2);
+// }
+
+.info nav{
+  align-self: flex-end;
+  filter: drop-shadow(2px 4px 6px grey);
+}
+
+#hire-nav{
+    animation: hire-slideInLeft 1s ease-in;
+    transition: 0.2s;
+    width: fit-content;
+    /* border: 1px solid grey; */
+    padding: 10px 10px;
+    border: 2px solid #3c415e;
+    border-radius: 20px 0;
+    align-self: flex-end;
 
     &:active{
       background: rgb(60 65 94);
@@ -79,19 +96,16 @@
     }
 }
 
-#hire-nav:hover{
-    transform: scale(1.2);
-}
+.hire-link-wrap{
+    max-width: fit-content;
+    border-radius: 20px 0;
+    align-self: flex-end;
+    transition: 1s;
 
-.info nav{
-  align-self: flex-end;
-  margin-top: 2em;
-  filter: drop-shadow(2px 4px 6px grey);
-}
-
-#hire-nav{
-  animation: hire-slideInLeft 1s ease-in;
-  transition: .2s;
+    &:hover{
+      background: rgb(162, 184, 198);
+      transform: scale(1.2);
+    }
 }
 
 @keyframes hire-slideInLeft {
