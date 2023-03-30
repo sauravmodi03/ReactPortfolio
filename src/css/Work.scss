@@ -17,11 +17,15 @@
         left: 50%;
         position: absolute;
         border-radius: 5px;
+        z-index: -1;
     }
-
   }
 
-.container{
+  @keyframes timeline-rotate {
+    to{transform: rotate(0); opacity: 1;}
+  }
+
+.timeline-wrapper{
     width: 50%;
     height: fit-content;
     position: relative;
@@ -51,7 +55,10 @@
     padding: 15px;
     border: 1px solid rgb(128, 128, 128);
     background: #f9efea;
+    opacity: 0;
 }
+
+
 
 .shadow-left{
     box-shadow: -5px 5px 10px grey;
@@ -59,6 +66,24 @@
 
 .shadow-right{
     box-shadow: 5px 5px 10px grey;
+}
+
+.slidein-left-animation{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slidein-right-animation{
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+@keyframes content-slideInLeft {
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes content-slideInRight {
+    to{transform: translateX(0); opacity: 1;}
 }
 
 .left{

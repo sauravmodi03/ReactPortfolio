@@ -72,6 +72,24 @@
     100%{width: 65%;}
 }
 
+.skill-slidein-left-animation{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.skill-slidein-right-animation{
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+@keyframes skill-slideInLeft {
+    to{transform: translateX(0); opacity: 1;}
+}
+
+@keyframes skill-slideInRight {
+    to{transform: translateX(0); opacity: 1;}
+}
+
 .java{
     animation: progress-bar-java 3s ease-in-out;
     width: 0;

@@ -21,7 +21,34 @@ function Skills() {
         }, 2800/90);
         return () => clearInterval(timer);
     }, [java]);
-   
+
+    const getY = (element) => {
+        return element.getBoundingClientRect().y;
+    }
+
+    const getHeight = (element) => {
+        return element.getBoundingClientRect().height
+    }
+
+    const innerHeight = document.documentElement.clientHeight;
+
+    document.addEventListener('scroll',function(){
+        const leftList = document.querySelectorAll(".skill-slidein-left-animation");
+        const rightList = document.querySelectorAll(".skill-slidein-right-animation");
+
+        for (let i = 0; i < leftList.length; i++) {
+            if(innerHeight > getY(leftList[i]) + getHeight(leftList[i])/4){
+                leftList[i].style.animation = "skill-slideInLeft 1.5s forwards";
+            }
+        }
+
+        for (let i = 0; i < rightList.length; i++) {
+            if(innerHeight > getY(rightList[i]) + getHeight(rightList[i])/4){
+                rightList[i].style.animation = "skill-slideInRight 1.5s forwards";
+            }
+        }
+    });
+    
 
     return (
         <div id="skills" className='Skills flex-top-padding'>
@@ -36,19 +63,19 @@ function Skills() {
                     </div>
                 </div>
                 <div className='skills-container'>
-                    <div className='skills-wrapper'>
+                    <div className='skills-wrapper skill-slidein-left-animation'>
                         <span className="skill skill-name">JAVA</span>
                         <div className='bar-wrapper'><div className='bar java'>{java}%</div></div>
                     </div>
-                    <div className='skills-wrapper'>
+                    <div className='skills-wrapper skill-slidein-right-animation'>
                         <span className="skill skill-name">HTML</span>
                         <div className='bar-wrapper'><div className='bar html'>{html}%</div></div>
                     </div>
-                    <div className='skills-wrapper'>
+                    <div className='skills-wrapper skill-slidein-left-animation'>
                         <span className="skill skill-name">CSS</span>
                         <div className='bar-wrapper'><div className='bar css'>{css}%</div></div>
                     </div>
-                    <div className='skills-wrapper'>
+                    <div className='skills-wrapper skill-slidein-right-animation'>
                         <span className="skill skill-name">JavaScript</span>
                         <div className='bar-wrapper'><div className='bar javascript'>{javascript}%</div></div>
                     </div>

@@ -23,7 +23,6 @@ class Contact extends React.Component {
     };
 
     componentDidMount(){
-        console.log("contact");
         const innerWidth = document.documentElement.clientWidth;
         const innerHeight = document.documentElement.clientHeight;
 
