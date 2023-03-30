@@ -1,28 +1,10 @@
 import '../css/Skills.scss';
+import Label from './Label';
 
 function Skills() {
     return (
         <div id="skills" className='Skills flex-top-padding'>
-                <div id="label">
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="S" className="letter">S</div>
-                    </div>
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="K" className="letter">K</div>
-                    </div>
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="I" className="letter">I</div>
-                    </div>
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="L" className="letter">L</div>
-                    </div>
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="L-s" className="letter">L</div>
-                    </div>
-                    <div className="wrapper">
-                        <div data-inviewport="scale-in" id="S-s" className="letter">S</div>
-                    </div>
-                </div>
+                <Label name="SKILLS"/>
                 <div className='education-container'>
                     <h1>Education</h1>
                     <div className='ed-wrapper'>

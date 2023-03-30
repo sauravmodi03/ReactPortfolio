@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import phoneblack from '../img/phoneblack.png';
 import markerblack from '../img/markerblack.png';
 import mailblack from '../img/mailblack.png';
+import Label from './Label';
 
 class Contact extends React.Component {
 
@@ -66,29 +67,7 @@ class Contact extends React.Component {
                     <div id="email-confirm" onAnimationEnd={this.resetAnimation} className='email-confirmation'>
                         <span>Message sent successfully !</span>
                     </div>
-                    <div id="label">
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="S" className="letter">C</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="K" className="letter">O</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="I" className="letter">N</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="L" className="letter">T</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="L-s" className="letter">A</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="S-s" className="letter">C</div>
-                        </div>
-                        <div className="wrapper">
-                            <div data-inviewport="scale-in" id="S-s" className="letter">T</div>
-                        </div>
-                    </div>
+                    <Label name="CONTACT"/>
                     <main>
                         <form ref={this.form} className="contact-form" onSubmit={this.sendEmail}>
                             <label className='inputs'>Get in touch?</label>

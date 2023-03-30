@@ -15,11 +15,11 @@ function Header() {
         if(window.scrollY > 20) {
           document.getElementById("header").classList.add("head-on-scroll");
           document.getElementById("scroller-wrapper").style.display = "none";
-          document.getElementById("top-scroll-wrapper").style.right = "0";
+          document.getElementById("top-scroll-wrapper").style.animation = "top-scroll-slideInLeft 1s forwards";
         } else {
           document.getElementById("header").classList.remove("head-on-scroll");
           document.getElementById("scroller-wrapper").style.display = "grid";
-          document.getElementById("top-scroll-wrapper").style.right = "-100%";
+          document.getElementById("top-scroll-wrapper").style.animation = "initial";
         }
 
       let scrollTop = window.scrollY;

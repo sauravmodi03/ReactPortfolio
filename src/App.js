@@ -9,8 +9,7 @@ import {Link, Element}  from 'react-scroll';
 import Home from './pages/Home';
 
 import React from 'react';
-import Education from './pages/Education';
-import Project from './pages/Projects';
+import Work from './pages/Work';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Header from './pages/Header';
@@ -70,8 +69,7 @@ class App extends React.Component {
             <Home/>
             <About/>
             <Skills/>
-            <Education/>
-            <Project/>
+            <Work/>
             <Contact/>
         </main>
         <footer>

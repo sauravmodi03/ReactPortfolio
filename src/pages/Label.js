@@ -1,32 +1,34 @@
+import '../css/Label.scss';
 
-function About() {
+
+function Label(props) {
+
+    const letters = props.name.split("");
+    const idName = props.name + "-label";
+
+    const innerWidth = document.documentElement.clientWidth;
+    const innerHeight = document.documentElement.clientHeight;
+
+    document.addEventListener('scroll',function(){
+        var label = document.getElementById(idName);
+        const labelY = label.getBoundingClientRect().y;
+        const elementHeight = label.getBoundingClientRect().height;
+
+        if(innerHeight > labelY){
+            label.style.animation = "labelSlideInTop 1s forwards";
+        } 
+
+    });
+
     return (
-        <div className="Label">
-        <div class="overlay"></div>
-            <div class="text">
-                <div class="wrapper">
-                    <div id="L" class="letter">A</div>
-                    <div class="shadow">A</div> 
+        <div id={idName} className="Label">
+            {letters.map((l,i) => 
+                <div key={i} className="wrapper">
+                    <div key={i} className="letter">{l}</div>
                 </div>
-                <div class="wrapper">
-                    <div id="I" class="letter">B</div>
-                    <div class="shadow">B</div>
-                </div>
-                <div class="wrapper">
-                    <div id="G" class="letter">O</div>
-                    <div class="shadow">O</div>
-                </div>
-                <div class="wrapper">
-                    <div id="H" class="letter">U</div>
-                    <div class="shadow">U</div>
-                </div>
-                <div class="wrapper">
-                    <div id="T" class="letter">T</div>
-                    <div class="shadow">T</div>
-                </div>
-            </div>
+            )}
         </div>
     );
 }
 
-export default About;
+export default Label;

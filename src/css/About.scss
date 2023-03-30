@@ -4,40 +4,6 @@ section{
     display: grid;
 }
 
-#label{
-    font-size: calc(20px + 3vmin);
-    align-self: center;
-    font-family: sans-serif;
-    font-weight: bolder;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    font-style: italic;
-    justify-self: center;
-    gap: 0.5em;
-    filter: drop-shadow(2px 4px 6px grey);
-}
-
-#A{
-    animation: slideInLeft 2s linear forwards 1s;
-}
-#B{
-    animation: slideInLeft 2s linear forwards .8s;
-}
-#O{
-    animation: slideInLeft 2s linear forwards .6s;
-}
-#U{
-    animation: slideInLeft 2s linear forwards .4s;
-}
-#T{
-    animation: slideInLeft 2s linear forwards .2s;
-}
-
-.letter{
-    animation: slideInLeft 5s ease;
-}
-
 .about-info{
     font-size: 20px;
     display: grid;

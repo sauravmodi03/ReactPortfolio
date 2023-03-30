@@ -155,13 +155,14 @@
   text-align: center;
   padding: 5px 0;
   position: fixed;
-  right: -100%;
   bottom: 70px;
   opacity: 1;
   background: #bfb2ad;
-  filter: drop-shadow(2px 4px 6px black);
   display: grid;
   transition: 2s;
+  filter: drop-shadow(2px 4px 6px black);
+  right: 0;
+  transform: translateX(100%);
 }
 
 .top-scroll{
@@ -175,6 +176,13 @@
 @keyframes top-scroll {
   0%{transform: translateY(30%);}
   100%{transform: translateY(-10%);}
+}
+
+@keyframes top-scroll-slideInLeft {
+  100%{transform: translateX(0);}
+}
+@keyframes top-scroll-slideInLeft-reverse {
+  100%{transform: translateX(100%);}
 }
 
 
