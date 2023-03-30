@@ -14,10 +14,9 @@ function Label(props) {
         const labelY = label.getBoundingClientRect().y;
         const elementHeight = label.getBoundingClientRect().height;
 
-        if(innerHeight > labelY){
-            label.style.animation = "labelSlideInTop 1s forwards";
+        if(innerHeight > labelY + elementHeight * 2/3){
+            label.style.animation = "labelSlideInTop 1.5s forwards";
         } 
-
     });
 
     return (

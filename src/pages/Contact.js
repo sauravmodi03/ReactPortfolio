@@ -22,7 +22,26 @@ class Contact extends React.Component {
         this.form = React.createRef();
     };
 
-    use
+    componentDidMount(){
+        console.log("contact");
+        const innerWidth = document.documentElement.clientWidth;
+        const innerHeight = document.documentElement.clientHeight;
+
+        document.addEventListener('scroll',function(){
+            const wrapper = document.querySelector(".contact-wrapper");
+            const form = document.querySelector(".contact-form");
+            const info = document.querySelector(".contact-info-wrapper");
+            
+            const wrapperY = wrapper.getBoundingClientRect().y;
+            const elementHeight = wrapper.getBoundingClientRect().height;
+
+            if(innerHeight > wrapperY + elementHeight/4){
+                wrapper.style.animation = "contact-fadeIn 1.5s forwards";
+                form.style.animation = "form-slideInTop 1.5s forwards";
+                info.style.animation = "infoWrapper-slideInRight 1.5s forwards";
+            }
+        });
+    }
 
     handleChange = (event) =>{
         const name = event.target.name;
@@ -31,6 +50,8 @@ class Contact extends React.Component {
             [name]:value
         });
     }
+
+    useEffect
 
 
     sendEmail = (e) => {
@@ -68,7 +89,7 @@ class Contact extends React.Component {
                         <span>Message sent successfully !</span>
                     </div>
                     <Label name="CONTACT"/>
-                    <main>
+                    <div className='contact-wrapper'>
                         <form ref={this.form} className="contact-form" onSubmit={this.sendEmail}>
                             <label className='inputs'>Get in touch?</label>
                             <input type="text" name="fname" required placeholder="First Name" value={this.state.fname} onChange={this.handleChange} />
@@ -100,7 +121,7 @@ class Contact extends React.Component {
                                 </div>
                             </article>
                         </div>
-                    </main>
+                    </div>
                 </div>
         );
     };

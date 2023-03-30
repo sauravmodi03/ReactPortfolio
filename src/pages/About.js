@@ -10,6 +10,18 @@ import Label from './Label';
 
 export default function About() {
 
+    const innerWidth = document.documentElement.clientWidth;
+    const innerHeight = document.documentElement.clientHeight;
+
+    document.addEventListener('scroll',function(){
+        var label = document.querySelector(".about-info-bg");
+        const labelY = label.getBoundingClientRect().y;
+        const elementHeight = label.getBoundingClientRect().height;
+
+        if(innerHeight > labelY + elementHeight * 2/3){
+            label.style.animation = "slideInLeft-aboutinfo 1.5s forwards";
+        }
+    });
 
     return (
     <div id="about" className='About flex-top-padding'>
@@ -34,7 +46,6 @@ export default function About() {
                     </div>
                 </a>
             </span>
-            
     </div>
     );
 }

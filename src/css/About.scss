@@ -15,6 +15,12 @@ section{
     height: fit-content;
     width: 50%;
     font-size: calc(15px + 2vmin);
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+@keyframes slideInLeft-aboutinfo {
+    to{transform: translateX(0); opacity: 1;}
 }
 
 @keyframes slideInLeft {
