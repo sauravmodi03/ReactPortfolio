@@ -36,8 +36,8 @@ class Contact extends React.Component {
 
             if(innerHeight > wrapperY + elementHeight/4){
                 wrapper.style.animation = "contact-fadeIn 1.5s forwards";
-                form.style.animation = "form-slideInTop 1.5s forwards";
-                info.style.animation = "infoWrapper-slideInRight 1.5s forwards";
+                form.style.animation = "form-slideInTop 1.5s forwards 1.3s";
+                info.style.animation = "infoWrapper-slideInRight 1.5s forwards 1.3s";
             }
         });
     }

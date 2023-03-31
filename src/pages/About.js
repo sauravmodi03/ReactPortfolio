@@ -36,7 +36,7 @@ export default function About() {
     return (
     <div id="about" className='About flex-top-padding'>
             <Label name="ABOUT"></Label>
-            <span className='about-info -drop-shadow'>
+            <div className='about-info -drop-shadow'>
                 <article>
                     <span className='about-info-bg'>A full stack developer with a deep understanding of multiple programming 
                         languages including HTML, CSS, JavaScript, and Java. Along with my proficiency in these languages, I am also 
@@ -55,7 +55,7 @@ export default function About() {
                         <img src={arrow} alt="arrow logo"/>
                     </div>
                 </a>
-            </span>
+            </div>
     </div>
     );
 }

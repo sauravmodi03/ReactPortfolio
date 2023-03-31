@@ -24,6 +24,7 @@
   gap: 0.5em;
   width: 40em;
   justify-content: center;
+  font-family: inherit;
 }
 
 .info-l1{
@@ -31,13 +32,15 @@
   width: fit-content;
   opacity: 0;
   animation: drop 1s linear forwards .4s;
+  font-weight: bold;
 }
 
 .info-l2{
-  font-size: 3em;
+  font-size: 5em;
   width: fit-content;
   opacity: 0;
   animation: drop 1s linear forwards .2s;
+  font-weight: bold;
 }
 
 .info-l3{
@@ -159,28 +162,30 @@
     height: 0px;
     display: grid;
     padding: 5px 0;
+    opacity: 0;
     animation: scrollerDrop 1s linear 1s infinite;
 }
 
 .top-scroll-wrapper{
   border-radius: 5px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   text-align: center;
-  padding: 5px 0;
   position: fixed;
   bottom: 70px;
   opacity: 1;
-  background: #bfb2ad;
+  background: #1cb3c8;
   display: grid;
   transition: 2s;
-  filter: drop-shadow(2px 4px 6px black);
-  right: 0;
-  transform: translateX(100%);
+  filter: drop-shadow(2px 4px 6px rgb(152, 150, 150));
+  right: 1em;
+  transform: translateX(150%);
+  transition: 1s;
 }
 
 .top-scroll{
-  animation: top-scroll 1s linear 2.5s infinite;
+  animation: top-scroll 1.5s linear 2.5s infinite;
   img{
     width: 2em;
     height: 2em;
@@ -189,19 +194,21 @@
 
 @keyframes top-scroll {
   0%{transform: translateY(30%);}
-  100%{transform: translateY(-10%);}
+  100%{transform: translateY(0%);}
 }
 
 @keyframes top-scroll-slideInLeft {
   100%{transform: translateX(0);}
 }
+
 @keyframes top-scroll-slideInLeft-reverse {
-  100%{transform: translateX(100%);}
+  100%{transform: translateX(150%);}
 }
 
 
 @keyframes scrollerDrop {
   0%{ transform: translateY(0);}
+  50%{opacity: 1;}
   100%{ transform: translateY(35px);
         opacity: 0;}
 }
@@ -209,6 +216,8 @@
 @keyframes scrollerScaleUp {
   0%{transform: translateY(200%);
     opacity: 0;}
+  60%{transform: translateY(-10%);}
+  80%{transform: translateY(5%);}
   100%{transform: translateY(0);
   opacity: 1;}
 }

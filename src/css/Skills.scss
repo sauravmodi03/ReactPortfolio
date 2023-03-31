@@ -83,10 +83,14 @@
 }
 
 @keyframes skill-slideInLeft {
-    to{transform: translateX(0); opacity: 1;}
+    60%{transform: translateX(3%);}
+    80%{transform: translateX(-1%);}
+    100%{transform: translateX(0); opacity: 1;}
 }
 
 @keyframes skill-slideInRight {
+    60%{transform: translateX(-3%);}
+    80%{transform: translateX(1%);}
     to{transform: translateX(0); opacity: 1;}
 }
 

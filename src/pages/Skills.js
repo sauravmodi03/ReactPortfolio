@@ -9,6 +9,9 @@ function Skills() {
     const[css, setCSS] = useState(0);
     const[html, setHTML] = useState(0);
     const[javascript, setJavaScript] = useState(0);
+    const[react, setReact] = useState(0);
+    const[angular, setAngular] = useState(0);
+    const[python, setPython] = useState(0);
 
     useEffect(() => {
         var elem = document.querySelector(".java");
@@ -78,6 +81,22 @@ function Skills() {
                     <div className='skills-wrapper skill-slidein-right-animation'>
                         <span className="skill skill-name">JavaScript</span>
                         <div className='bar-wrapper'><div className='bar javascript'>{javascript}%</div></div>
+                    </div>
+                    <div className='skills-wrapper skill-slidein-left-animation'>
+                        <span className="skill skill-name">React</span>
+                        <div className='bar-wrapper'><div className='bar javascript'>{react}%</div></div>
+                    </div>
+                    <div className='skills-wrapper skill-slidein-right-animation'>
+                        <span className="skill skill-name">Angular</span>
+                        <div className='bar-wrapper'><div className='bar javascript'>{angular}%</div></div>
+                    </div>
+                    <div className='skills-wrapper skill-slidein-left-animation'>
+                        <span className="skill skill-name">Python</span>
+                        <div className='bar-wrapper'><div className='bar javascript'>{python}%</div></div>
+                    </div>
+                    <div className='skills-wrapper skill-slidein-right-animation'>
+                        <span className="skill skill-name">Python</span>
+                        <div className='bar-wrapper'><div className='bar javascript'>{python}%</div></div>
                     </div>
                 </div>
         </div>

@@ -22,6 +22,7 @@ import Skills from './pages/Skills';
 import Header from './pages/Header';
 import Contact from './pages/Contact';
 import Flyer from './Components/Flyer/Flyer';
+import NavMenu from './pages/NavMenu';
 
 class App extends React.Component {
   
@@ -58,17 +59,16 @@ class App extends React.Component {
     return (
       <div id="App" className="App" onScroll={this.onScroll}>
         <Flyer/>
-        <Header>
-          <div className="bg-bubbles">
-            <div className="bg-square"></div>
-            <div className="bg-square"></div>
-            <div className="bg-square"></div>
-            <div className="bg-square"></div>
-            <div className="bg-square"></div>
-            <div className="bg-square"></div>
-          </div>
-          <Header/>
-        </Header>
+        <div className="bg-bubbles">
+          <div className="bg-square"></div>
+          <div className="bg-square"></div>
+          <div className="bg-square"></div>
+          <div className="bg-square"></div>
+          <div className="bg-square"></div>
+          <div className="bg-square"></div>
+        </div>
+        <Header/>
+        
         <main className='main'>
             <Home/>
             <About/>
@@ -81,31 +81,34 @@ class App extends React.Component {
             <div className='foo-sec s-1'>
                 <span>WORK WITH ME</span>
                 <span>Hi There</span>
-                <nav id="hire-nav">
-                  <Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link>
+                <nav id="foot-nav" className='foot-nav'>
+                  <Link className="scale" to="home" spy={true} smooth={true} duration={500}>Home</Link>
+                  <Link className="scale" to="about" spy={true} smooth={true} duration={500}>About</Link>
+                  <Link className="scale" to="skills" spy={true} smooth={true} duration={500}>Skills</Link>
+                  <Link className="scale" to="work" spy={true} smooth={true} duration={500}>Work</Link>
                 </nav>
             </div>
             <div className="foo-sec s-2">
-                            <label>Contact information.</label>
-                            <article className='foo-contact'>
-                                <div className="foo-c-w">
-                                    <img src={markerblack} alt=''/>
-                                    <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
-                                </div>
-                                <div className="foo-c-w">
-                                    <img src={mailblack} alt=''/>
-                                    <div className='info-val'>sauravmodi03@gmail.com</div>
-                                </div>
-                                <div className="foo-c-w">
-                                    <img src={markerblack} alt=''/>
-                                    <div className='info-val'>Website</div>
-                                </div>
-                                <div className="foo-c-w">
-                                    <img src={phoneblack} alt=''/>
-                                    <div className='info-val'>+1 312 478 1958</div>
-                                </div>
-                            </article>
-                        </div>
+                  <label>Contact information.</label>
+                  <article className='foo-contact'>
+                      <div className="foo-c-w">
+                          <img src={markerblack} alt=''/>
+                          <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
+                      </div>
+                      <div className="foo-c-w">
+                          <img src={mailblack} alt=''/>
+                          <div className='info-val'>sauravmodi03@gmail.com</div>
+                      </div>
+                      <div className="foo-c-w">
+                          <img src={markerblack} alt=''/>
+                          <div className='info-val'>Website</div>
+                      </div>
+                      <div className="foo-c-w">
+                          <img src={phoneblack} alt=''/>
+                          <div className='info-val'>+1 312 478 1958</div>
+                      </div>
+                  </article>
+              </div>
             <div className='foo-sec s-3'>
                 <span>Connect</span>
                 <span>

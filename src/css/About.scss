@@ -7,6 +7,10 @@ section{
 .about-info{
     font-size: 20px;
     display: grid;
+    // background: #adadbc29;
+    border-radius: 20px 0;
+    padding: 20px;
+    gap: 1em;
 }
 .about-info-bg{
     border-radius: 20px;
@@ -43,6 +47,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .resumeLink{
