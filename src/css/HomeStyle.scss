@@ -4,6 +4,11 @@
 .Home{
   height: calc(100vh - 200px);
   gap: 5em;
+  justify-content: center;
+
+  @media #{Media.$iphone-landscape}{
+    flex-direction: column-reverse;
+  }
 }
 
 .Home-main img {
@@ -15,6 +20,16 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+
+    @media #{Media.$ipad-pro-portrait}{
+      flex-direction: column-reverse;
+    }
+
+    @media #{Media.$iphone-portrait}{
+      padding: 0;
+      min-height: 100vh;
+    }
+
 }
 
 .info{
@@ -56,15 +71,23 @@
   padding: 10px;
 }
 
-.avatar img{
+.avatar-container img{
   transition: transform .2s;
   animation: scale-in 4s ease-in;
   animation-duration: .4s;
+  filter: drop-shadow(2px 4px 6px grey);
+  animation: avatarScaleIn 1.5s ease-out;
+  margin: 0 auto;
+
+
+  @media #{Media.$ipad-pro-portrait}{
+      max-width: 20em;
+  }
 }
 
-.avatar img:hover{
-  transform: scale(1.5);
-}
+// .avatar img:hover{
+//   transform: scale(1.5);
+// }
 
 #hire-me{
     background: #2cc1c100;
@@ -114,11 +137,6 @@
 @keyframes hire-slideInLeft {
   0%{transform: translateX(-100%);opacity: 10%;}
   100%{transform: translateX(0);opacity: 1;}
-}
-
-#avatar{
-  filter: drop-shadow(2px 4px 6px grey);
-  animation: avatarScaleIn 1.5s ease-out;
 }
 
 /* #avatar:hover{
@@ -223,15 +241,8 @@
 }
 
 @media #{Media.$ipad-pro-landscape}{
-  .Home{
-    padding: 0;
-    min-height: 100vh;
-  }
   .nav-link-wrap{
     margin-right: 5%;
-  }
-  #avatar{
-    max-width: 350px;
   }
 }
 

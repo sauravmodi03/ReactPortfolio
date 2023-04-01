@@ -16,8 +16,8 @@ function Home() {
                         <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
                     </span>
                 </section>
-                <section id="avatar-container">
-                    <img id="avatar" src={manLogo} alt="Avatar Logo"/>
+                <section id="avatar-container" className="avatar-container">
+                    <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
                 </section>
             </article>
             <Link id="scroller-wrapper" className='scroller-wrapper' to='about' spy={true} smooth={true} duration={500}>

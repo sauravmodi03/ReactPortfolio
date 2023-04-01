@@ -56,7 +56,7 @@ function Skills() {
     return (
         <div id="skills" className='Skills flex-top-padding'>
                 <Label name="SKILLS"/>
-                <div className='education-container'>
+                {/* <div className='education-container'>
                     <h1>Education</h1>
                     <div className='ed-wrapper'>
                         <h2>Date</h2>
@@ -64,7 +64,7 @@ function Skills() {
                             information
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className='skills-container'>
                     <div className='skills-wrapper skill-slidein-left-animation'>
                         <span className="skill skill-name">JAVA</span>

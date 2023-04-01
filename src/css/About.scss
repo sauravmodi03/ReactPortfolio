@@ -21,6 +21,11 @@ section{
     font-size: calc(15px + 2vmin);
     transform: translateX(-100%);
     opacity: 0;
+
+    @media #{Media.$ipad-pro-landscape}{
+        font-size: calc(10px + 2vmin);
+        padding: 0;  
+    }
 }
 
 @keyframes slideInLeft-aboutinfo {
@@ -30,6 +35,13 @@ section{
 .about-pic{
     opacity: 0;
     transform: translateX(50%);
+}
+
+.about-pic img{
+
+    @media #{Media.$ipad-pro-landscape}{
+        width: 15em;
+      }
 }
 
 @keyframes slideInLeft-aboutpic {
@@ -92,9 +104,7 @@ section{
 }
 
 
-@media #{Media.$ipad-pro-landscape}{
-    
-  }
+
 
   @media #{Media.$ipad-pro-portrait}{
    
