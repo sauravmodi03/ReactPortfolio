@@ -29,21 +29,8 @@
 .App main{
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 50px;
   z-index: 1;
   position: relative;
-
-  .About, .Skills, .Work, .Contact{
-    padding: 100px 0;
-
-    @media #{Media.$iphone-portrait}{
-      padding: 70px 0;
-    }
-  }
-
-  @media #{Media.$iphone-portrait}{
-    padding: 0 20px;
-  }
 }
 
 .flex-top-padding{
@@ -51,6 +38,15 @@
   min-height: 100vh;
   flex-flow: column;
   justify-content: flex-start;
+  padding: 100px 50px;
+
+  @media #{Media.$iphone-portrait}{
+    padding: 70px 20px;
+  }
+
+  @media #{Media.$iphone-landscape}{
+    padding: 40px 20px;
+  }
 }
 
 

@@ -8,6 +8,15 @@
 
   @media #{Media.$iphone-landscape}{
     flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+
+  @media #{Media.$iphone-portrait}{
+    justify-content: flex-start;
+  }
+
+  @media #{Media.$ipad-pro-portrait}{
+    justify-content: flex-start;
   }
 }
 
@@ -27,9 +36,10 @@
 
     @media #{Media.$iphone-portrait}{
       padding: 0;
-      min-height: 100vh;
+      min-height: auto;
+      justify-content: center;
+      flex-direction: column-reverse;
     }
-
 }
 
 .info{
@@ -40,6 +50,20 @@
   width: 40em;
   justify-content: center;
   font-family: inherit;
+  padding: 10px;
+
+  @media #{Media.$ipad-pro-portrait}{
+    width: auto;
+  }
+
+  @media #{Media.$iphone}{
+    width: auto;
+  }
+
+  @media #{Media.$iphone-landscape}{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
 }
 
 .info-l1{
@@ -48,6 +72,10 @@
   opacity: 0;
   animation: drop 1s linear forwards .4s;
   font-weight: bold;
+
+  @media #{Media.$iphone}{
+    font-size: 2em;
+  }
 }
 
 .info-l2{
@@ -56,6 +84,10 @@
   opacity: 0;
   animation: drop 1s linear forwards .2s;
   font-weight: bold;
+
+  @media #{Media.$iphone}{
+    font-size: 2em;
+  }
 }
 
 .info-l3{
@@ -63,27 +95,39 @@
   text-align: justify;
   opacity: 0;
   animation: drop 1s linear forwards;
+
+  @media #{Media.$iphone}{
+    font-size: 1.2em;
+  }
 }
 
 .info-bg {
   border-radius: 20px 0;
   filter: drop-shadow(2px 4px 6px grey);
-  padding: 10px;
 }
 
-.avatar-container img{
-  transition: transform .2s;
-  animation: scale-in 4s ease-in;
-  animation-duration: .4s;
-  filter: drop-shadow(2px 4px 6px grey);
-  animation: avatarScaleIn 1.5s ease-out;
-  margin: 0 auto;
+.avatar-container{
+  padding: 10px;
 
-
-  @media #{Media.$ipad-pro-portrait}{
-      max-width: 20em;
+  img{
+    transition: transform .2s;
+    animation: scale-in 4s ease-in;
+    animation-duration: .4s;
+    filter: drop-shadow(2px 4px 6px grey);
+    animation: avatarScaleIn 1.5s ease-out;
+    margin: auto;
+  
+    @media #{Media.$ipad-pro-portrait}{
+        max-width: 20em;
+    }
+  
+    @media #{Media.$iphone}{
+      max-width: 12em;
+    }
   }
 }
+
+.avatar-container 
 
 // .avatar img:hover{
 //   transform: scale(1.5);
@@ -95,6 +139,10 @@
     font-size: 2em;
     font-weight: bold;
     transition: transform 0.5s;
+
+    @media #{Media.$iphone}{
+      font-size: 1em;
+    }
 }
 
 // #hire-nav:hover{
@@ -114,11 +162,14 @@
     padding: 10px 10px;
     border: 2px solid #3c415e;
     border-radius: 20px 0;
-    align-self: flex-end;
 
     &:active{
       background: rgb(60 65 94);
       color: white;
+    }
+
+    @media #{Media.$iphone}{
+      border-radius: 15px 0;
     }
 }
 
@@ -131,6 +182,15 @@
     &:hover{
       background: rgb(162, 184, 198);
       transform: scale(1.2);
+    }
+
+    @media #{Media.$ipad-pro-landscape}{
+      align-self: flex-start;
+    }
+
+    @media #{Media.$iphone-portrait}{
+      align-self: flex-start;
+      margin-top: 1em;
     }
 }
 
@@ -170,6 +230,10 @@
     bottom: 70px;
     opacity: 1;
     align-self: center;
+
+    @media #{Media.$iphone}{
+      bottom: 10px;
+    }
 }
 
 .scroller{
@@ -240,83 +304,18 @@
   opacity: 1;}
 }
 
-@media #{Media.$ipad-pro-landscape}{
-  .nav-link-wrap{
-    margin-right: 5%;
-  }
-}
+// @media #{Media.$ipad-pro-landscape}{
+//   .nav-link-wrap{
+//     margin-right: 5%;
+//   }
+// }
 
 @media #{Media.$ipad-pro-portrait}{
-  #avatar {
-    max-width: 20em;
-  }
-  .info{
-    width: auto;
-  }
-  .nav-link-wrap{
-    padding-right: 10%;
-    margin: 0;
-  }
-  .Home{
-    flex-direction: column-reverse;
-  }
-}
 
-@media #{Media.$iphone-landscape}{
-  #avatar-container img{
-    max-width: 10em;
-  }
-  .info{
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      padding: 0;
-      justify-self: center;
-  }
-  .info-l1{
-      font-size: 2em;
-  }
-  .info-l2{
-      font-size: 1.5em;
-  }
-  .info-l3{
-      font-size: 1.2em;
-  } 
-}
-
-@media #{Media.$iphone-portrait}{
-  .info-l1{
-    font-size: 3em;
-  }
-  .info-l2{
-    font-size: 2em;
-  }
-  .info-l3{
-    font-size: 1.5em;
-  }
-  .info-bg{
-    background: #ffffffb0;
-  }
-  .info{
-    align-self: center;
-    position: static;
-    width: auto;
-  }
-  .Home-main{
-    left: 0;
-  }
-  #Flyer{
-    margin: 0;
-  }
-  #avatar-container img{
-    max-width: 15em;
-  }
-  .Home{
-    flex-direction: column-reverse;
-    justify-items: center;
-    align-items: center;
-    gap: 2em;
-  }
+  // .nav-link-wrap{
+  //   padding-right: 10%;
+  //   margin: 0;
+  // }
 }
 
 @keyframes scale-in {
