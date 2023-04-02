@@ -58,6 +58,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="App" className="App" onScroll={this.onScroll}>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <Flyer/>
         <div className="bg-bubbles">
           <div className="bg-square"></div>

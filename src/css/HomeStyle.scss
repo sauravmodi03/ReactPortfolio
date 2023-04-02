@@ -56,7 +56,7 @@
     width: auto;
   }
 
-  @media #{Media.$iphone}{
+  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     width: auto;
   }
 
@@ -73,7 +73,7 @@
   animation: drop 1s linear forwards .4s;
   font-weight: bold;
 
-  @media #{Media.$iphone}{
+  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 2em;
   }
 }
@@ -85,7 +85,7 @@
   animation: drop 1s linear forwards .2s;
   font-weight: bold;
 
-  @media #{Media.$iphone}{
+  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 2em;
   }
 }
@@ -96,7 +96,7 @@
   opacity: 0;
   animation: drop 1s linear forwards;
 
-  @media #{Media.$iphone}{
+  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 1.2em;
   }
 }
@@ -121,7 +121,7 @@
         max-width: 20em;
     }
   
-    @media #{Media.$iphone}{
+    @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       max-width: 12em;
     }
   }
@@ -140,7 +140,7 @@
     font-weight: bold;
     transition: transform 0.5s;
 
-    @media #{Media.$iphone}{
+    @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       font-size: 1em;
     }
 }
@@ -168,7 +168,7 @@
       color: white;
     }
 
-    @media #{Media.$iphone}{
+    @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       border-radius: 15px 0;
     }
 }
@@ -231,7 +231,7 @@
     opacity: 1;
     align-self: center;
 
-    @media #{Media.$iphone}{
+    @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       bottom: 10px;
     }
 }
