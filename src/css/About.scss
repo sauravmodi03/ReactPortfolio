@@ -11,9 +11,12 @@ section{
     border-radius: 20px 0;
     padding: 20px;
     gap: 1em;
+
+    @media #{Media.$iphone-portrait}{
+        padding: 0;
+    }
 }
 .about-info-bg{
-    border-radius: 20px;
     padding: 25px;
     text-align:justify;
     height: fit-content;
@@ -29,6 +32,17 @@ section{
 
     @media #{Media.$ipad-pro-portrait}{
         width: 100%;
+    }
+
+    @media #{Media.$iphone-portrait}{
+        width: 100%;
+        font-size: calc(10px + 2vmin);
+        padding: 20px;
+    }
+    @media #{Media.$iphone-landscape}{
+        width: 60%;
+        font-size: calc(10px + 2vmin);
+        padding: 20px;
     }
 }
 
@@ -48,6 +62,9 @@ section{
     }
     @media #{Media.$ipad-pro-portrait}{
         width: 10em;
+    }
+    @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
+        width: 6em;
     }
 }
 
@@ -69,6 +86,10 @@ section{
     align-items: center;
 
     @media #{Media.$ipad-pro-portrait}{
+        flex-direction: column-reverse;
+    }
+
+    @media #{Media.$iphone-portrait}{
         flex-direction: column-reverse;
     }
 }
@@ -114,15 +135,6 @@ section{
     100%{transform: translateY(30%);}
 }
   
-
-  @media #{Media.$iphone-portrait}{
-    .About{
-        min-height: 100vh;
-    }
-    .about-info img{
-        display: none;
-    }
-  }
   @media #{Media.$iphone-landscape} {
     .About{
         padding: 60px 0;
