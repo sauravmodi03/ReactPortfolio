@@ -11,11 +11,7 @@
     padding: 0 20px;
   }
 
-  @media #{Media.$iphone-portrait}{
-    justify-content: flex-start;
-  }
-
-  @media #{Media.$ipad-pro-portrait}{
+  @media #{Media.$ipad-pro-portrait}, #{Media.$iphone-portrait}, #{Media.$ipad-pro-landscape}{
     justify-content: flex-start;
   }
 }
@@ -127,8 +123,6 @@
   }
 }
 
-.avatar-container 
-
 // .avatar img:hover{
 //   transform: scale(1.5);
 // }
@@ -178,6 +172,7 @@
     border-radius: 20px 0;
     align-self: flex-end;
     transition: 1s;
+    margin-top: 1em;
 
     &:hover{
       background: rgb(162, 184, 198);

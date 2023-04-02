@@ -26,6 +26,10 @@ section{
         font-size: calc(10px + 2vmin);
         padding: 0;  
     }
+
+    @media #{Media.$ipad-pro-portrait}{
+        width: 100%;
+    }
 }
 
 @keyframes slideInLeft-aboutinfo {
@@ -41,7 +45,10 @@ section{
 
     @media #{Media.$ipad-pro-landscape}{
         width: 15em;
-      }
+    }
+    @media #{Media.$ipad-pro-portrait}{
+        width: 10em;
+    }
 }
 
 @keyframes slideInLeft-aboutpic {
@@ -60,6 +67,10 @@ section{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    @media #{Media.$ipad-pro-portrait}{
+        flex-direction: column-reverse;
+    }
 }
 
 .resumeLink{
@@ -102,16 +113,7 @@ section{
     0%{transform: translateY(-20%);}
     100%{transform: translateY(30%);}
 }
-
-
-
-
-  @media #{Media.$ipad-pro-portrait}{
-   
-    .about-info img{
-        width: 10em;
-    }
-  }
+  
 
   @media #{Media.$iphone-portrait}{
     .About{
