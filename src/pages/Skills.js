@@ -21,6 +21,9 @@ function Skills() {
             html < 80 && setHTML(html + 1);
             css < 70 && setCSS(css + 1);
             javascript < 60 && setJavaScript(javascript + 1);
+            react < 50 && setReact(react + 1);
+            angular < 50 && setAngular(angular + 1);
+            python < 50 && setPython(python + 1);
         }, 2800/90);
         return () => clearInterval(timer);
     }, [java]);

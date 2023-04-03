@@ -1,9 +1,6 @@
 @use '../css/Media';
 
-// #contact article{
-//     display: flex;
-//     flex-direction: row;
-// }
+
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -12,6 +9,10 @@
     gap: 1em;
     opacity: 0;
     transform: translateY(50%);
+
+    @media #{Media.$iphone-portrait},#{Media.$iphone-landscape} {
+        width: auto;
+    }
 }
 
 @keyframes form-slideInTop {
@@ -44,6 +45,7 @@ textarea, input[type="text"], input[type="email"]{
         transform: scale(1.05);
     }
 }
+
 textarea{
     height: 250px;
     font-size: 15px;
@@ -51,6 +53,14 @@ textarea{
     resize:vertical;
     overflow: hidden;
     padding: 10px;
+
+    @media #{Media.$ipad-pro-landscape}{
+        height: 180px;
+    }
+
+    @media #{Media.$iphone-portrait}{
+        height: 150px;
+    }
 }
 
 input[type="submit"]{
@@ -78,6 +88,7 @@ input[type="submit"]{
         color: white;
     }
 }
+
 #textarea-label{
     align-self: normal;
     margin-top: 10px;
@@ -94,6 +105,7 @@ input[type="submit"]{
     animation: drop 1s linear forwards;
     opacity: 0;
 }
+
 .email-confirmation span{
     align-self: center;
     border: 1px solid grey;
@@ -115,6 +127,10 @@ input[type="submit"]{
     padding: 25px;
     opacity: 0;
     transform: translateX(100%);
+
+    @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
+        width: auto;
+    }
 }
 
 @keyframes infoWrapper-slideInRight {
@@ -133,6 +149,15 @@ input[type="submit"]{
     margin: 0 auto;
     transform: scale(.6);
     opacity: 0;
+
+    @media #{Media.$iphone-portrait}{
+        width: auto;
+        flex-direction: column-reverse;
+    }
+
+    @media #{Media.$iphone-landscape}{
+        width: auto;
+      }
 }
 
 @keyframes contact-fadeIn {
@@ -160,8 +185,6 @@ input[type="submit"]{
     width: 25px;
 }
 
-
-
 @keyframes dropFade {
     0%{ transform: translateY(-150%);
         opacity: 0;}
@@ -170,57 +193,5 @@ input[type="submit"]{
     100%{opacity: 0;}
 }
 
-@media #{Media.$ipad-pro-landscape}{
-    .Contact{
-        padding: 100px 50px;
-        display: flex;
-        align-items: center;
-        min-height: 100vh;
-    }   
-    textarea{
-        height: 180px;
-    }
-  }
-
-  @media #{Media.$ipad-pro-portrait}{
-    .Contact{
-        padding: 100px 30px;
-        display: flex;
-        align-items: center;
-        min-height: 100vh;
-        justify-content: flex-start;
-    }
-    #contact article{
-        flex-direction: column-reverse;
-    }
-  }
-
-  @media #{Media.$iphone-portrait}{
-    .Contact{
-        padding: 20% 5%;
-    }
-    .contact-wrapper, .contact-form, .contact-info-wrapper{
-        width: auto;
-    }
-    .contact-wrapper{
-        flex-direction: column-reverse;
-    }
-    textarea{
-        height: 150px;
-    }
-    .skills-container{
-        justify-content: center;
-    }
-  }
-
-  @media #{Media.$iphone-landscape}{
-    .Contact{
-        padding: 0;
-    }
-    .contact-wrapper, .contact-form, .contact-info-wrapper{
-        width: auto;
-    }
-  }
-  
 
 

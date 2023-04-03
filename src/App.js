@@ -124,9 +124,6 @@ class App extends React.Component {
                 </span>
                 <span>Copyright</span>
             </div>
-            <div className='foo-sec s-4'>
-
-            </div>
           </div>
         </footer>
       </div>
