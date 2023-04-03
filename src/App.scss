@@ -35,10 +35,10 @@
 
 .flex-top-padding{
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 200px);;
   flex-flow: column;
   justify-content: flex-start;
-  padding: 100px 50px;
+  padding: 100px 20px;
 
   @media #{Media.$iphone-portrait}{
     padding: 70px 20px;

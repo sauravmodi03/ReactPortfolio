@@ -40,6 +40,13 @@ class App extends React.Component {
     this.setState({
       scrollTop: scrollTop
     })
+
+      let scrollToTop = window.scrollY;
+      let docHeight = document.body.offsetHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollToTop / (docHeight - winHeight);
+      let scrollPercentRounded = Math.round(scrollPercent * 100);
+      document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
   }
   
 
@@ -68,8 +75,8 @@ class App extends React.Component {
           <div className="bg-square"></div>
           <div className="bg-square"></div>
         </div>
+        <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
         <Header/>
-        
         <main className='main'>
             <Home/>
             <About/>

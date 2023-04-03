@@ -56,9 +56,8 @@ function Header() {
     }
 
 return( 
-        <div className='Header'>
-            <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
-            <header id="header" className="App-header">
+        <div id="header" className='Header'>
+            <header  className="head-wrapper">
                 <nav id="smodi"><Link className="scale" to="#" spy={true} smooth={true} duration={500}></Link>SMODI</nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
