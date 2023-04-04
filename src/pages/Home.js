@@ -20,7 +20,6 @@ function Home() {
     return (
         <div id="home" className="Home flex-top-padding">
             <article>
-            
                 <section id="avatar-container" className="avatar-container">
                     <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
                 </section>

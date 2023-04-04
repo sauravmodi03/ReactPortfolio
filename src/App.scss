@@ -7,8 +7,7 @@
   .-fl-c-c {display: flex; flex-direction: row; justify-content: center;}
   .-fl-c-sb {display: flex; flex-direction: row; justify-content: space-between;}
   .-fl-c-sa {display: flex; flex-direction: row; justify-content: space-around;}
-  
-  .-drop-shadow{filter: drop-shadow(2px 4px 6px grey);}
+
 
   /* Hide scrollbar for Chrome, Safari and Opera */
 .App::-webkit-scrollbar {
@@ -38,7 +37,7 @@
   min-height: calc(100vh - 200px);;
   flex-flow: column;
   justify-content: flex-start;
-  padding: 100px 50px;
+  padding: 100px 50px 0;
 
   @media #{Media.$iphone-portrait}{
     padding: 70px 20px;

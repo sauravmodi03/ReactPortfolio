@@ -1,8 +1,10 @@
 
 import '../css/About.scss';
 import React, {useEffect,  useRef } from 'react';
-import about from '../img/about.png';
+import about from '../img/self.png';
 import arrow from '../img/arrow-white.png';
+import resumeqr from '../img/ResumeQR.png';
+import QRlogo from '../img/QR-black.png';
 import download from '../img/download-white.png';
 import {Link}  from "react-router-dom";
 import Resume from '../data/Resume.pdf';
@@ -33,31 +35,51 @@ export default function About() {
 
     });
 
+    const manageQR = () => {
+        var qrcode = document.querySelector(".resume-qr");
+        qrcode.classList.toggle("show-qr");
+    }
+
     return (
     <div id="about" className='About flex-top-padding'>
             <Label name="ABOUT"></Label>
             <div className='about-info -drop-shadow'>
                 <article>
-                    <span className='about-info-bg'>
-                        Hi, I'm Saurav, Software Developer.!
-                    </span>
+                    <section>
+                        <span className='info-l1 about-info-bg'>
+                            Hi, I'm Saurav
+                        </span>
+                        <span className='info-l1 about-info-bg'>
+                            Full Stack Developer!
+                        </span>
+                    </section>
                     <span className='about-pic'>
                         <img src={about} alt="About logo"></img>
                     </span>
-                    <span className=''>A full stack developer with a deep understanding of multiple programming 
-                        languages including HTML, CSS, JavaScript, and Java. Along with my proficiency in these languages, I am also 
-                        experienced in utilizing popular frameworks like Angular, React, and Bootstrap to create robust and efficient 
-                        solutions. My skillset allows me to deliver high-quality solutions that meet the needs of clients and end-users 
-                        alike. I stay up-to-date with the latest trends and technologies to ensure that my work remains innovative 
-                        and effective.
-                    </span>
+                    <section className=''>
+                        <span> About Me</span>
+                        <span> Languages I speak: Java, HTML, CSS, JavaScript, Python</span>
+                        <span> Framework knowledge: Spring, React, Angular, Bootstrap</span>
+                        <span> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</span>
+                        <span> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
+                            meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
+                            and technologies to ensure that my work remains innovative and effective.</span>
+                    </section>
                 </article>
-                <a href={Resume} className="resumeLink scale" download="Resume_SauravModi">
-                    <span>Resume</span>
-                    <div className='download-wrapper'>
-                        <img src={arrow} alt="arrow logo"/>
-                    </div>
-                </a>
+                <div className='resume-link-wrap'>
+                    <a href={Resume} className="resumeLink scale" download="Resume_SauravModi">
+                        <span>Resume</span>
+                        <div className='download-wrapper'>
+                            <img src={arrow} alt="arrow logo"/>
+                        </div>
+                    </a>
+                    <a onClick={manageQR} className="qr-wrapper">
+                        <img id="qr-logo" src={QRlogo} alt="QR logo"/>
+                    </a>
+                </div>
+                <div className='resume-qr'>
+                            <img src={resumeqr} alt="Resume logo"/>
+                </div>
             </div>
     </div>
     );

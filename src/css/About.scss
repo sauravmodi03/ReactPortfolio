@@ -5,11 +5,14 @@ section{
 }
 
 .about-info{
-    font-size: 20px;
+    font-size: 2em;
     display: grid;
     border-radius: 20px 0;
     padding: 20px;
     gap: 1em;
+    font-family: ui-monospace;
+    background: #aeaeafc2;
+    transition: 1s ease;
 
     @media #{Media.$iphone-portrait}{
         padding: 0;
@@ -17,11 +20,8 @@ section{
 }
 
 .about-info-bg{
-    padding: 25px;
-    text-align:justify;
     height: fit-content;
-    width: 50%;
-    font-size: calc(15px + 2vmin);
+    font-size: calc(2rem + 2vmin);
     transform: translateX(-100%);
     opacity: 0;
 
@@ -82,22 +82,25 @@ section{
 
 .about-info article{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
+    row-gap: 3rem;
 
-    @media #{Media.$ipad-pro-portrait}{
-        flex-direction: column-reverse;
+    section{
+        grid-gap: 1rem;
     }
+}
 
-    @media #{Media.$iphone-portrait}{
-        flex-direction: column-reverse;
-    }
+.resume-link-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
 }
 
 .resumeLink{
     background: #3c415e;
-    margin: auto;
     text-align: center;
     text-decoration: none;
     padding: 10px;
@@ -110,6 +113,7 @@ section{
     align-items: center;
     opacity: 0;
     transform: translateY(100%);
+    width: fit-content;
 }
 
 @keyframes resumeSlideInBottom {
@@ -135,4 +139,44 @@ section{
     0%{transform: translateY(-20%);}
     100%{transform: translateY(30%);}
 }
-  
+
+.qr-wrapper{
+    display: grid;
+
+    #qr-logo{
+        width: 1.5em;
+        margin: auto;
+    }
+    img{
+        width: 5em;
+    }
+
+    // &::before{
+    //     content: '';
+    //     background: url("../img/ResumeQR.png") no-repeat;
+    //     background-size: 10em 10em;
+    //     max-width: 20em;
+    //     max-height: 20em;
+    //     top: 50%;
+    //     left: 50%;
+    //     position: relative;
+    // }
+}
+
+.resume-qr{
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    justify-self: center;
+    transition: 1s ease;
+    height: 0;
+    overflow: hidden;
+    
+    img{
+        width: 10em;
+    }
+}
+
+.show-qr{
+    height: calc(8em + 2vmin);
+}
