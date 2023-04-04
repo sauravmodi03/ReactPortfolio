@@ -12,9 +12,6 @@
     padding: 0 50px;
   }
 
-  @media #{Media.$ipad-pro-portrait}, #{Media.$iphone-portrait}, #{Media.$ipad-pro-landscape}{
-    justify-content: flex-start;
-  }
 }
 
 .Home-main img {
@@ -26,16 +23,16 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    flex-direction: column;
+    gap: 2em;
 
-    @media #{Media.$ipad-pro-portrait}{
-      flex-direction: column-reverse;
-    }
+    // @media #{Media.$ipad-pro-portrait}{
+    //   flex-direction: column-reverse;
+    // }
 
-    @media #{Media.$iphone-portrait}{
-      padding: 0;
-      min-height: auto;
-      justify-content: center;
-      flex-direction: column-reverse;
+    @media #{Media.$iphone-landscape}{
+      // padding: 0;
+      flex-direction: row-reverse;
     }
 }
 
@@ -44,7 +41,6 @@
   flex-direction: column;
   font-family: monospace;
   gap: 0.5em;
-  width: 40em;
   justify-content: center;
   font-family: inherit;
   padding: 10px;
@@ -76,11 +72,12 @@
 }
 
 .info-l2{
-  font-size: 5em;
+  font-size: calc(2em + 2vmin);
   width: fit-content;
   opacity: 0;
   animation: drop 1s linear forwards .2s;
   font-weight: bold;
+  align-self: center;
 
   @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 2em;
@@ -113,6 +110,7 @@
     filter: drop-shadow(2px 4px 6px grey);
     animation: avatarScaleIn 1.5s ease-out;
     margin: auto;
+    width: calc(15em + 2vmin);
   
     @media #{Media.$ipad-pro-portrait}{
         max-width: 20em;
@@ -171,7 +169,7 @@
 .hire-link-wrap{
     max-width: fit-content;
     border-radius: 20px 0;
-    align-self: flex-end;
+    align-self: center;
     transition: 1s;
     margin-top: 1em;
 
@@ -191,7 +189,7 @@
 }
 
 @keyframes hire-slideInLeft {
-  0%{transform: translateX(-100%);opacity: 10%;}
+  0%{transform: translateX(-100%);opacity: 0;}
   100%{transform: translateX(0);opacity: 1;}
 }
 
@@ -215,7 +213,7 @@
 }
 
 .scroller-wrapper{
-    border: 2px solid #{Media.$bg-color-2};
+    border: 3px solid #{Media.$bg-color-2};
     border-radius: 20px;
     width: 30px;
     height: 40px;

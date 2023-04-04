@@ -20,17 +20,18 @@ function Home() {
     return (
         <div id="home" className="Home flex-top-padding">
             <article>
+            
+                <section id="avatar-container" className="avatar-container">
+                    <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
+                </section>
                 <section className="info">
-                    <span className='info-l1 info-bg'>Hi,</span>
-                    <span className='info-l2 info-bg'>I'm Saurav!</span>
+                <span className='info-l2 info-bg'>Full Stack Developer</span>
+                    {/* <span className='info-l1 info-bg'>Hi, I'm Saurav!</span> */}
                     <span className='info-l3 info-bg'>I design and build innovative software solutions to help 
                                 businesses streamline their processes and achieve their goals.</span>
                     <span className='hire-link-wrap'>
                         <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>
                     </span>
-                </section>
-                <section id="avatar-container" className="avatar-container">
-                    <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
                 </section>
             </article>
             <Link id="scroller-wrapper" className='scroller-wrapper' to='about' spy={true} smooth={true} duration={500}>

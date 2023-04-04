@@ -56,6 +56,7 @@ section{
 }
 
 .about-pic img{
+    width: calc(10em + 2vmin);
 
     @media #{Media.$ipad-pro-landscape}{
         width: 15em;

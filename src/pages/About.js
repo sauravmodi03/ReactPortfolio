@@ -38,15 +38,18 @@ export default function About() {
             <Label name="ABOUT"></Label>
             <div className='about-info -drop-shadow'>
                 <article>
-                    <span className='about-info-bg'>A full stack developer with a deep understanding of multiple programming 
+                    <span className='about-info-bg'>
+                        Hi, I'm Saurav, Software Developer.!
+                    </span>
+                    <span className='about-pic'>
+                        <img src={about} alt="About logo"></img>
+                    </span>
+                    <span className=''>A full stack developer with a deep understanding of multiple programming 
                         languages including HTML, CSS, JavaScript, and Java. Along with my proficiency in these languages, I am also 
                         experienced in utilizing popular frameworks like Angular, React, and Bootstrap to create robust and efficient 
                         solutions. My skillset allows me to deliver high-quality solutions that meet the needs of clients and end-users 
                         alike. I stay up-to-date with the latest trends and technologies to ensure that my work remains innovative 
                         and effective.
-                    </span>
-                    <span className='about-pic'>
-                        <img src={about} alt="About logo"></img>
                     </span>
                 </article>
                 <a href={Resume} className="resumeLink scale" download="Resume_SauravModi">
