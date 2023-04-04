@@ -14,20 +14,17 @@ function Header() {
       const handleScroll = () => {
         if(window.scrollY > 20) {
           document.getElementById("header").classList.add("head-on-scroll");
-          document.getElementById("scroller-wrapper").style.display = "none";
-          document.getElementById("top-scroll-wrapper").style.animation = "top-scroll-slideInLeft 1s forwards";
         } else {
           document.getElementById("header").classList.remove("head-on-scroll");
-          document.getElementById("scroller-wrapper").style.display = "grid";
-          document.getElementById("top-scroll-wrapper").style.animation = "initial";
         }
 
-      let scrollTop = window.scrollY;
-      let docHeight = document.body.offsetHeight;
-      let winHeight = window.innerHeight;
-      let scrollPercent = scrollTop / (docHeight - winHeight);
-      let scrollPercentRounded = Math.round(scrollPercent * 100);
-      document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
+        let scrollTop = window.scrollY;
+        let docHeight = document.body.offsetHeight;
+        let winHeight = window.innerHeight;
+        let scrollPercent = scrollTop / (docHeight - winHeight);
+        let scrollPercentRounded = Math.round(scrollPercent * 100);
+        
+        document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
       };
 
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 
@@ -46,7 +43,6 @@ function Header() {
         menu.style.width="80%";
         menu.style.left="10%";
         document.getElementById("nav-bg-portrait").classList.add("nav-greyout");
-        // classList.add("nav-greyout");
     }
 
     const handleNavMenu = () => {

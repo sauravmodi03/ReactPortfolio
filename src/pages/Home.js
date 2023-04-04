@@ -3,7 +3,20 @@ import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
 import arrow from '../img/arrow-up-w.png';
 
+
 function Home() {
+
+    window.addEventListener('scroll', function(){
+        if(window.scrollY > 20) {
+            console.log("scrolling mobile");
+            document.getElementById("scroller-wrapper").style.display = "none";
+            document.getElementById("top-scroll-wrapper").style.right = "0";
+        }else{
+            document.getElementById("scroller-wrapper").style.display = "grid";
+            document.getElementById("top-scroll-wrapper").style.right = "-100%";
+        }
+    });
+
     return (
         <div id="home" className="Home flex-top-padding">
             <article>

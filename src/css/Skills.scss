@@ -26,6 +26,10 @@
     width: 30em;
     gap: 10px;
 
+    &:hover{
+        transform: scale(1.2);
+    }
+
     @media #{Media.$ipad-pro-landscape}{
         width: 25em;
     }
