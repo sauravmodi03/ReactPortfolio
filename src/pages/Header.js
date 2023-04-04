@@ -45,14 +45,15 @@ function Header() {
         var menu = document.getElementById("nav-link-wrap");
         menu.style.width="80%";
         menu.style.left="10%";
-        document.getElementById("nav-bg-portrait").classList.toggle("nav-greyout");
+        document.getElementById("nav-bg-portrait").classList.add("nav-greyout");
+        // classList.add("nav-greyout");
     }
 
     const handleNavMenu = () => {
       var menu = document.getElementById("nav-link-wrap");
       menu.style.width="0";
       menu.style.left="50%";
-      document.getElementById("nav-bg-portrait").classList.toggle("nav-greyout");
+      document.getElementById("nav-bg-portrait").classList.remove("nav-greyout");
     }
 
 return( 

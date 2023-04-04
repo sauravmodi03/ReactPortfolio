@@ -48,19 +48,7 @@ class App extends React.Component {
       let scrollPercentRounded = Math.round(scrollPercent * 100);
       document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
   }
-  
 
-  openNav () {
-    var menu = document.getElementById("nav-menu");
-    menu.style.width="100%";
-  }
-
-  closeNav () {
-    if(window.innerWidth <= 800){
-      var menu = document.getElementById("nav-menu");
-      menu.style.width="0";
-    }
-  }
 
   render() {
     return (

@@ -117,13 +117,15 @@ header{
         width: 0;
         transition: .5s ease-in-out;
         background: #646464cc;
-        z-index: 11;
+        z-index: 12;
         position: fixed;
         left: 50%;
+        opacity: 0;
     }
     .nav-greyout{
         width: 100%;   
         left: 0;
+        opacity: 1;
     }
 }
 
