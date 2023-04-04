@@ -8,6 +8,7 @@ const openNav = () => {
     menu.style.width="80%";
     menu.style.left="10%";
 }
+
 const closeNav = () => {
     var menu = document.getElementById("nav-link-wrap");
     menu.style.width="0";

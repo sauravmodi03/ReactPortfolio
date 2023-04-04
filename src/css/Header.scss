@@ -9,10 +9,11 @@
     z-index: 10;
     animation: slideInTop-head 2s ease-in-out;
     margin-top: 5px;
-}
-
-#header{
     transition: .3s ease-in;
+
+    @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
+        height: 3em;
+    }
 }
 
 // header{
@@ -23,6 +24,10 @@
     height: 3.5em;
     box-shadow: 0 0 14px 0 #b2b2b2;
     background-color: rgb(186 186 186 / 30%);
+
+    @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
+        height: 2.5em;
+    }
 }
 
 header{
@@ -38,19 +43,29 @@ header{
     gap: .5em;
     position: relative;
     // background-color: rgb(255 255 255 / 30%);
-    border-bottom: 1px solid rgb(207, 207, 207);
     backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
     z-index: 10;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
     transition: .3s ease-in;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+    @media #{Media.$iphone-portrait}{
+        padding: 0 20px;
+    }
 }
 
 #nav-button{
     display: none;
+
+    @media #{Media.$iphone-portrait}{
+        display: grid;
+    }
 }
 
 #progress-bar-wrapper{
@@ -70,10 +85,6 @@ header{
 
 //Ipad Pro Landscape
 @media #{Media.$ipad-pro-landscape}{
-
-    .nav-link-wrap{
-        margin: 0;
-    }
     #avatar{
         max-width: 20em;
     }
@@ -93,51 +104,26 @@ header{
 //     }
 // }
 
-@media #{Media.$iphone-landscape}{
-    #smodi{
-        margin-left: 10%;
-    }
-    .nav-link-wrap{
-        padding-right: 10%;
-        margin: 0;
-    }
-}
-
 @media #{Media.$iphone-portrait}{
     .App-header {
         flex-flow: column;
         height: 3em;
     }
-    #header{
-        gap: 0;
-        justify-content: space-between;
-        flex-direction: row;
-        align-content: center;
-        flex-wrap: wrap;
-        height: 3em;
-    }
     .head-on-scroll{
-        height: 2.5em !important;
-    }
-    #nav-button{
-        display: grid;
-        margin-right: 5%;
-    }
-    #smodi{
-        margin-left: 5%;
+        height: 2.5em;
     }
     .nav-bg-portrait{
         height: 100%;
         width: 0;
         transition: .5s ease-in-out;
         background: #646464cc;
-        z-index: 5;
+        z-index: 11;
         position: fixed;
         left: 50%;
     }
     .nav-greyout{
         width: 100%;   
-        left: 0 !important;
+        left: 0;
     }
 }
 

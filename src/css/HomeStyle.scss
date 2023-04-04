@@ -7,8 +7,9 @@
   justify-content: center;
 
   @media #{Media.$iphone-landscape}{
+    min-height: 100vh;
     flex-direction: column-reverse;
-    padding: 0 20px;
+    padding: 0 50px;
   }
 
   @media #{Media.$ipad-pro-portrait}, #{Media.$iphone-portrait}, #{Media.$ipad-pro-landscape}{

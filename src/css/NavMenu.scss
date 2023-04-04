@@ -4,7 +4,26 @@
     display: flex;
     flex-direction: row;
     gap: 1em;
-    width: fit-content;
+
+    @media #{Media.$iphone-portrait}  {
+        height: 3em;
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: 60vh;
+        background: #080807c7;
+        position: fixed;
+        overflow-x: hidden;
+        transition: 0.5s;
+        color: white;
+        border-radius: 20px;
+        left: 50%;
+        margin-top: 25%;
+        justify-content: space-evenly;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
+    }
   }
 
   .scale{
@@ -24,20 +43,19 @@
     height: 1em;
   }
 
-#nav-close-btn{
+  .nav-menu-show{
+    display: flex;
+  }
+
+  .nav-menu-close{
     display: none;
-}
+  }
 
+  #nav-close-btn{
+      display: none;
+  }
 
-@media screen and (min-width:40em) and (max-width:75em)  and (min-height:50){   
-    .nav-link-wrap {
-        width: fit-content;
-        padding-right: 5%;
-        gap: 1em;
-    }
-}
-
-  @media screen and (max-width:40em) {
+  @media #{Media.$iphone-portrait} {
     .nav-centre{
         display: grid;
         position: absolute;
@@ -47,49 +65,22 @@
         align-items: center;
         justify-items: center;
     }
-    #nav-link-wrap a{
-        height: 3em;
+    .active{
+        transform: scale(1.2);
     }
-    .bg-main{
-        background-position: right;
-        display: flex;
-    }
-    .nav-link-wrap{
-        height: 3em;
-        display: flex;
-        flex-direction: column;
-        width: 0;
-        height: 60vh;
-        background: #080807c7;
-        position: fixed;
-        overflow-x: hidden;
-        transition: 0.5s;
-        color: white;
-        border-radius: 20px;
-        left: 50%;
-        margin-top: 25%;
-        justify-content: center;
-    }
-    .nav-menu-show{
-        display: flex;
-    }
-    .nav-menu-close{
-        display: none;
-    }
-    #nav-link-wrap a{
+    .nav-link-wrap a{
         align-content: center;
         display: grid;
         align-self: center;
     }
     #nav-close-btn{
+      display: grid;
         right: 0;
         position: absolute;
-        padding-right: 1em;
+        padding: 1em;
         top: 0;
     }
-    .active{
-        transform: scale(1.2);
-        }
+    
     // @keyframes menuSlideInLeft {
     //   0% {
     //     transform: translateX(100%);

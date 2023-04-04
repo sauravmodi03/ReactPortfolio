@@ -38,7 +38,7 @@
   min-height: calc(100vh - 200px);;
   flex-flow: column;
   justify-content: flex-start;
-  padding: 100px 20px;
+  padding: 100px 50px;
 
   @media #{Media.$iphone-portrait}{
     padding: 70px 20px;
