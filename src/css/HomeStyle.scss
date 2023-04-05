@@ -25,6 +25,7 @@
     width: 100%;
     flex-direction: column;
     gap: 2em;
+    align-items: center;
 
     // @media #{Media.$ipad-pro-portrait}{
     //   flex-direction: column-reverse;
@@ -101,13 +102,13 @@
 
 .avatar-container{
   padding: 10px;
+  width: fit-content;
+  border-radius: 50%;
+  background : #{Media.$theme-light};
+  animation: avatarScaleIn 1.5s ease-out;
 
   img{
-    transition: transform .2s;
-    animation: scale-in 4s ease-in;
-    animation-duration: .4s;
     filter: drop-shadow(2px 4px 6px grey);
-    animation: avatarScaleIn 1.5s ease-out;
     margin: auto;
     width: calc(15em + 2vmin);
   

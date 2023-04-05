@@ -38,7 +38,6 @@ header{
     // background-color: rgba(230, 230, 230, 0.58);
     width: 100%;
     font-size: calc(8px + 2vmin);
-    color: #{Media.$font-dark};
     display: flex;
     gap: .5em;
     position: relative;
@@ -68,9 +67,10 @@ header{
     }
 }
 
-#smodi a{
+.smodi-link{
     text-decoration: none;
     color: inherit;
+    font-weight: bold;
 }
 
 #progress-bar-wrapper{

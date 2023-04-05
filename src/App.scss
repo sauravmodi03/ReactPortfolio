@@ -25,6 +25,85 @@
   font-family: sans-serif;
 }
 
+.dark-theme{
+  background: #{Media.$app-bg-dark};
+  color: white;
+
+  .active{
+    color: #{Media.$primary-dark};
+  }
+
+  .link-flyer{
+    background: #{Media.$primary-dark};;
+  }
+
+  .scroller-wrapper{
+    border: 3px solid #{Media.$theme-dark};
+ 
+    .scroller{
+      background: #{Media.$primary-dark};
+    }
+  }
+
+  .bg-square{
+    background: linear-gradient(45deg, #{Media.$theme-dark}, transparent);
+  }
+
+  .contact-wrapper,.content,#hire-nav{
+    border: 2px solid #{Media.$theme-dark};
+    box-shadow: none;
+  }
+
+  .content, .contact-wrapper {
+    background: transparent;
+  }
+
+  .timeline-wrapper::after{
+    border: 4px solid #{Media.$theme-dark};
+  }
+
+  .toggle-theme,.avatar-container,.resumeLink,.top-scroll-wrapper,.timeline::after,#progress-bar,#hire-nav:active{
+    background: #{Media.$theme-dark};
+  }
+
+  .contact{
+    background:#000000;
+  }
+
+  footer{
+    background: #2c3039;
+  }
+
+  .left::before{
+    border-left: 15px solid #{Media.$theme-dark};
+  }
+  .right::before{
+    border-right: 15px solid #{Media.$theme-dark};
+  }
+
+  textarea, input[type=text], input[type=email] {
+    background: #000000;
+    border-radius:  1px solid #{Media.$theme-dark};
+    color:white;
+  }
+
+  .smodi-link{
+    color: #{Media.$theme-dark};
+  }
+
+  .bar-wrapper{
+    box-shadow: none;
+    .bar{
+      background: linear-gradient(77.1deg, #{Media.$theme-dark} 11.5%, rgb(157 157 157) 100.2%);
+    }
+  }
+
+  .hire-link-wrap:hover{
+    background: #f29b62;
+  }
+  
+}
+
 .App main{
   max-width: 1400px;
   margin: 0 auto;
@@ -53,7 +132,7 @@
   width: 8em;
   height: 8em;
   //border-radius: 50%;
-  background: linear-gradient(45deg, #749195, transparent);
+  background: linear-gradient(45deg, #{Media.$theme-light}, transparent);
   animation: flyBubble 7s linear infinite;
   opacity: 0;
 }
@@ -287,4 +366,20 @@
   }
   .copyright img{
     width: 1em;
+  }
+
+  .toggle-theme{
+    position: fixed;
+    top: 15%;
+    right: 0px;
+    background: #{Media.$theme-light};
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    transition: 1s;
+
+    img{
+      width: 2rem;
+      margin: auto;
+    }
   }

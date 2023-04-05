@@ -10,6 +10,9 @@ import phoneblack from './img/phoneblack.png';
 import markerblack from './img/markerblack.png';
 import mailblack from './img/mailblack.png';
 import copyright from './img/copy-black.png';
+import www from './img/www-b.png';
+import sun from './img/sun-w.png';
+import moon from './img/moon-b.png';
 
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
@@ -22,36 +25,34 @@ import Skills from './pages/Skills';
 import Header from './pages/Header';
 import Contact from './pages/Contact';
 import Flyer from './Components/Flyer/Flyer';
+import { useState } from 'react';
 
-class App extends React.Component {
+export default function App() {
+
+  const [darkTheme, setDarkTheme] = useState(false);
   
-  constructor(props) {
-    super(props)
-    this.myRef = React.createRef()
-    this.state = {scrollTop: 0}
-  }
+  // constructor(props) {
+  //   super(props)
+  //   this.myRef = React.createRef()
+  //   this.state = {scrollTop: 0, darkTheme:false ,themeLogo:""}
+  //   this.toggleTheme = this.toggleTheme.bind(this);
+  // }
 
-  onScroll = () => {
-    console.log("scrolled")
-    const scrollY = window.scrollY //Don't get confused by what's scrolling - It's not the window
-    const scrollTop = this.myRef.current.scrollTop
-    console.log(`onScroll, window.scrollY: ${scrollY} myRef.scrollTop: ${scrollTop}`)
-    this.setState({
-      scrollTop: scrollTop
-    })
 
-      let scrollToTop = window.scrollY;
-      let docHeight = document.body.offsetHeight;
-      let winHeight = window.innerHeight;
-      let scrollPercent = scrollToTop / (docHeight - winHeight);
-      let scrollPercentRounded = Math.round(scrollPercent * 100);
-      document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
+
+  const toggleTheme = () => {
+    console.log("theme");
+    var element = document.querySelector(".App");
+    element.classList.toggle("dark-theme");
+    setDarkTheme(!darkTheme);
+    // this.setState({
+    //   ["darkTheme"]:!this.darkTheme
+    // });
   }
 
 
-  render() {
     return (
-      <div id="App" className="App" onScroll={this.onScroll}>
+      <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <Flyer/>
         <div className="bg-bubbles">
@@ -65,6 +66,7 @@ class App extends React.Component {
         <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
         <Header/>
         <main className='main'>
+        <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
             <Home/>
             <About/>
             <Skills/>
@@ -95,8 +97,8 @@ class App extends React.Component {
                           <div className='info-val'>sauravmodi03@gmail.com</div>
                       </div>
                       <div className="foo-c-w">
-                          <img src={markerblack} alt=''/>
-                          <div className='info-val'>Website</div>
+                          <img src={www} alt=''/>
+                          <div className='info-val'>https://www.smodi.co.in</div>
                       </div>
                       <div className="foo-c-w">
                           <img src={phoneblack} alt=''/>
@@ -124,6 +126,6 @@ class App extends React.Component {
       
     ); 
   }
-}
 
-export default App;
+
+// export default App;

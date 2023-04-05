@@ -25,12 +25,18 @@ $bg-color-3:"#738598";
 $bg-color-4:"#dfe2e2";
 
 
-//Font color for light theme
+//Collor Pallete for Light Theme
+$app-bg-light: "linear-gradient(to right, #fff1eb 0%, #{$bg-color-4} 100%)";
+$theme-light: "#2bc1c1";
+$primary-light: "#FF6000";
 $font-dark:"#3c415e";
 
-//App background light theme
-$app-bg-light:"linear-gradient(to right, #fff1eb 0%, #{$bg-color-4} 100%)";
 
+//Collor Pallete for Dark Theme
+$app-bg-dark: "#082032";
+$theme-dark: "#FF6000";
+$primary-dark: "#FF6000";
+$font-light:"white";
 
 :export{
     ipadLandscape:$ipad-pro-landscape;
