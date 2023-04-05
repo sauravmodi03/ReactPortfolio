@@ -6,10 +6,10 @@ import linkedin from './img/in-round-b.png';
 import git from './img/gitb.png';
 import insta from './img/insta-round-b.png';
 import twitter from './img/twit-round-b.png';
-import gearw from './img/gear-white.png';
 import phoneblack from './img/phoneblack.png';
 import markerblack from './img/markerblack.png';
 import mailblack from './img/mailblack.png';
+import copyright from './img/copy-black.png';
 
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
@@ -22,7 +22,6 @@ import Skills from './pages/Skills';
 import Header from './pages/Header';
 import Contact from './pages/Contact';
 import Flyer from './Components/Flyer/Flyer';
-import NavMenu from './pages/NavMenu';
 
 class App extends React.Component {
   
@@ -117,7 +116,7 @@ class App extends React.Component {
                       </nav>
                   </BrowserRouter>
                 </span>
-                <span>Copyright</span>
+                <span className='copyright'><img src={copyright} alt="Copyright logo"/>Copyright</span>
             </div>
           </div>
         </footer>

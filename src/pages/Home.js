@@ -8,7 +8,6 @@ function Home() {
 
     window.addEventListener('scroll', function(){
         if(window.scrollY > 20) {
-            console.log("scrolling mobile");
             document.getElementById("scroller-wrapper").style.display = "none";
             document.getElementById("top-scroll-wrapper").style.right = "0";
         }else{

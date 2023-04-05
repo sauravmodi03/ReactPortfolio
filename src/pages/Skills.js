@@ -1,7 +1,6 @@
 import '../css/Skills.scss';
 import Label from './Label';
 import { useState, useEffect } from 'react';
-import { getValue } from '@mui/system';
 
 function Skills() {
 
@@ -26,7 +25,7 @@ function Skills() {
             python < 50 && setPython(python + 1);
         }, 2800/90);
         return () => clearInterval(timer);
-    }, [java]);
+    }, [java, html, css, javascript, react, angular, python]);
 
     const getY = (element) => {
         return element.getBoundingClientRect().y;
@@ -59,15 +58,6 @@ function Skills() {
     return (
         <div id="skills" className='Skills flex-top-padding'>
                 <Label name="SKILLS"/>
-                {/* <div className='education-container'>
-                    <h1>Education</h1>
-                    <div className='ed-wrapper'>
-                        <h2>Date</h2>
-                        <div className='ed-info'>
-                            information
-                        </div>
-                    </div>
-                </div> */}
                 <div className='skills-container'>
                     <div className='skills-wrapper skill-slidein-left-animation'>
                         <span className="skill skill-name">JAVA</span>

@@ -6,7 +6,6 @@ function Label(props) {
     const letters = props.name.split("");
     const idName = props.name + "-label";
 
-    const innerWidth = document.documentElement.clientWidth;
     const innerHeight = document.documentElement.clientHeight;
 
     document.addEventListener('scroll',function(){

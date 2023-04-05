@@ -1,13 +1,5 @@
-import {Link, Element}  from 'react-scroll';
+import {Link}  from 'react-scroll';
 import '../css/NavMenu.scss';
-import menuLogo from '../img/menu.png';
-
-const openNav = () => {
-    console.log("navmenu");
-    var menu = document.getElementById("nav-link-wrap");
-    menu.style.width="80%";
-    menu.style.left="10%";
-}
 
 const closeNav = () => {
     var menu = document.getElementById("nav-link-wrap");

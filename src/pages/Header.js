@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import NavMenu from './NavMenu';
 import { Link } from 'react-scroll';
 import menuLogo from '../img/menu.png';
+import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
 function Header() {
 
@@ -55,7 +56,11 @@ function Header() {
 return( 
         <div id="header" className='Header'>
             <header  className="head-wrapper">
-                <nav id="smodi"><Link className="scale" to="#" spy={true} smooth={true} duration={500}></Link>SMODI</nav>
+                <nav id="smodi">
+                  <BrowserRouter>
+                    <RouterLink className="scale" to="https://www.smodi.co.in">SMODI</RouterLink>
+                  </BrowserRouter>
+                </nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>

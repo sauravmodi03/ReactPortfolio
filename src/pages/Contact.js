@@ -1,10 +1,10 @@
 
-import React, {useRef, useState, useEffect} from 'react';
+import React from 'react';
 import '../css/Contact.scss';
-import emailjs from '@emailjs/browser';
 import phoneblack from '../img/phoneblack.png';
 import markerblack from '../img/markerblack.png';
 import mailblack from '../img/mailblack.png';
+import www from '../img/www-b.png';
 import Label from './Label';
 
 class Contact extends React.Component {
@@ -23,7 +23,6 @@ class Contact extends React.Component {
     };
 
     componentDidMount(){
-        const innerWidth = document.documentElement.clientWidth;
         const innerHeight = document.documentElement.clientHeight;
 
         document.addEventListener('scroll',function(){
@@ -35,9 +34,9 @@ class Contact extends React.Component {
             const elementHeight = wrapper.getBoundingClientRect().height;
 
             if(innerHeight > wrapperY + elementHeight/4){
-                wrapper.style.animation = "contact-fadeIn 1.5s forwards";
-                form.style.animation = "form-slideInTop 1.5s forwards 1.3s";
-                info.style.animation = "infoWrapper-slideInRight 1.5s forwards 1.3s";
+                wrapper.style.animation = "contact-fadeIn 1s forwards";
+                form.style.animation = "form-slideInTop 1s forwards 1s";
+                info.style.animation = "infoWrapper-slideInRight 1s forwards 1s";
             }
         });
     }
@@ -108,8 +107,8 @@ class Contact extends React.Component {
                                     <div className='info-val'>sauravmodi03@gmail.com</div>
                                 </div>
                                 <div className="contact-info">
-                                    <div><img src={markerblack} alt=''/></div>
-                                    <div className='info-val'>Website</div>
+                                    <div><img src={www} alt=''/></div>
+                                    <a href="https://www.smodi.co.in" className='info-val'>https://www.smodi.co.in</a>
                                 </div>
                                 <div className="contact-info">
                                     <div><img src={phoneblack} alt=''/></div>
