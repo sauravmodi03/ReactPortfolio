@@ -69,6 +69,7 @@
     align-content: center;
     display: grid;
     background: linear-gradient(77.1deg, rgb(245, 220, 168) 11.5%, rgb(22, 220, 236) 100.2%);
+    width: 0;
 }
 
 .skill-name{
@@ -80,25 +81,25 @@
     font-family: serif;
 }
 
-@keyframes progress-bar-java {
-    0%{width: 0;}
-    100%{width: 90%;}
-}
+// @keyframes progress-bar {
+//     0%{width: 0;}
+//     100%{width: 90%;}
+// }
 
-@keyframes progress-bar-html {
-    0%{width: 0;}
-    100%{width: 80%;}
-}
+// @keyframes progress-bar-html {
+//     0%{width: 0;}
+//     100%{width: 80%;}
+// }
 
-@keyframes progress-bar-css {
-    0%{width: 0;}
-    100%{width: 70%;}
-}
+// @keyframes progress-bar-css {
+//     0%{width: 0;}
+//     100%{width: 70%;}
+// }
 
-@keyframes progress-bar-javascript {
-    0%{width: 0;}
-    100%{width: 65%;}
-}
+// @keyframes progress-bar-javascript {
+//     0%{width: 0;}
+//     100%{width: 65%;}
+// }
 
 .skill-slidein-left-animation{
     opacity: 0;

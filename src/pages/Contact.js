@@ -1,11 +1,12 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import '../css/Contact.scss';
 import phoneblack from '../img/phoneblack.png';
 import markerblack from '../img/markerblack.png';
 import mailblack from '../img/mailblack.png';
 import www from '../img/www-b.png';
 import Label from './Label';
+import emailjs from '@emailjs/browser';
 
 class Contact extends React.Component {
 
@@ -53,13 +54,13 @@ class Contact extends React.Component {
         e.preventDefault();
         console.log("contact form");
         document.getElementById("email-confirm").classList.toggle("show-confirm");
-        // emailjs.sendForm('service_5c7wcd9', 'template_egunr9p', this.form.current, 'ihO1q38-DIyH5MRpz')
-        //   .then((result) => {
-        //       document.getElementById("email-confirm").classList.add("show-confirm");
-        //       console.log(result.text);
-        //   }, (error) => {
-        //       console.log(error.text);
-        //   });
+        emailjs.sendForm('service_5c7wcd9', 'template_egunr9p', this.form.current, 'ihO1q38-DIyH5MRpz')
+          .then((result) => {
+              document.getElementById("email-confirm").classList.add("show-confirm");
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
         this.resetForm();
       };
 
