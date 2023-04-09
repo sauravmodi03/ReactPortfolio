@@ -4,9 +4,9 @@
   .-fl-r-c {display: flex; flex-direction: row; justify-content: center;}
   .-fl-r-sb {display: flex; flex-direction: row; justify-content: space-between;}
   .-fl-r-sa {display: flex; flex-direction: row; justify-content: space-around;}
-  .-fl-c-c {display: flex; flex-direction: row; justify-content: center;}
-  .-fl-c-sb {display: flex; flex-direction: row; justify-content: space-between;}
-  .-fl-c-sa {display: flex; flex-direction: row; justify-content: space-around;}
+  .-fl-c-c {display: flex; flex-direction: column; justify-content: center;}
+  .-fl-c-sb {display: flex; flex-direction: column; justify-content: space-between;}
+  .-fl-c-sa {display: flex; flex-direction: column; justify-content: space-around;}
 
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -372,10 +372,10 @@
     position: fixed;
     top: 15%;
     right: 0px;
-    background: #{Media.$theme-light};
+    background: #b5bebe;
     border: none;
-    border-radius: 5px;
-    padding: 3px;
+    border-radius: 10px 0 0 10px;
+    padding: 5px;
     transition: 1s;
 
     img{

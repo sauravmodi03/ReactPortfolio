@@ -291,20 +291,6 @@
   opacity: 1;}
 }
 
-// @media #{Media.$ipad-pro-landscape}{
-//   .nav-link-wrap{
-//     margin-right: 5%;
-//   }
-// }
-
-@media #{Media.$ipad-pro-portrait}{
-
-  // .nav-link-wrap{
-  //   padding-right: 10%;
-  //   margin: 0;
-  // }
-}
-
 @keyframes scale-in {
   0% {
     transform: scale(0,0);
