@@ -16,6 +16,7 @@
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-in-viewport": "^1.0.0-alpha.29",
     "react-router-dom": "^6.9.0",
     "react-router-hash-link": "^2.4.3",
