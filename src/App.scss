@@ -30,18 +30,14 @@
   color: white;
 
   .active{
-    color: #{Media.$primary-dark};
-  }
-
-  .link-flyer{
-    background: #{Media.$primary-dark};;
+    color: #{Media.$theme-dark};
   }
 
   .scroller-wrapper{
     border: 3px solid #{Media.$theme-dark};
  
     .scroller{
-      background: #{Media.$primary-dark};
+      background: #{Media.$theme-dark};
     }
   }
 
@@ -62,8 +58,12 @@
     border: 4px solid #{Media.$theme-dark};
   }
 
-  .toggle-theme,.avatar-container,.resumeLink,.top-scroll-wrapper,.timeline::after,#progress-bar,#hire-nav:active{
+  .avatar-container,.resumeLink,.timeline::after,#progress-bar,#hire-nav:active{
     background: #{Media.$theme-dark};
+  }
+
+  .link-flyer,.toggle-theme,.top-scroll-wrapper{
+    background: #{Media.$flyers-bg-dark};
   }
 
   .contact{
@@ -83,7 +83,7 @@
 
   textarea, input[type=text], input[type=email] {
     background: #000000;
-    border-radius:  1px solid #{Media.$theme-dark};
+    border:  1px solid white;
     color:white;
   }
 
@@ -375,11 +375,16 @@
     background: #b5bebe;
     border: none;
     border-radius: 10px 0 0 10px;
-    padding: 5px;
+    padding: 10px;
     transition: 1s;
 
     img{
-      width: 2rem;
+      width: 1.5em;
       margin: auto;
     }
+  }
+
+  .copyright{
+    display: flex;
+    height: fit-content;
   }

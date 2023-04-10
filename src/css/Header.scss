@@ -7,9 +7,10 @@
     position: fixed;
     border-bottom: 1px solid rgb(203, 203, 203);
     z-index: 10;
-    animation: slideInTop-head 2s ease-in-out;
+    animation: slideInTop-head 2s ease;
     margin-top: 5px;
     transition: .3s ease-in;
+    backdrop-filter: blur(10px);
 
     @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
         height: 3em;
@@ -42,7 +43,6 @@ header{
     gap: .5em;
     position: relative;
     // background-color: rgb(255 255 255 / 30%);
-    backdrop-filter: blur(10px);
     justify-content: space-between;
     align-items: center;
     z-index: 10;

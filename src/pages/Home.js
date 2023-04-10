@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
-import arrow from '../img/arrow-up-w.png';
+import arrow from '../img/arrow-up-b.png';
 
 
 function Home() {

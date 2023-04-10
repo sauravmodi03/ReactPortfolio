@@ -108,7 +108,7 @@
   animation: avatarScaleIn 1.5s ease-out;
 
   img{
-    filter: drop-shadow(2px 4px 6px grey);
+    
     margin: auto;
     width: calc(15em + 2vmin);
   
@@ -251,7 +251,7 @@
   position: fixed;
   bottom: 70px;
   opacity: 1;
-  background: #1cb3c8;
+  background: #{Media.$flyers-bg-light};
   display: grid;
   transition: 2s;
   filter: drop-shadow(2px 4px 6px rgb(152, 150, 150));
