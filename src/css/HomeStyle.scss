@@ -95,14 +95,14 @@
 
 .drop-heading{
   opacity: 0;
-  animation: drop 1s linear forwards .2s;
+  animation: drop 1s linear forwards 3.5s;
 }
 
 .info-l3{
   font-size: 2em;
   text-align: justify;
   opacity: 0;
-  animation: drop 1s linear forwards;
+  animation: drop 1s linear forwards 3s;
 
   @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 1.2em;
@@ -118,7 +118,7 @@
   width: fit-content;
   border-radius: 50%;
   background : #{Media.$theme-light};
-  animation: avatarScaleIn 1.5s ease-out 1s forwards;
+  animation: avatarScaleIn 1.5s ease-out 4s forwards;
   overflow: hidden;
   transition: transform .5s;
   border: 2px solid;
@@ -157,7 +157,7 @@
     padding: 10px;
     font-size: 1.5em;
     font-weight: bold;
-    transition: transform 0.5s;
+    transition: transform 0.5s forwards 2.8s;
 
     @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       font-size: 1em;
@@ -238,11 +238,13 @@
     display: grid;
     text-align: center;
     padding: 5px 0;
-    animation: scrollerScaleUp 1s ease-out;
+    animation: scrollerScaleUp 1s ease-out forwards 3s;
     position: fixed;
     bottom: 70px;
     opacity: 1;
     align-self: center;
+    opacity: 0;
+    transform: translateY(200%);
 
     @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       bottom: 10px;
@@ -258,7 +260,7 @@
     display: grid;
     padding: 5px 0;
     opacity: 0;
-    animation: scrollerDrop 1s linear 1s infinite;
+    animation: scrollerDrop 1s linear 3s infinite;
 }
 
 .top-scroll-wrapper{
@@ -280,7 +282,7 @@
 
 .top-scroll{
   margin: auto;
-  animation: top-scroll-arrow 1.5s linear 2.5s infinite;
+  animation: top-scroll-arrow 1.5s linear 3s infinite;
   img{
     width: 1em;
     height: 1em;
@@ -301,8 +303,6 @@
 }
 
 @keyframes scrollerScaleUp {
-  0%{transform: translateY(200%);
-    opacity: 0;}
   60%{transform: translateY(-10%);}
   80%{transform: translateY(5%);}
   100%{transform: translateY(0);
@@ -348,6 +348,9 @@
   border: 2px solid #3c415e;
   border-radius: 20px 0;
   transition: .5s;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: resumeSlideInBottom 1s forwards 3s;
 
   &:hover{
       transform: scale(1.1);
@@ -359,10 +362,10 @@
   }
 }
 
-// @keyframes resumeSlideInBottom {
-//     to{transform: translateY(0);
-//     opacity: 1;}
-// }
+@keyframes resumeSlideInBottom {
+    to{transform: translateY(0);
+    opacity: 1;}
+}
 
 .download-wrapper{
   width: 1em;

@@ -78,15 +78,42 @@
         top: 0;
     }
     
-    // @keyframes menuSlideInLeft {
-    //   0% {
-    //     transform: translateX(100%);
-    //     left: -100%;
-    //   }
-    //   100% {
-    //     transform: translateX(0);
-    //     left: 0;
-    //   }
-    // }
+  }
+
+  .home-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 2s;
+  }
+
+  .about-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 2.2s;
+  }
+
+  .skills-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 2.4s;
+  }
+
+  .work-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 2.8s;
+  }
+
+  .contact-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 3s;
+  }
+
+  @keyframes nav-option-pop {
+    to{
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 

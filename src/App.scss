@@ -396,11 +396,17 @@
     border-radius: 10px 0 0 10px;
     padding: 10px;
     transition: 1s;
+    transform: translateX(100%);
+    animation: slideInRight 1s forwards 3s;
 
     img{
       width: 1.5em;
       margin: auto;
     }
+  }
+
+  @keyframes slideInRight {
+    to{transform: translateX(0);}
   }
 
   .copyright{
