@@ -1,6 +1,7 @@
 import '../css/Skills.scss';
 import Label from './Label';
 import { useState, useEffect } from 'react';
+import {getY, getHeight} from './Utility.js';
 
 function Skills() {
 
@@ -39,20 +40,13 @@ function Skills() {
     //     return () => clearInterval(timer);
     // }, [java, html, css, javascript, react, angular, python, spring]);
 
-    const getY = (element) => {
-        return element.getBoundingClientRect().y;
-    }
-
-    const getHeight = (element) => {
-        return element.getBoundingClientRect().height
-    }
-
     const innerHeight = document.documentElement.clientHeight;
 
     document.addEventListener('scroll',function(){
         console.log("Skills");
         const leftList = document.querySelectorAll(".skill-slidein-left-animation");
         const rightList = document.querySelectorAll(".skill-slidein-right-animation");
+        const label = document.querySelector(".skills-label");
 
         for (let i = 0; i < leftList.length; i++) {
             if(innerHeight > getY(leftList[i]) + getHeight(leftList[i])/4){
@@ -67,12 +61,16 @@ function Skills() {
                 rightList[i].children[1].children[0].style.width = skillMap.get(rightList[i].children[0].innerText);
             }
         }
+
+        if(innerHeight > getY(label) + getHeight(label) * 2/3){
+            label.style.animation = "labelSlideInTop 1.5s forwards";
+        }
     });
     
 
     return (
         <div id="skills" className='Skills flex-top-padding'>
-                <Label name="SKILLS"/>
+                <div className='skills-label heading-text'><h2>Skills</h2></div>
                 <div className='skills-container'>
                     <div className='skills-wrapper skill-slidein-left-animation'>
                         <span className="skill skill-name">JAVA</span>

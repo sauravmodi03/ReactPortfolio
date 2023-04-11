@@ -12,3 +12,11 @@ export const colors = {
         background:""
     }
 }
+
+export const getY = (element) => {
+    return element.getBoundingClientRect().y;
+}
+
+export const getHeight = (element) => {
+    return element.getBoundingClientRect().height
+}

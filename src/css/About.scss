@@ -121,20 +121,51 @@ section{
     grid-gap: 1rem;
 }
 
-.about-label {
-    
+.heading-text {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    transform: translateY(100%);
+    opacity: 0;
+    display: flex;
     
     h2 {
     margin: 0;
     padding: 0;
     font-size: clamp(40px, 8vw, 60px);
+    position: relative;
+    width: fit-content;
+
+    
+
     }
 
     &::after{
-        content: '';
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 2px;
+        content: "";
+        top: 50%;
+        left: 62%;
+        right: 10%;
+        height: 1px;
+        position: absolute;
+        background: #3c415e;
     }
+
+    &::before{
+        content: "";
+        top: 50%;
+        left: 10%;
+        right: 62%;
+        height: 1px;
+        position: absolute;
+        background: #3c415e;
+    }
+
+    
+
+}
+
+@keyframes labelSlideInTop {
+    60%{transform: translateY(-10%);}
+    80%{transform: translateY(5%);}
+    100%{transform: translateY(0%);opacity: 1; }
 }

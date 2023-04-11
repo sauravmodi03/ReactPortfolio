@@ -1,21 +1,15 @@
 import '../css/Work.scss';
 import Label from './Label';
+import {getY, getHeight} from './Utility.js';
 
 function Project(){
 
     const innerHeight = document.documentElement.clientHeight;
 
-    const getY = (element) => {
-        return element.getBoundingClientRect().y;
-    }
-
-    const getHeight = (element) => {
-        return element.getBoundingClientRect().height
-    }
-
     document.addEventListener('scroll',function(){
         const leftList = document.querySelectorAll(".slidein-left-animation");
         const rightList = document.querySelectorAll(".slidein-right-animation");
+        const label = document.querySelector(".work-label");
 
         for (let i = 0; i < leftList.length; i++) {
             if(innerHeight > getY(leftList[i]) + getHeight(leftList[i])/4){
@@ -28,11 +22,15 @@ function Project(){
                 rightList[i].style.animation = "content-slideInRight 1.5s forwards";
             }
         }
+
+        if(innerHeight > getY(label) + getHeight(label) * 2/3){
+            label.style.animation = "labelSlideInTop 1.5s forwards";
+        }
     });
 
     return(
         <div id="work" className="Work flex-top-padding">
-            <Label name="WORK"/>
+            <div className='work-label heading-text'><h2>Work</h2></div>
             <div className="timeline">
                 <div className="timeline-wrapper left slidein-left-animation">
                     <div className="content shadow-left slidein-left-animation">

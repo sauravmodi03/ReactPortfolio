@@ -7,6 +7,7 @@ import mailblack from '../img/mailblack.png';
 import www from '../img/www-b.png';
 import Label from './Label';
 import emailjs from '@emailjs/browser';
+import {getY, getHeight} from './Utility.js';
 
 class Contact extends React.Component {
 
@@ -30,6 +31,7 @@ class Contact extends React.Component {
             const wrapper = document.querySelector(".contact-wrapper");
             const form = document.querySelector(".contact-form");
             const info = document.querySelector(".contact-info-wrapper");
+            const label = document.querySelector(".contact-label");
             
             const wrapperY = wrapper.getBoundingClientRect().y;
             const elementHeight = wrapper.getBoundingClientRect().height;
@@ -39,6 +41,11 @@ class Contact extends React.Component {
                 form.style.animation = "form-slideInTop 1s forwards 1s";
                 info.style.animation = "infoWrapper-slideInRight 1s forwards 1s";
             }
+
+            if(innerHeight > getY(label) + getHeight(label) * 2/3){
+                label.style.animation = "labelSlideInTop 1.5s forwards";
+            }
+
         });
     }
 
@@ -84,7 +91,7 @@ class Contact extends React.Component {
                     <div id="email-confirm" onAnimationEnd={this.resetAnimation} className='email-confirmation'>
                         <span>Message sent successfully !</span>
                     </div>
-                    <Label name="CONTACT"/>
+                    <div className='contact-label heading-text'><h2>Contact</h2></div>
                     <div className='contact-wrapper'>
                         <form ref={this.form} className="contact-form" onSubmit={this.sendEmail}>
                             <label className='inputs'>Get in touch?</label>

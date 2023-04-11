@@ -7,22 +7,24 @@ import resumeqr from '../img/ResumeQR.png';
 import QRlogo from '../img/QR-black.png';
 import Resume from '../data/Resume.pdf';
 import Label from './Label';
+import {getY, getHeight} from './Utility.js';
 
 export default function About() {
 
     const innerHeight = document.documentElement.clientHeight;
 
-    const getY = (element) => {
-        return element.getBoundingClientRect().y;
-    }
+    // const getY = (element) => {
+    //     return element.getBoundingClientRect().y;
+    // }
 
-    const getHeight = (element) => {
-        return element.getBoundingClientRect().height
-    }
+    // const getHeight = (element) => {
+    //     return element.getBoundingClientRect().height
+    // }
 
     document.addEventListener('scroll',function(){
         var infoList = document.querySelectorAll(".ab-animation");
         var pic = document.querySelector(".about-pic");
+        var label = document.querySelector(".about-label");
 
         if(innerHeight > getY(pic) + getHeight(pic) * 2/3){
             pic.style.animation = "slideInLeft-aboutpic 1.5s forwards";
@@ -33,6 +35,10 @@ export default function About() {
                 infoList[i].style.animation = "slideInLeft-aboutinfo 1.5s forwards";
             }
         }
+
+        if(innerHeight > getY(label) + getHeight(label) * 2/3){
+            label.style.animation = "labelSlideInTop 1.5s forwards";
+        } 
 
         // var resumeLink = document.querySelector(".resumeLink");
         // var qrLink = document.querySelector(".qr-wrapper");
@@ -52,7 +58,7 @@ export default function About() {
 
     return (
         <div id="about" className='About flex-top-padding'>
-                <div className='about-label'><h2>About Me</h2></div>
+                <div className='about-label heading-text'><h2>About Me</h2></div>
                 <div className='about-info-wrapper -drop-shadow'>
                     <article>
                         <section className='about-info'>
