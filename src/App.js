@@ -12,7 +12,7 @@ import mailblack from './img/mailblack.png';
 import copyright from './img/copy-black.png';
 import www from './img/www-b.png';
 import sun from './img/sun-w.png';
-import moon from './img/moon.png';
+import moon from './img/moon-w.png';
 
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
@@ -55,6 +55,7 @@ export default function App() {
     return (
       <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <Flyer/>
         <div className="bg-bubbles">
           <div className="bg-square"></div>
           <div className="bg-square"></div>
@@ -107,7 +108,7 @@ export default function App() {
                   </article>
               </div>
             <div className='foo-sec s-3'>
-                <span>Connect</span>
+                <span>Follow Me</span>
                 <span>
                   <BrowserRouter>
                       <nav id="foot-links-wrap" className='foot-links-wrap'>
@@ -119,8 +120,7 @@ export default function App() {
                   </BrowserRouter>
                 </span>
                 <span className='copyright'>
-                  <img src={copyright} alt="Copyright logo"/>
-                  <span> 2023 by Saurav Modi. All rights reserved.</span>
+                  <span> © 2023 by Saurav Modi. All rights reserved.</span>
                 </span>
             </div>
           </div>

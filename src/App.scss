@@ -45,20 +45,20 @@
     background: linear-gradient(45deg, #{Media.$theme-dark}, transparent);
   }
 
-  .contact-wrapper,.content,#hire-nav{
+  .resumeLink,.contact-wrapper,.content,#hire-nav,input[type=submit]{
     border: 2px solid #{Media.$theme-dark};
     box-shadow: none;
   }
 
   .content, .contact-wrapper {
-    background: transparent;
+    background: #454545;
   }
 
   .timeline-wrapper::after{
     border: 4px solid #{Media.$theme-dark};
   }
 
-  .avatar-container,.resumeLink,.timeline::after,#progress-bar,#hire-nav:active{
+  .avatar-container,.timeline::after,#progress-bar,#hire-nav:active{
     background: #{Media.$theme-dark};
   }
 
@@ -87,10 +87,6 @@
     color:white;
   }
 
-  .smodi-link{
-    color: #{Media.$theme-dark};
-  }
-
   .bar-wrapper{
     box-shadow: none;
     .bar{
@@ -99,7 +95,11 @@
   }
 
   .hire-link-wrap:hover{
-    background: #f29b62;
+    background: #ff650078;
+  }
+
+  .bar-wrapper{
+    border: 2px solid #ffffff;
   }
   
 }

@@ -34,14 +34,14 @@ export default function About() {
             }
         }
 
-        var resumeLink = document.querySelector(".resumeLink");
-        var qrLink = document.querySelector(".qr-wrapper");
-        const resumeLinkY = resumeLink.getBoundingClientRect().y;
-        const resumeHeight = resumeLink.getBoundingClientRect().height;
-        if(innerHeight > resumeLinkY + resumeHeight * 2/3){
-            resumeLink.style.animation = "resumeSlideInBottom 1.5s forwards";
-            qrLink.style.animation = "resumeSlideInBottom 1.5s forwards";
-        }
+        // var resumeLink = document.querySelector(".resumeLink");
+        // var qrLink = document.querySelector(".qr-wrapper");
+        // const resumeLinkY = resumeLink.getBoundingClientRect().y;
+        // const resumeHeight = resumeLink.getBoundingClientRect().height;
+        // if(innerHeight > resumeLinkY + resumeHeight * 2/3){
+        //     resumeLink.style.animation = "resumeSlideInBottom 1.5s forwards";
+        //     qrLink.style.animation = "resumeSlideInBottom 1.5s forwards";
+        // }
 
     });
 

@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   font-family: monospace;
-  gap: 0.5em;
+  gap: 2em;
   justify-content: center;
   font-family: inherit;
   padding: 10px;
@@ -106,6 +106,8 @@
   border-radius: 50%;
   background : #{Media.$theme-light};
   animation: avatarScaleIn 1.5s ease-out;
+  overflow: hidden;
+  transition: transform .5s;
 
   img{
     
@@ -129,7 +131,7 @@
 #hire-me{
     background: #2cc1c100;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     transition: transform 0.5s;
 
@@ -244,8 +246,8 @@
 }
 
 .top-scroll-wrapper{
-  border-radius: 5px 0 0 5px;
-  width: 2.5rem;
+  border-radius: 10px 0 0 10px;
+  width: 0;
   height: 2.5rem;
   text-align: center;
   position: fixed;
@@ -255,9 +257,9 @@
   display: grid;
   transition: 2s;
   filter: drop-shadow(2px 4px 6px rgb(152, 150, 150));
-  right: -100%;
+  right: 0;
   // transform: translateX(150%);
-  transition: 2s ease;
+  transition: 1s ease;
 }
 
 .top-scroll{
@@ -302,9 +304,112 @@
 
 @keyframes drop {
   0% {transform: translateY(-200px) scaleY(0.9); opacity: 0;}
-  5% {opacity: .7;}
+  5% {opacity: .2;}
   50% {transform: translateY(0px) scaleY(1); opacity: 1;}
   65% {transform: translateY(-17px) scaleY(.9); opacity: 1;}
   75% {transform: translateY(-22px) scaleY(.9); opacity: 1;}
   100% {transform: translateY(0px) scaleY(1); opacity: 1;}
+}
+
+.resume-link-wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+
+.resumeLink{
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: inherit;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  width: fit-content;
+  border: 2px solid #3c415e;
+  border-radius: 20px 0;
+  transition: .5s;
+
+  &:hover{
+      transform: scale(1.1);
+  }
+
+  &:active{
+      background: #3c415e;
+      color: white;
+  }
+}
+
+// @keyframes resumeSlideInBottom {
+//     to{transform: translateY(0);
+//     opacity: 1;}
+// }
+
+.download-wrapper{
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 4px solid white;
+
+  img{
+      width: 1em;
+      height: 1em;
+      animation: translateY-infinite 1s linear infinite;
+  }
+}
+
+@keyframes translateY-infinite {
+  0%{transform: translateY(-20%);}
+  100%{transform: translateY(30%);}
+}
+
+.qr-wrapper{
+  display: grid;
+  transition: 1s;
+  cursor: pointer;
+
+  #qr-logo{
+      width: 1.5em;
+      margin: auto;
+  }
+  img{
+      width: 5em;
+  }
+  &:hover{
+      transform: scale(1.2);
+  }
+
+  // &::before{
+  //     content: '';
+  //     background: url("../img/ResumeQR.png") no-repeat;
+  //     background-size: 10em 10em;
+  //     max-width: 20em;
+  //     max-height: 20em;
+  //     top: 50%;
+  //     left: 50%;
+  //     position: relative;
+  // }
+}
+
+.resume-qr{
+  right: 0;
+  bottom: 0;
+  width: fit-content;
+  justify-self: center;
+  transition: 1s ease;
+  height: 0;
+  overflow: hidden;
+  
+  img{
+      width: 10em;
+  }
+}
+
+.show-qr{
+  height: calc(8em + 2vmin);
 }
