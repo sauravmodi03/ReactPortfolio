@@ -50,7 +50,15 @@ function Home() {
                     <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
                 </section>
                 <section className="info">
-                <span className='info-l2 info-bg'>Hi, I'm Saurav.</span>
+                    <div className='info-l1-wraper'>
+                        <span className='info-l2 info-bg big-heading'>Hi, I'm Saurav.</span>
+                        <div onClick={manageQR} className="qr-wrapper">
+                            <img id="qr-logo" src={QRlogo} alt="QR logo"/>
+                        </div>
+                    </div>
+                    <div className='resume-qr'>
+                        <img src={resumeqr} alt="Resume logo"/>
+                    </div>
                     {/* <span className='info-l1 info-bg'>Hi, I'm Saurav!</span> */}
                     <span className='info-l3 info-bg'>I am a Software Engineer specialized in creating exceptional digital experiences, combining my technical 
                     expertise with design skills. I design and build innovative software solutions to help businesses streamline their processes and achieve their goals.
@@ -62,9 +70,6 @@ function Home() {
                                 <img src={downArrow} alt="arrow logo"/>
                             </div>
                         </a>
-                        <div onClick={manageQR} className="qr-wrapper">
-                            <img id="qr-logo" src={QRlogo} alt="QR logo"/>
-                        </div>
                     </div>
                     {/* <span className='hire-link-wrap'>
                         <nav id="hire-nav"><Link id="hire-me" to='contact' activeClass="active" className="scale" spy={true} smooth={true} duration={500} >Hire Me</Link></nav>

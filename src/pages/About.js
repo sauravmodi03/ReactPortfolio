@@ -1,7 +1,7 @@
 
 import '../css/About.scss';
 import React from 'react';
-import about from '../img/self.png';
+import about from '../img/self-orig.jpg';
 import arrow from '../img/arrow-white.png';
 import resumeqr from '../img/ResumeQR.png';
 import QRlogo from '../img/QR-black.png';
@@ -53,9 +53,9 @@ export default function About() {
     return (
         <div id="about" className='About flex-top-padding'>
                 <Label name="ABOUT"></Label>
-                <div className='about-info -drop-shadow'>
+                <div className='about-info-wrapper -drop-shadow'>
                     <article>
-                        <section>
+                        <section className='about-info'>
                             <span className='about-l1 ab-animation'>
                                 Hi, I'm Saurav
                             </span>
@@ -65,34 +65,20 @@ export default function About() {
                             <span className='about-l3 ab-animation'>
                                 Chicago, USA
                             </span>
+                            <section className='about-info-main'>
+                                <span> About Me</span>
+                                <span> Languages I speak: Java, HTML, CSS, JavaScript, Python</span>
+                                <span> Framework knowledge: Spring, React, Angular, Bootstrap</span>
+                                <span> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</span>
+                                <span> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
+                                    meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
+                                    and technologies to ensure that my work remains innovative and effective.</span>
+                            </section>
                         </section>
-                        <span className='about-pic'>
+                        <picture className='about-pic'>
                             <img src={about} alt="About logo"></img>
-                        </span>
-                        <section className='about-info-main'>
-                            <span> About Me</span>
-                            <span> Languages I speak: Java, HTML, CSS, JavaScript, Python</span>
-                            <span> Framework knowledge: Spring, React, Angular, Bootstrap</span>
-                            <span> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</span>
-                            <span> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
-                                meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
-                                and technologies to ensure that my work remains innovative and effective.</span>
-                        </section>
+                        </picture>
                     </article>
-                    <div className='resume-link-wrap'>
-                        <a href={Resume} className="resumeLink scale" download="Resume_SauravModi">
-                            <span>Resume</span>
-                            <div className='download-wrapper'>
-                                <img src={arrow} alt="arrow logo"/>
-                            </div>
-                        </a>
-                        <div onClick={manageQR} className="qr-wrapper">
-                            <img id="qr-logo" src={QRlogo} alt="QR logo"/>
-                        </div>
-                    </div>
-                    <div className='resume-qr'>
-                        <img src={resumeqr} alt="Resume logo"/>
-                    </div>
                 </div>
         </div>
     );

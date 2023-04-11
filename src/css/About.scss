@@ -4,7 +4,7 @@ section{
     display: grid;
 }
 
-.about-info{
+.about-info-wrapper{
     font-size: 2em;
     display: grid;
     border-radius: 20px 0;
@@ -17,6 +17,10 @@ section{
         padding: 0;
         font-size: 1.5rem;
     }
+}
+
+.about-info{
+    padding: 30px;
 }
 
 .about-info-bg{
@@ -62,6 +66,14 @@ section{
 
 .about-pic img{
     width: calc(10em + 2vmin);
+    //mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1);
+    transition: .5s;
+    border: 5px solid;
+
+    &:hover{
+        filter: none;
+    }
 
     @media #{Media.$ipad-pro-landscape}{
         width: 15em;
@@ -85,9 +97,8 @@ section{
     opacity: 1;}
 }
 
-.about-info article{
+.about-info-wrapper article{
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     row-gap: 3rem;
