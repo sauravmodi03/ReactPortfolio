@@ -52,7 +52,7 @@ export default function About() {
 
     return (
         <div id="about" className='About flex-top-padding'>
-                <Label name="ABOUT"></Label>
+                <div className='about-label'><h2>About Me</h2></div>
                 <div className='about-info-wrapper -drop-shadow'>
                     <article>
                         <section className='about-info'>

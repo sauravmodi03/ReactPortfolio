@@ -85,14 +85,17 @@
 
 .info-l2{
   width: fit-content;
-  opacity: 0;
-  animation: drop 1s linear forwards .2s;
   font-weight: bold;
   align-self: center;
 
   @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 2em;
   }
+}
+
+.drop-heading{
+  opacity: 0;
+  animation: drop 1s linear forwards .2s;
 }
 
 .info-l3{
@@ -123,7 +126,6 @@
   transform: scale(.2);
 
   img{
-    
     margin: auto;
     width: calc(15em + 2vmin);
   
@@ -135,6 +137,10 @@
       max-width: 12em;
     }
   }
+}
+
+@keyframes rotateY {
+  to{transform: rotateY(360deg)};
 }
 
 @keyframes avatarScaleIn {

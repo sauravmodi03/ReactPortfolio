@@ -50,7 +50,7 @@ function Home() {
                     <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
                 </section>
                 <section className="info">
-                    <div className='info-l1-wraper'>
+                    <div className='info-l1-wraper drop-heading'>
                         <span className='info-l2 info-bg big-heading'>Hi, I'm Saurav.</span>
                         <div onClick={manageQR} className="qr-wrapper">
                             <img id="qr-logo" src={QRlogo} alt="QR logo"/>

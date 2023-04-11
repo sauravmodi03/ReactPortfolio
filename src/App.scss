@@ -25,6 +25,16 @@
   font-family: sans-serif;
 }
 
+.app-loader{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #fff1eb 0%, #{Media.$theme-light} 100%);
+}
+
 .dark-theme{
   background: #{Media.$app-bg-dark};
   color: white;

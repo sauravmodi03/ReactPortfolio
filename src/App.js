@@ -13,12 +13,13 @@ import copyright from './img/copy-black.png';
 import www from './img/www-b.png';
 import sun from './img/sun-w.png';
 import moon from './img/moon-w.png';
+import ReactLoader from 'react-loading';
 
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
 import Home from './pages/Home';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Work from './pages/Work';
 import About from './pages/About';
 import Skills from './pages/Skills';
@@ -31,6 +32,7 @@ import { useState } from 'react';
 export default function App() {
 
   const [darkTheme, setDarkTheme] = useState(false);
+  const [loader, setLoader] = useState(true);
   
   // constructor(props) {
   //   super(props)
@@ -38,7 +40,6 @@ export default function App() {
   //   this.state = {scrollTop: 0, darkTheme:false ,themeLogo:""}
   //   this.toggleTheme = this.toggleTheme.bind(this);
   // }
-
 
 
   const toggleTheme = () => {
@@ -51,8 +52,21 @@ export default function App() {
     // });
   }
 
+  useEffect(() => function(){
+    sleep(3000).then(() => {
+      setLoader(false);
+    })
+  });
+
+  const sleep = (time) => {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
+
 
     return (
+      loader ? 
+      <div className='app-loader'><ReactLoader type={"bars"} color={"#3c415e"} height={"300px"} width={"200px"}/></div>
+      :
       <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <Flyer/>
@@ -126,7 +140,6 @@ export default function App() {
           </div>
         </footer>
       </div>
-      
     ); 
   }
 
