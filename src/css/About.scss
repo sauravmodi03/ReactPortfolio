@@ -19,10 +19,6 @@ section{
     }
 }
 
-.about-info{
-    padding: 30px;
-}
-
 .about-info-bg{
     height: fit-content;
     font-size: calc(2rem + 2vmin);
@@ -101,7 +97,11 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    row-gap: 3rem;
+    gap: 3em;
+    padding: 30px;
+    background: #b5bebe;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px #c0bfbf;
 }
 
 .about-l1{
