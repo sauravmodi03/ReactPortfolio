@@ -35,6 +35,7 @@
   background: linear-gradient(to right, #fff1eb 0%, #{Media.$theme-light} 100%);
 }
 
+//Dark Theme Start -------
 .dark-theme{
   background: #{Media.$app-bg-dark};
   color: white;
@@ -111,8 +112,15 @@
   .bar-wrapper{
     border: 2px solid #ffffff;
   }
+
+  .heading-text{
+    &::after,&::before{
+      background: white;
+    }
+  }
   
 }
+// Dark Theme end ----------
 
 .App main{
   max-width: 1400px;

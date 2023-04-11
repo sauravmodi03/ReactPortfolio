@@ -66,9 +66,12 @@ section{
     filter: grayscale(100%) contrast(1);
     transition: .5s;
     border: 5px solid;
+    border-radius: 5px;
 
     &:hover{
         filter: none;
+        transform: scale(1.1);
+        border: 1px solid;
     }
 
     @media #{Media.$ipad-pro-landscape}{

@@ -2,11 +2,6 @@
 import '../css/About.scss';
 import React from 'react';
 import about from '../img/self-orig.jpg';
-import arrow from '../img/arrow-white.png';
-import resumeqr from '../img/ResumeQR.png';
-import QRlogo from '../img/QR-black.png';
-import Resume from '../data/Resume.pdf';
-import Label from './Label';
 import {getY, getHeight} from './Utility.js';
 
 export default function About() {
@@ -69,7 +64,7 @@ export default function About() {
                                 Full Stack Developer!
                             </span>
                             <span className='about-l3 ab-animation'>
-                                Chicago, USA
+                                5+ Yrs | Chicago, USA
                             </span>
                             <section className='about-info-main'>
                                 <span> About Me</span>
