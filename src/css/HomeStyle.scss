@@ -397,6 +397,8 @@
   display: grid;
   transition: 1s;
   cursor: pointer;
+  opacity: 0;
+  animation: drop .5s linear forwards 3.8s;
 
   #qr-logo{
       width: 2.5em;
