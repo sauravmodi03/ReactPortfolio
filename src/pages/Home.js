@@ -1,12 +1,12 @@
 import { Link } from 'react-scroll';
 import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
-import arrow from '../img/arrow-up-b.png';
+import arrow from '../img/arrow-up-d.png';
 import downArrow from '../img/arrow.png';
 import self from '../img/self.png';
 import { useEffect, useState } from 'react';
 import resumeqr from '../img/ResumeQR.png';
-import QRlogo from '../img/QR-black.png';
+import QRlogo from '../img/qr-d.png';
 import Resume from '../data/Resume.pdf';
 
 
@@ -29,35 +29,31 @@ function Home() {
 
         element.addEventListener("mouseenter",function(){
             showAvatar(false);
-            console.log("Mouseenter");
         });
 
         element.addEventListener("mouseleave",function(){
             showAvatar(true);
-            console.log("Mouseleave");
         });
     });
 
     const manageQR = () => {
-        var qrcode = document.querySelector(".resume-qr");
-        qrcode.classList.toggle("show-qr");
+        showAvatar(!avatar);
     }
 
     return (
         <div id="home" className="Home flex-top-padding">
             <article>
+                <div onClick={manageQR} className="qr-wrapper">
+                    <img id="qr-logo" src={QRlogo} alt="QR logo"/>
+                </div>
                 <section id="avatar-container" className="avatar-container">
-                    <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
+                    {avatar ? <img id="avatar" className="avatar" src={manLogo} alt="Avatar Logo"/>
+                     : <img id="resume" className="avatar" src={resumeqr} alt="Avatar Logo"/> }
                 </section>
                 <section className="info">
                     <div className='info-l1-wraper drop-heading'>
                         <span className='info-l2 info-bg big-heading'>Hi, I'm Saurav.</span>
-                        <div onClick={manageQR} className="qr-wrapper">
-                            <img id="qr-logo" src={QRlogo} alt="QR logo"/>
-                        </div>
-                    </div>
-                    <div className='resume-qr'>
-                        <img src={resumeqr} alt="Resume logo"/>
+                        
                     </div>
                     {/* <span className='info-l1 info-bg'>Hi, I'm Saurav!</span> */}
                     <span className='info-l3 info-bg'>I am a Software Engineer specialized in creating exceptional digital experiences, combining my technical 

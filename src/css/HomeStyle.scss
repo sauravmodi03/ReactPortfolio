@@ -127,7 +127,9 @@
 
   img{
     margin: auto;
-    width: calc(15em + 2vmin);
+    width: calc(10em + 2vmin);
+    animation: fadeIn 1s;
+    margin: 30px;
   
     @media #{Media.$ipad-pro-portrait}{
         max-width: 20em;
@@ -137,6 +139,11 @@
       max-width: 12em;
     }
   }
+}
+
+@keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
 
 @keyframes rotateY {
@@ -238,7 +245,7 @@
     display: grid;
     text-align: center;
     padding: 5px 0;
-    animation: scrollerScaleUp 1s ease-out forwards 3s;
+    animation: scrollerScaleUp 1s ease-out forwards 1s;
     position: fixed;
     bottom: 70px;
     opacity: 1;
@@ -284,8 +291,8 @@
   margin: auto;
   animation: top-scroll-arrow 1.5s linear 3s infinite;
   img{
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 
@@ -350,7 +357,7 @@
   transition: .5s;
   opacity: 0;
   transform: translateY(100%);
-  animation: resumeSlideInBottom 1s forwards 3s;
+  animation: resumeSlideInBottom 1s forwards 4s;
 
   &:hover{
       transform: scale(1.1);
@@ -428,4 +435,8 @@
 
 .show-qr{
   height: calc(8em + 2vmin);
+}
+
+.about-info p{
+  margin: 0;
 }

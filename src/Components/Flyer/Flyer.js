@@ -3,10 +3,10 @@ import { BrowserRouter, Link } from 'react-router-dom';
 
 import React from 'react';
 
-import linkedin from '../../img/linkedinb.png';
-import git from '../../img/gitb.png';
-import insta from '../../img/instab.png';
-import twitter from '../../img/twitterb.png';
+import linkedin from '../../img/in-d.png';
+import git from '../../img/git-d.png';
+import insta from '../../img/insta-d.png';
+import twitter from '../../img/twit-d.png';
 import gearw from '../../img/gear-white.png';
 import './Flyer.scss';
 

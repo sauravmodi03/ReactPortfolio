@@ -5,7 +5,7 @@ section{
 }
 
 .about-info-wrapper{
-    font-size: 2em;
+    font-size: 1.5em;
     display: grid;
     border-radius: 20px 0;
     padding: 20px;
@@ -17,6 +17,12 @@ section{
         padding: 0;
         font-size: 1.5rem;
     }
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .about-info-bg{
@@ -86,7 +92,7 @@ section{
 }
 
 @keyframes slideInLeft-aboutpic {
-    to{transform: translateX(0); opacity: 1;}
+    100%{transform: translateX(0); opacity: 1;}
 }
 
 @keyframes slideInLeft {
@@ -122,6 +128,7 @@ section{
 
 .about-info-main{
     grid-gap: 1rem;
+    display: grid;
 }
 
 .heading-text {

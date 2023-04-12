@@ -22,7 +22,7 @@ export default function About() {
         var label = document.querySelector(".about-label");
 
         if(innerHeight > getY(pic) + getHeight(pic) * 2/3){
-            pic.style.animation = "slideInLeft-aboutpic 1.5s forwards";
+            pic.style.animation = "slideInLeft-aboutpic .5s forwards";
         }
 
         for (let i = 0; i < infoList.length; i++) {
@@ -57,24 +57,28 @@ export default function About() {
                 <div className='about-info-wrapper -drop-shadow'>
                     <article>
                         <section className='about-info'>
-                            <span className='about-l1 ab-animation'>
-                                Hi, I'm Saurav
-                            </span>
-                            <span className='about-l1 ab-animation'>
-                                Full Stack Developer!
-                            </span>
-                            <span className='about-l3 ab-animation'>
-                                5+ Yrs | Chicago, USA
-                            </span>
-                            <section className='about-info-main'>
-                                <span> About Me</span>
-                                <span> Languages I speak: Java, HTML, CSS, JavaScript, Python</span>
-                                <span> Framework knowledge: Spring, React, Angular, Bootstrap</span>
-                                <span> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</span>
-                                <span> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
+                            <div>
+                                <p className='about-l3 ab-animation'>
+                                    Hello, my name is
+                                </p>
+                                <p className='about-l1 ab-animation'>
+                                    Saurav Modi.
+                                </p>
+                                <p className='about-l1 ab-animation'>
+                                    I'm a Full Stack Developer.
+                                </p>
+                                <p className='about-l3 ab-animation -bold'>
+                                    5+ Yrs | Chicago, USA
+                                </p>
+                            </div>
+                            <div className='about-info-main'>
+                                <p> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
                                     meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
-                                    and technologies to ensure that my work remains innovative and effective.</span>
-                            </section>
+                                    and technologies to ensure that my work remains innovative and effective.</p>
+                                <p> Languages I speak: Java, HTML, CSS, JavaScript, Python</p>
+                                <p> Framework knowledge: Spring, React, Angular, Bootstrap</p>
+                                <p> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
+                            </div>
                         </section>
                         <picture className='about-pic'>
                             <img src={about} alt="About logo"></img>

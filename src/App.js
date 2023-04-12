@@ -2,17 +2,17 @@
 import './App.scss';
 import {Link} from 'react-scroll';
 
-import linkedin from './img/in-round-b.png';
-import git from './img/gitb.png';
-import insta from './img/insta-round-b.png';
-import twitter from './img/twit-round-b.png';
+import linkedin from './img/in-d.png';
+import git from './img/git-d.png';
+import insta from './img/insta-d.png';
+import twitter from './img/twit-d.png';
 import phoneblack from './img/phoneblack.png';
 import markerblack from './img/markerblack.png';
 import mailblack from './img/mailblack.png';
 import copyright from './img/copy-black.png';
 import www from './img/www-b.png';
 import sun from './img/sun-w.png';
-import moon from './img/moon-w.png';
+import moon from './img/moon-d.png';
 import ReactLoader from 'react-loading';
 
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';

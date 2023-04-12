@@ -7,6 +7,10 @@
     left: 1em;
     top: 50%; 
     z-index: 10;
+
+    @media #{Media.$iphone-portrait},#{Media.$iphone-landscape} {
+      display: none;
+    }
 }
 
 .link-flyer{
@@ -15,7 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-150%);
-  animation: 1.5s ease-out slideInLeft forwards 3s;
+  animation: 1.5s ease-out slideInLeft forwards 3.5s;
   align-items: center;
   align-self: center;
   transition: .5s;

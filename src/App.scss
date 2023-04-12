@@ -1,6 +1,8 @@
   @use './css/Media';
 
   
+  .-bold {font-weight: bold;}
+
   .-fl-r-c {display: flex; flex-direction: row; justify-content: center;}
   .-fl-r-sb {display: flex; flex-direction: row; justify-content: space-between;}
   .-fl-r-sa {display: flex; flex-direction: row; justify-content: space-around;}
@@ -56,13 +58,13 @@
     background: linear-gradient(45deg, #{Media.$theme-dark}, transparent);
   }
 
-  .resumeLink,.contact-wrapper,.content,#hire-nav,input[type=submit]{
+  .resumeLink,.contact-wrapper,.content,#hire-nav,input[type=submit],.about-info-wrapper article {
     border: 2px solid #{Media.$theme-dark};
     box-shadow: none;
   }
 
-  .content, .contact-wrapper {
-    background: #454545;
+  .about-info-wrapper article,.content, .contact-wrapper{
+    background: #000000;
   }
 
   .timeline-wrapper::after{
@@ -115,7 +117,7 @@
 
   .heading-text{
     &::after,&::before{
-      background: white;
+      background: #{Media.$theme-dark};
     }
   }
   
