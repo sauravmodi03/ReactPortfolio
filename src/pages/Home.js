@@ -2,7 +2,8 @@ import { Link } from 'react-scroll';
 import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
 import arrow from '../img/arrow-up-d.png';
-import downArrow from '../img/arrow.png';
+import arrowDownDark from '../img/arrow-down-d.png';
+import arrowDownWhite from '../img/arrow-down-l.png';
 import self from '../img/self.png';
 import { useEffect, useState } from 'react';
 import resumeqr from '../img/ResumeQR.png';
@@ -10,7 +11,7 @@ import QRlogo from '../img/qr-d.png';
 import Resume from '../data/Resume.pdf';
 
 
-function Home() {
+function Home(props) {
 
     const[avatar, showAvatar] = useState(true);
 
@@ -34,6 +35,8 @@ function Home() {
         element.addEventListener("mouseleave",function(){
             showAvatar(true);
         });
+
+        console.log(props.darkTheme);
     });
 
     const manageQR = () => {
@@ -63,7 +66,7 @@ function Home() {
                         <a href={Resume} className="resumeLink" download="Resume_SauravModi">
                             <span>Resume</span>
                             <div className='download-wrapper'>
-                                <img src={downArrow} alt="arrow logo"/>
+                                <img src={props.darkTheme ? arrowDownWhite : arrowDownDark} alt="arrow logo"/>
                             </div>
                         </a>
                     </div>

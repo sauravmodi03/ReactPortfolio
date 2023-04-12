@@ -6,11 +6,24 @@ import linkedin from './img/in-d.png';
 import git from './img/git-d.png';
 import insta from './img/insta-d.png';
 import twitter from './img/twit-d.png';
-import phoneblack from './img/phoneblack.png';
-import markerblack from './img/markerblack.png';
-import mailblack from './img/mailblack.png';
+import www from './img/www-d.png';
+import phoneblack from './img/call-d.png';
+import markerblack from './img/marker-d.png';
+import mailblack from './img/mail-d.png';
+
+
+import linkedinL from './img/in-l.png';
+import gitL from './img/git-l.png';
+import instaL from './img/insta-l.png';
+import twitterL from './img/twit-l.png';
+import wwwL from './img/www-l.png';
+import phoneblackL from './img/call-l.png';
+import markerblackL from './img/marker-l.png';
+import mailblackL from './img/mail-l.png';
+
+
 import copyright from './img/copy-black.png';
-import www from './img/www-b.png';
+
 import sun from './img/sun-w.png';
 import moon from './img/moon-d.png';
 import ReactLoader from 'react-loading';
@@ -69,7 +82,7 @@ export default function App() {
       :
       <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <Flyer/>
+        <Flyer darkTheme={darkTheme}/>
         <div className="bg-bubbles">
           <div className="bg-square"></div>
           <div className="bg-square"></div>
@@ -82,11 +95,11 @@ export default function App() {
         <Header/>
         <main className='main'>
         <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
-            <Home/>
-            <About/>
-            <Skills/>
-            <Work/>
-            <Contact/>
+            <Home darkTheme={darkTheme}/>
+            <About darkTheme={darkTheme}/>
+            <Skills darkTheme={darkTheme}/>
+            <Work darkTheme={darkTheme}/>
+            <Contact darkTheme={darkTheme}/>
         </main>
         <footer>
           <div className='foot-container'>
@@ -104,19 +117,19 @@ export default function App() {
                   <label>Contact information.</label>
                   <article className='foo-contact'>
                       <div className="foo-c-w">
-                          <img src={markerblack} alt=''/>
+                          <img src={darkTheme ? markerblackL : markerblack} alt=''/>
                           <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
                       </div>
                       <div className="foo-c-w">
-                          <img src={mailblack} alt=''/>
+                          <img src={darkTheme ? mailblackL : mailblack} alt=''/>
                           <div className='info-val'>sauravmodi03@gmail.com</div>
                       </div>
                       <div className="foo-c-w">
-                          <img src={www} alt=''/>
+                          <img src={darkTheme ? wwwL : www} alt=''/>
                           <div className='info-val'>https://www.smodi.co.in</div>
                       </div>
                       <div className="foo-c-w">
-                          <img src={phoneblack} alt=''/>
+                          <img src={darkTheme ? phoneblackL : phoneblack} alt=''/>
                           <div className='info-val'>+1 312 478 1958</div>
                       </div>
                   </article>
@@ -126,10 +139,10 @@ export default function App() {
                 <span>
                   <BrowserRouter>
                       <nav id="foot-links-wrap" className='foot-links-wrap'>
-                          <RouterLink className='scale' to="https://www.linkedin.com/in/sauravmodi03/" target="_blank"><img alt="Linked logo" src={linkedin}/></RouterLink>
-                          <RouterLink className='scale' to="https://github.com/sauravmodi03" target="_blank"><img alt="Git logo" src={git}/></RouterLink>
-                          <RouterLink className='scale' to="https://www.instagram.com/saurav.modi/" target="_blank"><img alt="Insta logo" src={insta}/></RouterLink>
-                          <RouterLink className='scale' to="https://twitter.com/sauravmodi03" target="_blank"><img alt="Twitter logo" src={twitter}/></RouterLink>
+                          <RouterLink className='scale' to="https://www.linkedin.com/in/sauravmodi03/" target="_blank"><img alt="Linked logo" src={darkTheme ? linkedinL : linkedin}/></RouterLink>
+                          <RouterLink className='scale' to="https://github.com/sauravmodi03" target="_blank"><img alt="Git logo" src={darkTheme ? gitL : git}/></RouterLink>
+                          <RouterLink className='scale' to="https://www.instagram.com/saurav.modi/" target="_blank"><img alt="Insta logo" src={darkTheme ? instaL : insta}/></RouterLink>
+                          <RouterLink className='scale' to="https://twitter.com/sauravmodi03" target="_blank"><img alt="Twitter logo" src={darkTheme ? twitterL : twitter}/></RouterLink>
                       </nav>
                   </BrowserRouter>
                 </span>
