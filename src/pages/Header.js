@@ -3,10 +3,11 @@ import '../css/Header.scss';
 import React, {useEffect, useState} from 'react';
 import NavMenu from './NavMenu';
 import { Link } from 'react-scroll';
-import menuLogo from '../img/menu.png';
+import menu from '../img/menu-d.png';
+import menuL from '../img/menu-l.png';
 import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 
-function Header() {
+function Header(props) {
 
     const [navMobile, setNavMobile] = useState(window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").matches);
     
@@ -40,16 +41,17 @@ function Header() {
     }, []);
 
     const openNav = () => {
-        var menu = document.getElementById("nav-link-wrap");
-        menu.style.width="80%";
-        menu.style.left="10%";
+        // var menu = document.getElementById("nav-link-wrap");
+        // menu.style.width="80%";
+        // menu.style.left="10%";
         document.getElementById("nav-bg-portrait").classList.add("nav-greyout");
+        document.getElementById("close-logo").classList.toggle("rotate-anitclock");
     }
 
     const handleNavMenu = () => {
-      var menu = document.getElementById("nav-link-wrap");
-      menu.style.width="0";
-      menu.style.left="50%";
+      // var menu = document.getElementById("nav-link-wrap");
+      // menu.style.width="0";
+      // menu.style.left="50%";
       document.getElementById("nav-bg-portrait").classList.remove("nav-greyout");
     }
 
@@ -61,7 +63,7 @@ return(
                     <RouterLink className="smodi-link scale" to="/">SMODI</RouterLink>
                   </BrowserRouter>
                 </nav>
-                <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>
+                <nav id="nav-button"><Link to="#" onClick={openNav}><img id="close-logo" src={props.darkTheme ? menuL : menu} alt="Menu logo"/></Link></nav>
                 {!navMobile && <NavMenu/>}
             </header>
             { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu/></div>}

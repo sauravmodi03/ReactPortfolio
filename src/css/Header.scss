@@ -17,6 +17,21 @@
     }
 }
 
+#nav-button img{
+    width: 2em; 
+    transition: .5s;
+    animation-delay: .2s;
+}
+
+.rotate-anticlock{
+    transform: rotate(-45deg);
+}
+.rotate-clock{
+    transform: rotate(0);
+}
+
+
+
 .head-on-scroll{
     height: 3.5em;
     box-shadow: 0 0 14px 0 #b2b2b2;
@@ -117,19 +132,19 @@
         height: 2.5em;
     }
     .nav-bg-portrait{
-        height: 100%;
-        width: 0;
+        height: 100vh;
         transition: .5s ease-in-out;
-        background: #646464cc;
+        background: rgb(54 126 124);
         z-index: 12;
         position: fixed;
-        left: 50%;
-        opacity: 0;
+        opacity: 1;
+        transform: translateX(100%);
+        transition: .4s;
+        width: 75%;
+        right: 0;
     }
     .nav-greyout{
-        width: 100%;   
-        left: 0;
-        opacity: 1;
+        transform: translateX(0);
     }
 }
 

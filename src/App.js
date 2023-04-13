@@ -80,7 +80,7 @@ export default function App() {
           <div className="bg-square"></div>
         </div>
         <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
-        <Header/>
+        <Header darkTheme={darkTheme}/>
         <main className='main'>
             <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
             <Home darkTheme={darkTheme}/>

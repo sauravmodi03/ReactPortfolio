@@ -6,23 +6,13 @@
     gap: 1em;
 
     @media #{Media.$iphone-portrait}  {
-        height: 3em;
-        display: flex;
         flex-direction: column;
-        width: 0;
         height: 60vh;
-        background: #080807c7;
-        position: fixed;
-        overflow-x: hidden;
-        transition: 0.5s;
         color: white;
-        border-radius: 20px;
-        left: 50%;
         margin-top: 25%;
         justify-content: space-evenly;
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
         box-sizing: border-box;
+        font-size: calc(8px + 2vw);
     }
   }
 
@@ -38,11 +28,6 @@
     color: #{Media.$bg-color-1};
   }
 
-  #nav-button img{
-    width: 1em;
-    height: 1em;
-  }
-
   .nav-menu-show{
     display: flex;
   }
@@ -53,6 +38,10 @@
 
   #nav-close-btn{
       display: none;
+
+      img{
+        width: 2em;
+      }
   }
 
   @media #{Media.$iphone-portrait} {
@@ -74,7 +63,7 @@
       display: grid;
         right: 0;
         position: absolute;
-        padding: 1em;
+        padding: 0.5em 1em;;
         top: 0;
     }
     
