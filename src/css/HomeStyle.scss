@@ -11,7 +11,6 @@
     flex-direction: column-reverse;
     padding: 0 50px;
   }
-
 }
 
 .Home-main img {
@@ -46,12 +45,13 @@
   font-family: inherit;
   padding: 10px;
 
-  @media #{Media.$ipad-pro-portrait}{
-    width: auto;
+  @media #{Media.$ipad-pro-portrait},#{Media.$iphone-portrait}{
+    max-width: auto;
   }
 
-  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
-    width: auto;
+  @media #{Media.$iphone-landscape} {
+    max-width: 60%;
+    gap: 1em;
   }
 
   @media #{Media.$iphone-landscape}{

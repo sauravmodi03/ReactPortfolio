@@ -125,17 +125,22 @@ input[type="submit"]{
     display: flex;
     flex-direction: column;
     padding: 25px;
-    opacity: 0;
-    transform: translateX(100%);
+    gap: calc(1em + 3vh);
+    
 
     @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
         width: auto;
     }
 }
 
-@keyframes infoWrapper-slideInRight {
-    to{transform: translateX(0);
-    opacity: 1;}
+.slide-right{
+    transform: translateX(100%);
+    //opacity: 0;
+    transition: .5s;
+}
+
+@keyframes slideInRight {
+    to{transform: translateX(0); opacity: 1;}
 }
 
 .contact-wrapper{

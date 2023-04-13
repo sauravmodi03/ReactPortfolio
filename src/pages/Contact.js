@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import '../css/Contact.scss';
 
 import phoneblack from '../img/call-d.png';
@@ -32,8 +32,9 @@ class Contact extends React.Component {
         document.addEventListener('scroll',function(){
             const wrapper = document.querySelector(".contact-wrapper");
             const form = document.querySelector(".contact-form");
-            const info = document.querySelector(".contact-info-wrapper");
+            
             const label = document.querySelector(".contact-label");
+            const listElements = document.querySelectorAll(".slide-right"); 
             
             const wrapperY = wrapper.getBoundingClientRect().y;
             const elementHeight = wrapper.getBoundingClientRect().height;
@@ -41,13 +42,18 @@ class Contact extends React.Component {
             if(innerHeight > wrapperY + elementHeight/4){
                 wrapper.style.animation = "contact-fadeIn 1s forwards";
                 form.style.animation = "form-slideInTop 1s forwards 1s";
-                info.style.animation = "infoWrapper-slideInRight 1s forwards 1s";
+                //info.style.animation = "infoWrapper-slideInRight 1s forwards 1s";
             }
 
             if(innerHeight > getY(label) + getHeight(label) * 2/3){
                 label.style.animation = "labelSlideInTop 1.5s forwards";
             }
 
+            for (let i = 0; i < listElements.length; i++) {
+                if(innerHeight > getY(listElements[i]) + getHeight(listElements[i])/4){
+                    listElements[i].style.animation = "slideInRight 1s forwards 1s";
+                }
+            }
         });
     }
 
@@ -105,22 +111,21 @@ class Contact extends React.Component {
                             <input type="submit" value="Send" />
                         </form>
                         <div className="contact-info-wrapper">
-                            <label>Contact information.</label>
-                            <p>Please feel free to contact.</p>
+                            <label className='slide-right'>Contact information.</label>
                             <article className='info-article'>
-                                <div className="contact-info">
+                                <div className="contact-info slide-right">
                                     <div><img src={markerblack} alt=''/></div>
                                     <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
                                 </div>
-                                <div className="contact-info">
+                                <div className="contact-info slide-right">
                                     <div><img src={mailblack} alt=''/></div>
                                     <div className='info-val'>sauravmodi03@gmail.com</div>
                                 </div>
-                                <div className="contact-info">
+                                <div className="contact-info slide-right">
                                     <div><img src={www} alt=''/></div>
                                     <a href="https://www.smodi.co.in" className='info-val'>https://www.smodi.co.in</a>
                                 </div>
-                                <div className="contact-info">
+                                <div className="contact-info slide-right">
                                     <div><img src={phoneblack} alt=''/></div>
                                     <div className='info-val'>+1 312 478 1958</div>
                                 </div>

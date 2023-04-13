@@ -12,7 +12,13 @@
         margin-top: 25%;
         justify-content: space-evenly;
         box-sizing: border-box;
-        font-size: calc(8px + 2vw);
+    }
+
+  }
+
+  .--nav-font{
+    @media #{Media.$iphone-portrait} {
+      font-size: calc(13px + 2vw);
     }
   }
 
@@ -40,7 +46,7 @@
       display: none;
 
       img{
-        width: 2em;
+        max-width: 2em;
       }
   }
 

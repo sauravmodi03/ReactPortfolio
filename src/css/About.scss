@@ -64,6 +64,7 @@ section{
 .about-pic{
     opacity: 0;
     transform: translateX(50%);
+    align-self: flex-start;
 }
 
 .about-pic img{
@@ -108,7 +109,7 @@ section{
     align-items: center;
     gap: 3em;
     padding: 30px;
-    background: #b5bebe;
+    background: #b5bebec9;
     border-radius: 5px;
     box-shadow: 2px 3px 10px #c0bfbf;
 
