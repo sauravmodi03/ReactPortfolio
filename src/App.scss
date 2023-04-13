@@ -89,7 +89,13 @@
 
   .left::before{
     border-left: 15px solid #{Media.$theme-dark};
+    @media #{Media.$iphone-portrait}, #{Media.$iphone-landscape}{
+      border-left: none;
+      border-right: 15px solid #{Media.$theme-dark};
+    }
   }
+
+
   .right::before{
     border-right: 15px solid #{Media.$theme-dark};
   }
@@ -119,6 +125,10 @@
     &::after,&::before{
       background: #{Media.$theme-dark};
     }
+  }
+
+  .download-wrapper{
+    border-bottom: 4px solid white;
   }
   
 }
@@ -393,13 +403,14 @@
     position: fixed;
     top: 15%;
     right: 0px;
-    background: #b5bebe;
+    background: #{Media.$flyers-bg-light};
     border: none;
     border-radius: 10px 0 0 10px;
     padding: 10px;
     transition: 1s;
     transform: translateX(100%);
     animation: slideInRight 1s forwards 3s;
+    z-index: 1;
 
     img{
       width: 1.5em;

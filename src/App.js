@@ -10,6 +10,7 @@ import www from './img/www-d.png';
 import phoneblack from './img/call-d.png';
 import markerblack from './img/marker-d.png';
 import mailblack from './img/mail-d.png';
+import arrow from './img/arrow-up-d.png';
 
 
 import linkedinL from './img/in-l.png';
@@ -20,9 +21,8 @@ import wwwL from './img/www-l.png';
 import phoneblackL from './img/call-l.png';
 import markerblackL from './img/marker-l.png';
 import mailblackL from './img/mail-l.png';
+import arrowL from './img/arrow-up-l.png';
 
-
-import copyright from './img/copy-black.png';
 
 import sun from './img/sun-w.png';
 import moon from './img/moon-d.png';
@@ -45,24 +45,12 @@ import { useState } from 'react';
 export default function App() {
 
   const [darkTheme, setDarkTheme] = useState(false);
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   
-  // constructor(props) {
-  //   super(props)
-  //   this.myRef = React.createRef()
-  //   this.state = {scrollTop: 0, darkTheme:false ,themeLogo:""}
-  //   this.toggleTheme = this.toggleTheme.bind(this);
-  // }
-
-
   const toggleTheme = () => {
-    console.log("theme");
     var element = document.querySelector(".App");
     element.classList.toggle("dark-theme");
     setDarkTheme(!darkTheme);
-    // this.setState({
-    //   ["darkTheme"]:!this.darkTheme
-    // });
   }
 
   useEffect(() => function(){
@@ -94,12 +82,15 @@ export default function App() {
         <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
         <Header/>
         <main className='main'>
-        <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
+            <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
             <Home darkTheme={darkTheme}/>
             <About darkTheme={darkTheme}/>
             <Skills darkTheme={darkTheme}/>
             <Work darkTheme={darkTheme}/>
             <Contact darkTheme={darkTheme}/>
+            <Link id="top-scroll-wrapper" className='top-scroll-wrapper' to='home' spy={true} smooth={true} duration={500}>
+                <div className='top-scroll'><img src={darkTheme ? arrowL : arrow} alt="Arrow logo"/></div>
+            </Link>
         </main>
         <footer>
           <div className='foot-container'>
@@ -156,5 +147,3 @@ export default function App() {
     ); 
   }
 
-
-// export default App;

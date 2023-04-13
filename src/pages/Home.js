@@ -1,10 +1,8 @@
 import { Link } from 'react-scroll';
 import '../css/HomeStyle.scss';
 import manLogo from '../img/man.png';
-import arrow from '../img/arrow-up-d.png';
 import arrowDownDark from '../img/arrow-down-d.png';
 import arrowDownWhite from '../img/arrow-down-l.png';
-import self from '../img/self.png';
 import { useEffect, useState } from 'react';
 import resumeqr from '../img/ResumeQR.png';
 import QRlogo from '../img/qr-d.png';
@@ -35,8 +33,6 @@ function Home(props) {
         element.addEventListener("mouseleave",function(){
             showAvatar(true);
         });
-
-        console.log(props.darkTheme);
     });
 
     const manageQR = () => {
@@ -77,9 +73,6 @@ function Home(props) {
             </article>
             <Link id="scroller-wrapper" className='scroller-wrapper' to='about' spy={true} smooth={true} duration={500}>
                 <div className='scroller'></div>
-            </Link>
-            <Link id="top-scroll-wrapper" className='top-scroll-wrapper' to='home' spy={true} smooth={true} duration={500}>
-                <div className='top-scroll'><img src={arrow} alt="Arrow logo"/></div>
             </Link>
         </div>
     );

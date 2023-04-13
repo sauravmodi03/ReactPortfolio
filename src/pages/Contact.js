@@ -1,11 +1,13 @@
 
 import React, { useRef } from 'react';
 import '../css/Contact.scss';
-import phoneblack from '../img/phoneblack.png';
-import markerblack from '../img/markerblack.png';
-import mailblack from '../img/mailblack.png';
-import www from '../img/www-b.png';
-import Label from './Label';
+
+import phoneblack from '../img/call-d.png';
+import markerblack from '../img/marker-d.png';
+import mailblack from '../img/mail-d.png';
+import www from '../img/www-d.png';
+
+
 import emailjs from '@emailjs/browser';
 import {getY, getHeight} from './Utility.js';
 

@@ -132,11 +132,11 @@
     margin: 30px;
   
     @media #{Media.$ipad-pro-portrait}{
-        max-width: 20em;
+        max-width: 15em;
     }
   
     @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
-      max-width: 12em;
+      max-width: 8em;
     }
   }
 }
@@ -367,6 +367,10 @@
       background: #3c415e;
       color: white;
   }
+
+  @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
+      font-size: 15px;
+  }
 }
 
 @keyframes resumeSlideInBottom {
@@ -379,7 +383,7 @@
   height: 1em;
   text-align: center;
   padding: 5px;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #{Media.$font-dark};
 
   img{
       width: 1em;
@@ -399,6 +403,7 @@
   cursor: pointer;
   opacity: 0;
   animation: drop .5s linear forwards 3.8s;
+  display: none;
 
   #qr-logo{
       width: 2.5em;
@@ -409,10 +414,6 @@
   }
   &:hover{
       transform: scale(1.2);
-  }
-
-  @media only screen and (min-width: 80em) {
-      display: none;
   }
 
   // &::before{

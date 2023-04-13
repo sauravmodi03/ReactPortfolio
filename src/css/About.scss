@@ -56,7 +56,7 @@ section{
     to{transform: translateX(0); opacity: 1;}
 }
 
-.ab-animation{
+.slideLeft{
     transform: translate(-50%);
     opacity: 0;
 }
@@ -111,6 +111,10 @@ section{
     background: #b5bebe;
     border-radius: 5px;
     box-shadow: 2px 3px 10px #c0bfbf;
+
+    @media #{Media.$iphone-portrait} {
+        flex-direction: column-reverse;
+    }
 }
 
 .about-l1{
@@ -129,6 +133,10 @@ section{
 .about-info-main{
     grid-gap: 1rem;
     display: grid;
+
+    @media #{Media.$iphone-portrait} {
+        font-size: calc(10px + 2vw);
+    }
 }
 
 .heading-text {
@@ -146,8 +154,6 @@ section{
     position: relative;
     width: fit-content;
 
-    
-
     }
 
     &::after{
@@ -158,6 +164,11 @@ section{
         height: 1px;
         position: absolute;
         background: #3c415e;
+
+        @media #{Media.$iphone-portrait} {
+            left: 80%;
+            right: 0%;
+        }
     }
 
     &::before{
@@ -168,10 +179,11 @@ section{
         height: 1px;
         position: absolute;
         background: #3c415e;
+        @media #{Media.$iphone-portrait} {
+            left: 0%;
+            right: 80%;
+        }
     }
-
-    
-
 }
 
 @keyframes labelSlideInTop {

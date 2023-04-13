@@ -43,7 +43,6 @@ function Skills() {
     const innerHeight = document.documentElement.clientHeight;
 
     document.addEventListener('scroll',function(){
-        console.log("Skills");
         const leftList = document.querySelectorAll(".skill-slidein-left-animation");
         const rightList = document.querySelectorAll(".skill-slidein-right-animation");
         const label = document.querySelector(".skills-label");

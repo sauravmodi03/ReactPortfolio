@@ -17,7 +17,7 @@ export default function About() {
     // }
 
     document.addEventListener('scroll',function(){
-        var infoList = document.querySelectorAll(".ab-animation");
+        var infoList = document.querySelectorAll(".slideLeft");
         var pic = document.querySelector(".about-pic");
         var label = document.querySelector(".about-label");
 
@@ -58,26 +58,26 @@ export default function About() {
                     <article>
                         <section className='about-info'>
                             <div>
-                                <p className='about-l3 ab-animation'>
+                                <p className='about-l3 slideLeft'>
                                     Hello, my name is
                                 </p>
-                                <p className='about-l1 ab-animation'>
+                                <p className='about-l1 slideLeft'>
                                     Saurav Modi.
                                 </p>
-                                <p className='about-l1 ab-animation'>
+                                <p className='about-l1 slideLeft'>
                                     I'm a Full Stack Developer.
                                 </p>
-                                <p className='about-l3 ab-animation -bold'>
+                                <p className='about-l3 slideLeft -bold'>
                                     5+ Yrs | Chicago, USA
                                 </p>
                             </div>
                             <div className='about-info-main'>
-                                <p> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
+                                <p className='slideLeft'> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
                                     meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
                                     and technologies to ensure that my work remains innovative and effective.</p>
-                                <p> Languages I speak: Java, HTML, CSS, JavaScript, Python</p>
-                                <p> Framework knowledge: Spring, React, Angular, Bootstrap</p>
-                                <p> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
+                                <p className='slideLeft'> Languages I speak: Java, HTML, CSS, JavaScript, Python</p>
+                                <p className='slideLeft'> Framework knowledge: Spring, React, Angular, Bootstrap</p>
+                                <p className='slideLeft'> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
                             </div>
                         </section>
                         <picture className='about-pic'>

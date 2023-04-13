@@ -58,7 +58,7 @@ return(
             <header  className="head-wrapper">
                 <nav id="smodi">
                   <BrowserRouter>
-                    <RouterLink className="smodi-link scale" to="https://www.smodi.co.in">SMODI</RouterLink>
+                    <RouterLink className="smodi-link scale" to="/">SMODI</RouterLink>
                   </BrowserRouter>
                 </nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img src={menuLogo} alt="Menu logo"/></Link></nav>

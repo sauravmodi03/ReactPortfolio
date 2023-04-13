@@ -30,7 +30,7 @@ $app-bg-light: "linear-gradient(to right, #fff1eb 0%, #{$bg-color-4} 100%)";
 $theme-light: "#2bc1c1";
 $primary-light: "#FF6000";
 $font-dark:"#3c415e";
-$flyers-bg-light:"#b5bebe";
+$flyers-bg-light:"#acacac";
 
 
 //Collor Pallete for Dark Theme
@@ -38,7 +38,7 @@ $app-bg-dark: "#000000";
 $theme-dark:  "#3e32e4"; //#FF6000";
 $primary-dark: "#FF6000";
 $font-light:"white";
-$flyers-bg-dark:"#d2d2d278";
+$flyers-bg-dark:"#acacac";
 
 :export{
     ipadLandscape:$ipad-pro-landscape;
