@@ -28,6 +28,16 @@
                 background: transparent;
             }
         }
+
+        @media #{Media.$iphone-portrait} {
+            .project-info{
+                height: 22em;
+                padding: 10px;
+            }
+            .info-arrow-img{
+                transform: rotate(-180deg);
+            }
+        }
     }
 
     @media #{Media.$iphone-portrait} {
@@ -138,6 +148,8 @@
     transition: .5s;
     align-items: center;
     display: grid;
+    border-radius: 5px;
+    overflow: hidden;
 
     &::after{
         content: "";
@@ -153,9 +165,13 @@
 
     img:nth-child(1){
         max-width: 38em;
+    }
 
-        @media #{Media.$iphone-portrait} {
+    @media #{Media.$iphone-portrait} {
+        border-radius: 0;
+        img:nth-child(1){
             max-width: 100%;
         }
+
     }
 }

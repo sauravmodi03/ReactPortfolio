@@ -20,24 +20,6 @@ export function Project(props) {
         }
     });
 
-    useEffect(()=> {
-        const list = document.querySelectorAll(".project-wrapper");
-
-        for(var i= 0; i< list.length; i++){
-            const element = list[i];
-            element.addEventListener("focus",function(){
-                element.querySelector(".project-info").classList.add("expand-info");
-                element.querySelector(".info-arrow-img").classList.add("rotate-arrow");
-            });
-    
-            element.addEventListener("blur",function(){
-                element.querySelector(".project-info").classList.remove("expand-info");
-                element.querySelector(".info-arrow-img").classList.remove("rotate-arrow");
-            });
-        }
-        
-    });
-
     const handleInfo = () => {
         const element = document.querySelector(".project-info");
         element.classList.toggle("expand-info");
@@ -52,8 +34,9 @@ export function Project(props) {
                         <h4>Web Application</h4>
                         <h5>A web application for end user to generate quotation for different insurance provided by the client.</h5>
                         <p>Developed and supported applications using Java, JavaScript, HTML, CSS, RESTful API, and Spring framework working alongside a cross-functional team.</p>
-                        <p>Written comprehensive JUnit test cases for conducting rigorous integration testing to ensure the bug-free performance of the 
-                            applications with 100% test coverage.</p>
+                        <p>Implemented and integrated language translation feature, leveraging the powerful AngularJS framework and JSON data format. Allowing end user to
+                            change the website language.
+                        </p>
                     </div>
                     <picture className='project-picture' >
                         <img src={clientPortal}  alt="Client Portal"/>

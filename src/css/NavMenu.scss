@@ -13,7 +13,6 @@
         justify-content: space-evenly;
         box-sizing: border-box;
     }
-
   }
 
   .--nav-font{
@@ -72,7 +71,6 @@
         padding: 0.5em 1em;;
         top: 0;
     }
-    
   }
 
   .home-nav{
@@ -91,6 +89,12 @@
     opacity: 0;
     transform: scale(.2);
     animation: nav-option-pop .5s forwards 2.4s;
+  }
+
+  .project-nav{
+    opacity: 0;
+    transform: scale(.2);
+    animation: nav-option-pop .5s forwards 2.6s;
   }
 
   .work-nav{
