@@ -3,12 +3,20 @@
 
 .project-container{
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
 }
 
-.project-wrapper{
+.project-wrapper {
     display: flex;
     align-items: center;
     transition: .5s;
+    overflow: hidden;
+    border-radius: 5px;
 
     &:hover,&:focus{
         filter: none;
@@ -31,17 +39,32 @@
     }
 }
 
+.even-p-wrapper {
+    flex-direction: row-reverse;
+    
+    .project-info{
+        left: 0;
+    }
+
+    @media #{Media.$iphone-portrait} {
+        flex-direction: column-reverse;
+    }
+}
+
 .project-info{
-    left: 8%;
-    position: relative;
+    position: absolute;
+    height: -moz-fit-content;
     height: fit-content;
-    background: #c1c8c7d4;
+    background: rgba(193, 200, 199, 0.831372549);
     padding: 10px;
     font-size: calc(8px + 1vmin);
     border-radius: 5px;
     z-index: 1;
     overflow: hidden;
-    transition: .5s;
+    transition: 0.5s;
+    width: 40em;
+    right: 0;
+    box-sizing: border-box;
 
     p,h2,h5{
         margin: 10px 0;
@@ -53,12 +76,17 @@
         z-index: 0;
         padding: 0;
         height: 0;
+        width: fit-content;
+        position: relative;
+        font-size: calc(8px + 3vmin);
+        border-radius: 0 0 5px 5px;
     }
 
 }
+    
 
 .expand-info{
-    height: calc(5em + 15vh);
+    height: 22em;
     padding: 10px;
 }
 
@@ -76,11 +104,13 @@
     transition: .5s;
     overflow: hidden;
     display: none;
+    background: #bebbbbb8;
 
     img{
         max-width: 2em;
         max-height: 2em;
         justify-self: center;
+        transition: .5s;
     }
 
     @media #{Media.$iphone-portrait} {
@@ -123,7 +153,6 @@
 
     img:nth-child(1){
         max-width: 38em;
-        border-radius: 5px;
 
         @media #{Media.$iphone-portrait} {
             max-width: 100%;

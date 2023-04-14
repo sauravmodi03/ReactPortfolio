@@ -166,6 +166,16 @@
             left: 80%;
             right: 0%;
         }
+
+        @media #{Media.$ipad-pro-landscape} {
+            left: 65%;
+            right: 5%;
+        }
+
+        @media #{Media.$ipad-pro-portrait} {
+            left: 70%;
+            right: 5%;
+        }
     }
 
     &::before{
@@ -176,9 +186,20 @@
         height: 1px;
         position: absolute;
         background: #3c415e;
+
         @media #{Media.$iphone-portrait} {
             left: 0%;
             right: 80%;
+        }
+
+        @media #{Media.$ipad-pro-landscape} {
+            left: 5%;
+            right: 65%;
+        }
+
+        @media #{Media.$ipad-pro-portrait} {
+            left: 5%;
+            right: 70%;
         }
     }
 }

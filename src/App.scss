@@ -134,6 +134,10 @@
   .nav-bg-portrait{
     background :rgb(47 44 91);
   }
+
+  .project-picture::after {
+    background: rgb(62 50 228 / 58%);
+  }
   
 }
 // Dark Theme end ----------

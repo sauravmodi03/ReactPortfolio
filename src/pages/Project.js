@@ -2,6 +2,7 @@
 import {getY, getHeight} from './Utility.js';
 import '../css/Project.scss';
 import clientPortal from '../img/insurance.png';
+import agentPortal from '../img/agentportal.png';
 import { useEffect } from 'react';
 
 import arrow from '../img/arrow-up-d.png';
@@ -16,22 +17,25 @@ export function Project(props) {
 
         if(innerHeight > getY(label) + getHeight(label) * 2/3){
             label.style.animation = "labelSlideInTop 1.5s forwards";
-        } 
+        }
     });
 
     useEffect(()=> {
-        const element = document.querySelector(".project-wrapper");
-        element.addEventListener("focus",function(){
-            console.log("Focus");
-            document.querySelector(".project-info").classList.add("expand-info");
-            document.querySelector(".info-arrow").classList.add("rotate-arrow");
-        });
+        const list = document.querySelectorAll(".project-wrapper");
 
-        element.addEventListener("blur",function(){
-            console.log("Blur");
-            document.querySelector(".project-info").classList.remove("expand-info");
-            document.querySelector(".info-arrow").classList.remove("rotate-arrow");
-        });
+        for(var i= 0; i< list.length; i++){
+            const element = list[i];
+            element.addEventListener("focus",function(){
+                element.querySelector(".project-info").classList.add("expand-info");
+                element.querySelector(".info-arrow-img").classList.add("rotate-arrow");
+            });
+    
+            element.addEventListener("blur",function(){
+                element.querySelector(".project-info").classList.remove("expand-info");
+                element.querySelector(".info-arrow-img").classList.remove("rotate-arrow");
+            });
+        }
+        
     });
 
     const handleInfo = () => {
@@ -53,7 +57,20 @@ export function Project(props) {
                     </div>
                     <picture className='project-picture' >
                         <img src={clientPortal}  alt="Client Portal"/>
-                        <picture className='info-arrow'><img src={props.darkTheme ? arrowL : arrow} alt="Arrow"/></picture>
+                        <picture className='info-arrow'><img className="info-arrow-img" src={props.darkTheme ? arrowL : arrow} alt="Arrow"/></picture>
+                    </picture>
+                </section>
+                <section className='project-wrapper even-p-wrapper' tabIndex="1">
+                    <div className='project-info'>
+                        <h4>Client Portal Application</h4>
+                        <h5>A web application for end user to generate quotation for different insurance provided by the client.</h5>
+                        <p>Developed and supported applications using Java, JavaScript, HTML, CSS, RESTful API, and Spring framework working alongside a cross-functional team.</p>
+                        <p>Written comprehensive JUnit test cases for conducting rigorous integration testing to ensure the bug-free performance of the 
+                            applications with 100% test coverage.</p>
+                    </div>
+                    <picture className='project-picture' >
+                        <img src={agentPortal}  alt="Client Portal"/>
+                        <picture className='info-arrow' ><img className="info-arrow-img" src={props.darkTheme ? arrowL : arrow} alt="Arrow"/></picture>
                     </picture>
                 </section>
             </div>
