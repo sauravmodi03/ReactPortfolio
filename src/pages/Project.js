@@ -4,6 +4,9 @@ import '../css/Project.scss';
 import clientPortal from '../img/insurance.png';
 import { useEffect } from 'react';
 
+import arrow from '../img/arrow-up-d.png';
+import arrowL from '../img/arrow-up-l.png';
+
 export function Project(props) {
 
     const innerHeight = document.documentElement.clientHeight;
@@ -21,11 +24,13 @@ export function Project(props) {
         element.addEventListener("focus",function(){
             console.log("Focus");
             document.querySelector(".project-info").classList.add("expand-info");
+            document.querySelector(".info-arrow").classList.add("rotate-arrow");
         });
 
         element.addEventListener("blur",function(){
             console.log("Blur");
             document.querySelector(".project-info").classList.remove("expand-info");
+            document.querySelector(".info-arrow").classList.remove("rotate-arrow");
         });
     });
 
@@ -48,7 +53,7 @@ export function Project(props) {
                     </div>
                     <picture className='project-picture' >
                         <img src={clientPortal}  alt="Client Portal"/>
-                        <button className='p-info-btn' name='p-info'>p-info</button>
+                        <picture className='info-arrow'><img src={props.darkTheme ? arrowL : arrow} alt="Arrow"/></picture>
                     </picture>
                 </section>
             </div>

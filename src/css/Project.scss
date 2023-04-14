@@ -34,9 +34,9 @@
 .project-info{
     left: 8%;
     position: relative;
-    height: 0;
+    height: fit-content;
     background: #c1c8c7d4;
-    padding: 0;
+    padding: 10px;
     font-size: calc(8px + 1vmin);
     border-radius: 5px;
     z-index: 1;
@@ -51,6 +51,8 @@
     @media #{Media.$iphone-portrait} {
         left: 0;
         z-index: 0;
+        padding: 0;
+        height: 0;
     }
 
 }
@@ -61,7 +63,7 @@
 }
 
 
-.p-info-btn{
+.info-arrow{
     position: absolute;
     bottom: 0;
     z-index: 1;
@@ -70,6 +72,24 @@
     border: none;
     background: transparent;
     height: 3em;
+    align-content: center;
+    transition: .5s;
+    overflow: hidden;
+    display: none;
+
+    img{
+        max-width: 2em;
+        max-height: 2em;
+        justify-self: center;
+    }
+
+    @media #{Media.$iphone-portrait} {
+        display: grid;
+    }
+}
+
+.rotate-arrow{
+    transform: rotate(-180deg);
 }
 
 .project-info p::after {
@@ -101,7 +121,7 @@
         transition: .5s;
     }
 
-    img{
+    img:nth-child(1){
         max-width: 38em;
         border-radius: 5px;
 
