@@ -105,6 +105,10 @@
     border: 2px solid #{Media.$bg-color-2};
     background: #f9efea;
     opacity: 0;
+
+    @media #{Media.$iphone-portrait} {
+        margin: 30px 20px 30px 40px;
+    }
 }
 
 .shadow-left{

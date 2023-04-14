@@ -40,6 +40,7 @@ import Header from './pages/Header';
 import Contact from './pages/Contact';
 import Flyer from './Components/Flyer/Flyer';
 import { useState } from 'react';
+import { Project } from './pages/Project';
 
 
 export default function App() {
@@ -86,6 +87,7 @@ export default function App() {
             <Home darkTheme={darkTheme}/>
             <About darkTheme={darkTheme}/>
             <Skills darkTheme={darkTheme}/>
+            <Project darkTheme={darkTheme}/>
             <Work darkTheme={darkTheme}/>
             <Contact darkTheme={darkTheme}/>
             <Link id="top-scroll-wrapper" className='top-scroll-wrapper' to='home' spy={true} smooth={true} duration={500}>

@@ -46,11 +46,6 @@ export default function About() {
 
     });
 
-    const manageQR = () => {
-        var qrcode = document.querySelector(".resume-qr");
-        qrcode.classList.toggle("show-qr");
-    }
-
     return (
         <div id="about" className='About flex-top-padding'>
                 <div className='about-label heading-text'><h2>About Me</h2></div>
@@ -76,7 +71,7 @@ export default function About() {
                                     meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
                                     and technologies to ensure that my work remains innovative and effective.</p>
                                 <p className='slideLeft'> Languages I speak: Java, HTML, CSS, JavaScript, Python</p>
-                                <p className='slideLeft'> Framework knowledge: Spring, React, Angular, Bootstrap</p>
+                                <p className='slideLeft'> Framework knowledge: Spring, React, Angular, Bootstrap, JDBC, JPA, Hibernate, Gradle, Maven</p>
                                 <p className='slideLeft'> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
                             </div>
                         </section>

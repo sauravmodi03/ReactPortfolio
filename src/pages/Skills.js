@@ -1,18 +1,7 @@
 import '../css/Skills.scss';
-import Label from './Label';
-import { useState, useEffect } from 'react';
 import {getY, getHeight} from './Utility.js';
 
 function Skills() {
-
-    const[java, setJava] = useState(90);
-    const[css, setCSS] = useState(80);
-    const[html, setHTML] = useState(80);
-    const[javascript, setJavaScript] = useState(70);
-    const[react, setReact] = useState(50);
-    const[angular, setAngular] = useState(50);
-    const[python, setPython] = useState(50);
-    const[spring, setSpring] = useState(70);
 
     const skillMap = new Map();
     skillMap.set('JAVA', '90%');
@@ -23,22 +12,6 @@ function Skills() {
     skillMap.set('React', '40%');
     skillMap.set('Angular', '50%');
     skillMap.set('Spring', '70%');
-
-    // useEffect(() => {
-    //     var elem = document.querySelector(".java");
-    //     elem.style.width = "90%";
-    //     const timer = setInterval(()=>{
-    //         java < 90 && setJava(java + 1);
-    //         html < 80 && setHTML(html + 1);
-    //         css < 70 && setCSS(css + 1);
-    //         javascript < 60 && setJavaScript(javascript + 1);
-    //         react < 50 && setReact(react + 1);
-    //         angular < 50 && setAngular(angular + 1);
-    //         python < 50 && setPython(python + 1);
-    //         spring < 80 && setSpring(spring + 1);
-    //     }, 2800/90);
-    //     return () => clearInterval(timer);
-    // }, [java, html, css, javascript, react, angular, python, spring]);
 
     const innerHeight = document.documentElement.clientHeight;
 

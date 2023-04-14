@@ -1,0 +1,112 @@
+@use '../css/Media';
+
+
+.project-container{
+    margin-top: 2em;
+}
+
+.project-wrapper{
+    display: flex;
+    align-items: center;
+    transition: .5s;
+
+    &:hover,&:focus{
+        filter: none;
+        transform: scale(1.02);
+    
+        .project-picture{
+            filter: none;
+            &::after{
+                background: transparent;
+            }
+        }
+    }
+
+    @media #{Media.$iphone-portrait} {
+        flex-direction: column-reverse;
+
+        &:target, &:focus .project-info{
+            transform: translateY(0);
+        }
+    }
+}
+
+.project-info{
+    left: 8%;
+    position: relative;
+    height: 0;
+    background: #c1c8c7d4;
+    padding: 0;
+    font-size: calc(8px + 1vmin);
+    border-radius: 5px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+    p,h2,h5{
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    @media #{Media.$iphone-portrait} {
+        left: 0;
+        z-index: 0;
+    }
+
+}
+
+.expand-info{
+    height: calc(5em + 15vh);
+    padding: 10px;
+}
+
+
+.p-info-btn{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    height: 3em;
+}
+
+.project-info p::after {
+    height: 0px;
+    width: 0px;
+    border-bottom: 100px solid #45597e;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent; 
+}
+
+.project-picture{
+    //background: linear-gradient(red,blue), url('../img/insurance.png');
+    filter: grayscale(50%) contrast(1);
+    position: relative;
+    // mix-blend-mode: darken;
+    transition: .5s;
+    align-items: center;
+    display: grid;
+
+    &::after{
+        content: "";
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #2fcfc7a3;
+        position: absolute;
+        border-radius: 5px;
+        transition: .5s;
+    }
+
+    img{
+        max-width: 38em;
+        border-radius: 5px;
+
+        @media #{Media.$iphone-portrait} {
+            max-width: 100%;
+        }
+    }
+}
