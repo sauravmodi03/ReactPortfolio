@@ -61,6 +61,36 @@
     opacity: 0;
     transform: translateX(50%);
     align-self: flex-start;
+    position: relative;
+    display: grid;
+    align-items: center;
+
+    &::after{
+        content: "";
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #00bab178;
+        position: absolute;
+        border-radius: 5px;
+        transition: .5s;   
+    }
+
+    @media #{Media.$iphone-portrait} {
+        align-self: center;
+    }
+}
+
+.about-pic:hover{
+    transform: scale(1.1);
+    
+    &::after{
+        background: transparent;
+    }
+    img{
+        filter: none;
+    } 
 }
 
 .about-pic img{
@@ -68,14 +98,8 @@
     //mix-blend-mode: multiply;
     filter: grayscale(100%) contrast(1);
     transition: .5s;
-    border: 5px solid;
+    border: 1px solid;
     border-radius: 5px;
-
-    &:hover{
-        filter: none;
-        transform: scale(1.1);
-        border: 1px solid;
-    }
 
     @media #{Media.$ipad-pro-landscape}{
         width: 15em;

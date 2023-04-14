@@ -135,8 +135,20 @@
     background :rgb(47 44 91);
   }
 
-  .project-picture::after {
+  .about-pic::after, .project-picture::after {
     background: rgb(62 50 228 / 58%);
+  }
+
+  .project-wrapper{
+    border: 1px solid #{Media.$theme-dark};
+
+    .info-arrow{
+      background: #000000b8;
+    }
+  }
+
+  .project-info{
+    background: #000000bf;
   }
   
 }

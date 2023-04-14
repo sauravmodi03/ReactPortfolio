@@ -49,7 +49,7 @@ export function Project(props) {
             <div className='project-container'>
                 <section className='project-wrapper' tabIndex="1">
                     <div className='project-info'>
-                        <h4>Client Portal Application</h4>
+                        <h4>Web Application</h4>
                         <h5>A web application for end user to generate quotation for different insurance provided by the client.</h5>
                         <p>Developed and supported applications using Java, JavaScript, HTML, CSS, RESTful API, and Spring framework working alongside a cross-functional team.</p>
                         <p>Written comprehensive JUnit test cases for conducting rigorous integration testing to ensure the bug-free performance of the 
@@ -62,11 +62,10 @@ export function Project(props) {
                 </section>
                 <section className='project-wrapper even-p-wrapper' tabIndex="1">
                     <div className='project-info'>
-                        <h4>Client Portal Application</h4>
-                        <h5>A web application for end user to generate quotation for different insurance provided by the client.</h5>
-                        <p>Developed and supported applications using Java, JavaScript, HTML, CSS, RESTful API, and Spring framework working alongside a cross-functional team.</p>
-                        <p>Written comprehensive JUnit test cases for conducting rigorous integration testing to ensure the bug-free performance of the 
-                            applications with 100% test coverage.</p>
+                        <h4>Web Application</h4>
+                        <h5>A web application for Client agent's on intranet to generate offers and contract for end users.</h5>
+                        <p>Refine and develop intricate business logic using Java and SQL in accordance with client specifications.</p>
+                        <p>Mitigated critical production incidents, minimized impact by 40%, through root cause analysis, proposing necessary Java/SQL/Data modifications..</p>
                     </div>
                     <picture className='project-picture' >
                         <img src={agentPortal}  alt="Client Portal"/>
