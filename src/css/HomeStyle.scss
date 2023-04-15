@@ -95,14 +95,14 @@
 
 .drop-heading{
   opacity: 0;
-  animation: drop 1s linear forwards 3.5s;
+  animation: drop .5s linear forwards 1.5s;
 }
 
 .info-l3{
   font-size: 2em;
   text-align: justify;
   opacity: 0;
-  animation: drop 1s linear forwards 3s;
+  animation: drop .5s linear forwards 1.8s;
 
   @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
     font-size: 1.2em;
@@ -118,7 +118,7 @@
   width: fit-content;
   border-radius: 50%;
   background : #{Media.$theme-light};
-  animation: avatarScaleIn 1.5s ease-out 4s forwards;
+  animation: avatarScaleIn .5s ease-out 2.3s forwards;
   overflow: hidden;
   transition: transform .5s;
   border: 2px solid;
@@ -164,7 +164,7 @@
     padding: 10px;
     font-size: 1.5em;
     font-weight: bold;
-    transition: transform 0.5s forwards 2.8s;
+    transition: transform 0.5s forwards 2.3s;
 
     @media #{Media.$iphone-landscape}, #{Media.$iphone-portrait}{
       font-size: 1em;
@@ -245,7 +245,7 @@
     display: grid;
     text-align: center;
     padding: 5px 0;
-    animation: scrollerScaleUp 1s ease-out forwards 1s;
+    animation: scrollerScaleUp .5s ease-out forwards 2.3s;
     position: fixed;
     bottom: 70px;
     opacity: 1;
@@ -280,16 +280,15 @@
   opacity: 1;
   background: #{Media.$flyers-bg-light};
   display: grid;
-  transition: 2s;
   filter: drop-shadow(2px 4px 6px rgb(152, 150, 150));
   right: 0;
   // transform: translateX(150%);
-  transition: 1s ease;
+  transition: .5s ease;
 }
 
 .top-scroll{
   margin: auto;
-  animation: top-scroll-arrow 1.5s linear 3s infinite;
+  animation: top-scroll-arrow 1.5s linear 1s infinite;
   img{
     width: 1.5em;
     height: 1.5em;
@@ -357,7 +356,7 @@
   transition: .5s;
   opacity: 0;
   transform: translateY(100%);
-  animation: resumeSlideInBottom 1s forwards 4s;
+  animation: resumeSlideInBottom .5s forwards 2.3s;
 
   &:hover{
       transform: scale(1.1);

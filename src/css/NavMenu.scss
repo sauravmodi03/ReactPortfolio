@@ -85,37 +85,37 @@
   .home-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2s;
+    animation: nav-option-pop .5s forwards .5s;
   }
 
   .about-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2.1s;
+    animation: nav-option-pop .5s forwards .6s;
   }
 
   .skills-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2.2s;
+    animation: nav-option-pop .5s forwards .7s;
   }
 
   .project-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2.3s;
+    animation: nav-option-pop .5s forwards .8s;
   }
 
   .work-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2.4s;
+    animation: nav-option-pop .5s forwards .9s;
   }
 
   .contact-nav{
     opacity: 0;
     transform: translate(-50px,-150%);
-    animation: nav-option-pop .5s forwards 2.5s;
+    animation: nav-option-pop .5s forwards 1s;
   }
 
   @keyframes nav-option-pop {

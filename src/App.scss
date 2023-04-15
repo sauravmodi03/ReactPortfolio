@@ -429,7 +429,7 @@
     padding: 10px;
     transition: 1s;
     transform: translateX(100%);
-    animation: slide-X 1s forwards 3s;
+    animation: slide-X .5s forwards 2.3s;
     z-index: 1;
 
     img{

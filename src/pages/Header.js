@@ -60,7 +60,7 @@ return(
             <header  className="head-wrapper">
                 <nav id="smodi">
                   <BrowserRouter>
-                    <RouterLink className="smodi-link scale" to="/">SMODI</RouterLink>
+                    <RouterLink className="smodi-link" to="/">SMODI</RouterLink>
                   </BrowserRouter>
                 </nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img id="close-logo" src={props.darkTheme ? menuL : menu} alt="Menu logo"/></Link></nav>
