@@ -429,7 +429,7 @@
     padding: 10px;
     transition: 1s;
     transform: translateX(100%);
-    animation: slideInRight 1s forwards 3s;
+    animation: slide-X 1s forwards 3s;
     z-index: 1;
 
     img{
@@ -438,11 +438,33 @@
     }
   }
 
-  @keyframes slideInRight {
-    to{transform: translateX(0);}
-  }
-
   .copyright{
     display: flex;
     height: fit-content;
   }
+
+  .slideInRight{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  .slideInLeft{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .slideInTop{
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  @keyframes slide-X {
+    to{transform: translateX(0); opacity: 1;}
+  }
+
+  @keyframes slide-Y {
+    to{transform: translateY(0); opacity: 1;}
+  }
+
+  
+

@@ -13,6 +13,15 @@
         justify-content: space-evenly;
         box-sizing: border-box;
     }
+
+    a{
+      border-bottom: 2px solid rgba(255, 255, 255, 0);
+    }
+
+    a:hover{
+      border-bottom: 2px solid #{Media.$theme-light};
+      transition: .5s;
+    }
   }
 
   .--nav-font{
@@ -75,44 +84,41 @@
 
   .home-nav{
     opacity: 0;
-    transform: scale(.2);
+    transform: translate(-50px,-150%);
     animation: nav-option-pop .5s forwards 2s;
   }
 
   .about-nav{
     opacity: 0;
-    transform: scale(.2);
-    animation: nav-option-pop .5s forwards 2.2s;
+    transform: translate(-50px,-150%);
+    animation: nav-option-pop .5s forwards 2.1s;
   }
 
   .skills-nav{
     opacity: 0;
-    transform: scale(.2);
-    animation: nav-option-pop .5s forwards 2.4s;
+    transform: translate(-50px,-150%);
+    animation: nav-option-pop .5s forwards 2.2s;
   }
 
   .project-nav{
     opacity: 0;
-    transform: scale(.2);
-    animation: nav-option-pop .5s forwards 2.6s;
+    transform: translate(-50px,-150%);
+    animation: nav-option-pop .5s forwards 2.3s;
   }
 
   .work-nav{
     opacity: 0;
-    transform: scale(.2);
-    animation: nav-option-pop .5s forwards 2.8s;
+    transform: translate(-50px,-150%);
+    animation: nav-option-pop .5s forwards 2.4s;
   }
 
   .contact-nav{
     opacity: 0;
-    transform: scale(.2);
-    animation: nav-option-pop .5s forwards 3s;
+    transform: translate(-50px,-150%);
+    animation: nav-option-pop .5s forwards 2.5s;
   }
 
   @keyframes nav-option-pop {
-    to{
-      transform: scale(1);
-      opacity: 1;
-    }
+    to{transform: translate(0,0); opacity: 1;}
   }
 

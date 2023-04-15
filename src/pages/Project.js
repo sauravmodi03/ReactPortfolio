@@ -14,9 +14,16 @@ export function Project(props) {
 
     document.addEventListener('scroll',function(){
         var label = document.querySelector(".project-label");
+        var listProjects = document.querySelectorAll(".slideInTop");
 
         if(innerHeight > getY(label) + getHeight(label) * 2/3){
             label.style.animation = "labelSlideInTop 1.5s forwards";
+        }
+
+        for (let i = 0; i < listProjects.length; i++) {
+            if(innerHeight > getY(listProjects[i]) + getHeight(listProjects[i])/4){
+                listProjects[i].style.animation = "slide-Y 1.5s forwards";
+            }
         }
     });
 
@@ -29,7 +36,7 @@ export function Project(props) {
         <div id="project" className='Project flex-top-padding'>
             <div className='project-label heading-text'><h2>Projects</h2></div>
             <div className='project-container'>
-                <section className='project-wrapper' tabIndex="1">
+                <section className='project-wrapper slideInTop' tabIndex="1">
                     <div className='project-info'>
                         <h4>Web Application</h4>
                         <h5>A web application for end user to generate quotation for different insurance provided by the client.</h5>
@@ -43,7 +50,7 @@ export function Project(props) {
                         <picture className='info-arrow'><img className="info-arrow-img" src={props.darkTheme ? arrowL : arrow} alt="Arrow"/></picture>
                     </picture>
                 </section>
-                <section className='project-wrapper even-p-wrapper' tabIndex="1">
+                <section className='project-wrapper even-p-wrapper slideInTop' tabIndex="1">
                     <div className='project-info'>
                         <h4>Web Application</h4>
                         <h5>A web application for Client agent's on intranet to generate offers and contract for end users.</h5>

@@ -48,18 +48,7 @@
     }
 }
 
-@keyframes slideInLeft-aboutinfo {
-    to{transform: translateX(0); opacity: 1;}
-}
-
-.slideLeft{
-    transform: translate(-50%);
-    opacity: 0;
-}
-
 .about-pic{
-    opacity: 0;
-    transform: translateX(50%);
     align-self: flex-start;
     position: relative;
     display: grid;
