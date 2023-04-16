@@ -42,15 +42,6 @@
   transform: rotate(-90deg);
 }
 
-@keyframes slideInRight {
-  0% {
-    transform: translateX(150%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes slideInLeft {
   to{
     transform: translateX(0);

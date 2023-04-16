@@ -14,18 +14,20 @@
 .project-wrapper {
     display: flex;
     align-items: center;
-    transition: .5s;
+    transition: .2s;
     overflow: hidden;
     border-radius: 5px;
 
     &:hover,&:focus{
-        filter: none;
-        transform: scale(1.02);
-    
+
         .project-picture{
             filter: none;
             &::after{
                 background: transparent;
+            }
+
+            img:nth-child(1){
+                filter: none;
             }
         }
 
@@ -142,7 +144,6 @@
 
 .project-picture{
     //background: linear-gradient(red,blue), url('../img/insurance.png');
-    filter: grayscale(50%) contrast(1);
     position: relative;
     // mix-blend-mode: darken;
     transition: .5s;
@@ -165,6 +166,7 @@
 
     img:nth-child(1){
         max-width: 38em;
+        filter: grayscale(1) contrast(1);
     }
 
     @media #{Media.$iphone-portrait} {
@@ -173,5 +175,15 @@
             max-width: 100%;
         }
 
+    }
+}
+
+.scale-project{
+    display: block;
+    transition: .2s;
+    transform: scale(.95);
+
+    &:hover,&:focus{
+        transform: scale(1) translate3d(0,0,0);
     }
 }

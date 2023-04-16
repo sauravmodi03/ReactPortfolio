@@ -17,11 +17,6 @@
     a{
       border-bottom: 2px solid rgba(255, 255, 255, 0);
     }
-
-    a:hover{
-      border-bottom: 2px solid #{Media.$theme-light};
-      transition: .5s;
-    }
   }
 
   .--nav-font{
@@ -31,11 +26,12 @@
   }
 
   .scale{
+    display: block;
     transition: transform .2s;
   }
 
   .scale:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 
   .active{
