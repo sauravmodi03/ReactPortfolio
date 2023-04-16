@@ -140,15 +140,15 @@
   }
 
   .project-wrapper{
-    border: 1px solid #{Media.$theme-dark};
-
+    
     .info-arrow{
       background: #000000b8;
     }
-  }
 
-  .project-info{
-    background: #000000bf;
+    .project-info{
+      background: #000000bf;
+      border: 1px solid #{Media.$theme-dark};
+    }
   }
   
 }

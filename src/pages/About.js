@@ -50,26 +50,20 @@ export default function About() {
                 <div className='about-info-wrapper -drop-shadow'>
                     <article className='slideInTop'>
                         <section className='about-info'>
-                            <div>
-                                <p className='about-l3 slideInLeft'>
-                                    Hello, my name is
-                                </p>
-                                <p className='about-l1 slideInLeft'>
-                                    Saurav Modi.
-                                </p>
-                                <p className='about-l1 slideInLeft'>
-                                    I'm a Full Stack Developer.
-                                </p>
-                                <p className='about-l3 slideInLeft -bold'>
-                                    5+ Yrs of Exp | Chicago, USA
-                                </p>
-                            </div>
                             <div className='about-info-main'>
-                                <p className='slideInLeft'> I enjoy what I do. My skillset allows me to deliver high-quality solutions that 
-                                    meet the needs of clients and end-users alike. I stay up-to-date with the latest trends 
-                                    and technologies to ensure that my work remains innovative and effective.</p>
+                                <p className='slideInLeft'>As a dedicated Software Developer, I have gained valuable experience and skills since I began 
+                                my career in 2016, following the completion of my undergraduate degree. I have had the privilege 
+                                of working with Tata Consultancy Services from 2016 to 2022, where I have consistently delivered high-quality solutions that effectively meet 
+                                the needs of clients and end-users alike.</p>
+                                <p className='slideInLeft'> My skillset is constantly evolving, and I make sure to stay up-to-date with the latest trends and 
+                                technologies to ensure that my work is innovative and effective. I believe in a collaborative approach to problem-solving and enjoy 
+                                working with my colleagues to find creative solutions to complex challenges.</p>
+                                <p className='slideInLeft'>When I'm not working, I enjoy playing video games and cooking. These hobbies not only provide a welcome 
+                                break from work but also help me to stay sharp and focused when I'm on the job. I'm excited to continue learning and growing in my 
+                                career as a Software Developer and to make meaningful contributions to the industry.</p>
                                 <p className='slideInLeft'> Languages I speak: Java, HTML, CSS, JavaScript, Python</p>
-                                <p className='slideInLeft'> Framework knowledge: Spring, React, Angular, Bootstrap, JDBC, JPA, Hibernate, Gradle, Maven</p>
+                                <p className='slideInLeft'> Framework knowledge: Spring, React, Angular, Bootstrap, JDBC, JPA, Hibernate</p>
+                                <p className='slideInLeft'> Build Tool: Maven, Gradle</p>
                                 <p className='slideInLeft'> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
                             </div>
                         </section>

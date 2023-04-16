@@ -72,7 +72,6 @@
 }
 
 .about-pic:hover{
-    transform: scale(1.1);
     
     &::after{
         background: transparent;
@@ -121,6 +120,7 @@
     background: #b5bebec9;
     border-radius: 5px;
     box-shadow: 2px 3px 10px #c0bfbf;
+    align-items: flex-start;
 
     @media #{Media.$iphone-portrait} {
         flex-direction: column-reverse;
@@ -138,6 +138,7 @@
 
 .about-l3{
     font-size: calc(5px + 2vmin);
+    text-align: center;
 }
 
 .about-info-main{
