@@ -1,0 +1,16 @@
+{
+    "NavMenu" : {
+        "home" : "Home",
+        "skills" : "Skills",
+        "about" : "About",
+        "project" : "Project",
+        "work" : "Work",
+        "contact" : "Contact"  
+    },
+
+    "home" : {
+        "hi_key" : "Hi, I'm Saurav.",
+        "home_info" : "I am a Software Engineer specialized in creating exceptional digital experiences, combining my technical expertise with design skills. I design and build innovative software solutions to help businesses streamline their processes and achieve their goals.",
+        "resume_link" : "Resume"
+    }
+}

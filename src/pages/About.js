@@ -3,6 +3,7 @@ import '../css/About.scss';
 import React from 'react';
 import about from '../img/self-orig.jpg';
 import {getY, getHeight} from './Utility.js';
+import { Link } from 'react-router-dom';
 
 export default function About() {
 
@@ -53,7 +54,9 @@ export default function About() {
                             <div className='about-info-main'>
                                 <p className='slideInLeft'>As a dedicated Software Developer, I have gained valuable experience and skills since I began 
                                 my career in 2016, following the completion of my undergraduate degree. I have had the privilege 
-                                of working with Tata Consultancy Services from 2016 to 2022, where I have consistently delivered high-quality solutions that effectively meet 
+                                of working with 
+                                <a className='text-link' href='https://www.tcs.com/' target='_blank'> Tata Consultancy Services </a> 
+                                from 2016 to 2022, where I have consistently delivered high-quality solutions that effectively meet 
                                 the needs of clients and end-users alike.</p>
                                 <p className='slideInLeft'> My skillset is constantly evolving, and I make sure to stay up-to-date with the latest trends and 
                                 technologies to ensure that my work is innovative and effective. I believe in a collaborative approach to problem-solving and enjoy 

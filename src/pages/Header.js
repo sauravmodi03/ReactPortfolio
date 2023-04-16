@@ -10,9 +10,9 @@ import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 function Header(props) {
 
     const [navMobile, setNavMobile] = useState(window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").matches);
-    
 
     useEffect(() => {
+
       const handleScroll = () => {
         if(window.scrollY > 20) {
           document.getElementById("header").classList.add("head-on-scroll");
@@ -64,9 +64,9 @@ return(
                   </BrowserRouter>
                 </nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img id="close-logo" src={props.darkTheme ? menuL : menu} alt="Menu logo"/></Link></nav>
-                {!navMobile && <NavMenu/>}
+                {!navMobile && <NavMenu language={props.language}/>}
             </header>
-            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu/></div>}
+            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu language={props.language}/></div>}
         </div>
     );
 }

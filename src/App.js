@@ -59,6 +59,10 @@ export default function App() {
     sleep(3000).then(() => {
       setLoader(false);
     })
+
+    setLanguage(require('./lang/app_en.json'));
+    console.log(language.NavMenu.home);
+
   });
 
   const sleep = (time) => {
@@ -72,7 +76,7 @@ export default function App() {
       :
       <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <Flyer darkTheme={darkTheme}/>
+        <Flyer darkTheme={darkTheme} language={language}/>
         <div className="bg-bubbles">
           <div className="bg-square"></div>
           <div className="bg-square"></div>
@@ -82,10 +86,10 @@ export default function App() {
           <div className="bg-square"></div>
         </div>
         <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
-        <Header darkTheme={darkTheme}/>
+        <Header darkTheme={darkTheme} language={language}/>
         <main className='main'>
             <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
-            <Home darkTheme={darkTheme}/>
+            <Home darkTheme={darkTheme} language={language}/>
             <About darkTheme={darkTheme}/>
             <Skills darkTheme={darkTheme}/>
             <Project darkTheme={darkTheme}/>
