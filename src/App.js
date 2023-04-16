@@ -47,6 +47,7 @@ export default function App() {
 
   const [darkTheme, setDarkTheme] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [language, setLanguage] = useState(require('./lang/app_en.json'));
   
   const toggleTheme = () => {
     var element = document.querySelector(".App");
