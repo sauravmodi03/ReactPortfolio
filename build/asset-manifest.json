@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "https://smodi.co.in/static/css/main.076292d4.css",
+    "main.js": "https://smodi.co.in/static/js/main.9713c57b.js",
+    "static/js/787.1ed0c42c.chunk.js": "https://smodi.co.in/static/js/787.1ed0c42c.chunk.js",
+    "static/media/self-orig.jpg": "https://smodi.co.in/static/media/self-orig.793776694cf6593edd72.jpg",
+    "static/media/Resume.pdf": "https://smodi.co.in/static/media/Resume.0b2f0f3e785c1957ad99.pdf",
+    "static/media/chrome-ext.png": "https://smodi.co.in/static/media/chrome-ext.836a27753c9d6498e943.png",
+    "static/media/insurance.png": "https://smodi.co.in/static/media/insurance.ccf1b1b0206032b6c554.png",
+    "static/media/ResumeQR.png": "https://smodi.co.in/static/media/ResumeQR.2e85566cbbc8af19bf8c.png",
+    "static/media/man.png": "https://smodi.co.in/static/media/man.161d25be4a11420577e9.png",
+    "static/media/agentportal.png": "https://smodi.co.in/static/media/agentportal.f14ce7dec82fc874aef4.png",
+    "index.html": "https://smodi.co.in/index.html",
+    "main.076292d4.css.map": "https://smodi.co.in/static/css/main.076292d4.css.map",
+    "main.9713c57b.js.map": "https://smodi.co.in/static/js/main.9713c57b.js.map",
+    "787.1ed0c42c.chunk.js.map": "https://smodi.co.in/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.076292d4.css",
+    "static/js/main.9713c57b.js"
+  ]
+}
