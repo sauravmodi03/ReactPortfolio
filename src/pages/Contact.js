@@ -46,7 +46,7 @@ class Contact extends React.Component {
             }
 
             if(innerHeight > getY(label) + getHeight(label) * 2/3){
-                label.style.animation = "labelSlideInTop 1.5s forwards";
+                label.style.animation = "labelSlideInTop 1s forwards";
             }
 
             for (let i = 0; i < listElements.length; i++) {

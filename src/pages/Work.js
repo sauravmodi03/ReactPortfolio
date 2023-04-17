@@ -13,18 +13,18 @@ function Project(){
 
         for (let i = 0; i < leftList.length; i++) {
             if(innerHeight > getY(leftList[i]) + getHeight(leftList[i])/4){
-                leftList[i].style.animation = "content-slideInLeft 1.5s forwards";
+                leftList[i].style.animation = "content-slideInLeft 1s forwards";
             }
         }
 
         for (let i = 0; i < rightList.length; i++) {
             if(innerHeight > getY(rightList[i]) + getHeight(rightList[i])/4){
-                rightList[i].style.animation = "content-slideInRight 1.5s forwards";
+                rightList[i].style.animation = "content-slideInRight 1s forwards";
             }
         }
 
         if(innerHeight > getY(label) + getHeight(label) * 2/3){
-            label.style.animation = "labelSlideInTop 1.5s forwards";
+            label.style.animation = "labelSlideInTop 1s forwards";
         }
     });
 

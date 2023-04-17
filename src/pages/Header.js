@@ -10,7 +10,7 @@ import { BrowserRouter, Link as RouterLink} from 'react-router-dom';
 function Header(props) {
 
     const [navMobile, setNavMobile] = useState(window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").matches);
-
+ 
     useEffect(() => {
 
       const handleScroll = () => {
@@ -27,6 +27,7 @@ function Header(props) {
         let scrollPercentRounded = Math.round(scrollPercent * 100);
         
         document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
+        console.log(props);
       };
 
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 
@@ -64,9 +65,9 @@ return(
                   </BrowserRouter>
                 </nav>
                 <nav id="nav-button"><Link to="#" onClick={openNav}><img id="close-logo" src={props.darkTheme ? menuL : menu} alt="Menu logo"/></Link></nav>
-                {!navMobile && <NavMenu language={props.language}/>}
+                {!navMobile && <NavMenu translation={props.translation} setTranslation={props.setTranslation}/>}
             </header>
-            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu language={props.language}/></div>}
+            { navMobile && <div onClick={handleNavMenu} id='nav-bg-portrait' className='nav-bg-portrait'><NavMenu translation={props.translation} setTranslation={props.setTranslation}/></div>}
         </div>
     );
 }

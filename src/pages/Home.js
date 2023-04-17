@@ -51,14 +51,14 @@ function Home(props) {
                 </div>
                 <section className="info">
                     <div className='info-l1-wraper drop-heading'>
-                        <span className='info-l2 info-bg big-heading'>{props.language.home.hi_key}</span>
+                        <span className='info-l2 info-bg big-heading'>{props.translation.home.hi_key}</span>
                     </div>
                     {/* <span className='info-l1 info-bg'>Hi, I'm Saurav!</span> */}
-                    <span className='info-l3 info-bg'>{props.language.home.home_info}
+                    <span className='info-l3 info-bg'>{props.translation.home.home_info}
                     </span>
                     <div className='resume-link-wrap'>
                         <a href={Resume} className="resumeLink" download="Resume_SauravModi">
-                            <span>{props.language.home.resume_link}</span>
+                            <span>{props.translation.home.resume_link}</span>
                             <div className='download-wrapper'>
                                 <img src={props.darkTheme ? arrowDownWhite : arrowDownDark} alt="arrow logo"/>
                             </div>

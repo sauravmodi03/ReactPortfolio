@@ -19,27 +19,29 @@ export default function About() {
 
     document.addEventListener('scroll',function(){
         var infoList = document.querySelectorAll(".slideInLeft");
-        var pic = document.querySelector(".slideInRight");
+        var rightList = document.querySelectorAll(".slideInRight");
         var label = document.querySelector(".about-label");
         var slideTopList = document.querySelectorAll(".slideInTop");
 
-        if(innerHeight > getY(pic) + getHeight(pic) * 2/3){
-            pic.style.animation = "slide-X 1s forwards";
-        }
-
         if(innerHeight > getY(label) + getHeight(label) * 2/3){
-            label.style.animation = "labelSlideInTop 1.5s forwards";
+            label.style.animation = "labelSlideInTop 1s forwards";
         }
 
         for (let i = 0; i < infoList.length; i++) {
             if(innerHeight > getY(infoList[i]) + getHeight(infoList[i])/4){
-                infoList[i].style.animation = "slide-X 1.5s forwards";
+                infoList[i].style.animation = "slide-X 1s forwards";
+            }
+        }
+
+        for (let i = 0; i < rightList.length; i++) {
+            if(innerHeight > getY(rightList[i]) + getHeight(rightList[i])/4){
+                rightList[i].style.animation = "slide-X 1s forwards";
             }
         }
 
         for (let i = 0; i < slideTopList.length; i++) {
             if(innerHeight > getY(slideTopList[i]) + getHeight(slideTopList[i])/4){
-                slideTopList[i].style.animation = "slide-Y 1.5s forwards";
+                slideTopList[i].style.animation = "slide-Y 1s forwards";
             }
         }
 
@@ -54,9 +56,9 @@ export default function About() {
                             <div className='about-info-main'>
                                 <p className='slideInLeft'>As a dedicated Software Developer, I have gained valuable experience and skills since I began 
                                 my career in 2016, following the completion of my undergraduate degree. I have had the privilege 
-                                of working with 
-                                <a className='text-link' href='https://www.tcs.com/' target='_blank'> Tata Consultancy Services </a> 
-                                from 2016 to 2022, where I have consistently delivered high-quality solutions that effectively meet 
+                                of working with&nbsp;
+                                <a className='text-link' href='https://www.tcs.com/' target='_blank'>Tata Consultancy Services</a> 
+                                &nbsp;from 2016 to 2022, where I have consistently delivered high-quality solutions that effectively meet 
                                 the needs of clients and end-users alike.</p>
                                 <p className='slideInLeft'> My skillset is constantly evolving, and I make sure to stay up-to-date with the latest trends and 
                                 technologies to ensure that my work is innovative and effective. I believe in a collaborative approach to problem-solving and enjoy 
@@ -70,11 +72,11 @@ export default function About() {
                                 <p className='slideInLeft'> Tools experience: Intellij, Eclipse, Pycharm, VSCode, GiBash</p>
                             </div>
                         </section>
-                        <section>
+                        <section className='headshot-container'>
                             <picture className='about-pic slideInRight'>
                                 <img src={about} alt="About logo"></img>
                             </picture>
-                            <p className='about-l3 -bold slideInTop'>
+                            <p className='about-l3 -bold slideInRight'>
                                 5+ Yrs | Chicago, USA
                             </p>
                         </section>

@@ -124,8 +124,16 @@
 
     @media #{Media.$iphone-portrait} {
         flex-direction: column-reverse;
+        gap: 1em;
+
+        .headshot-container{
+            display: grid;
+            align-self: center;
+        }
     }
 }
+
+
 
 .about-l1{
     font-size: calc(1em + 2vmin);

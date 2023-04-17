@@ -1,0 +1,16 @@
+{
+    "NavMenu" : {
+        "home" : "Hogar",
+        "skills" : "Habilidades",
+        "about" : "Acerca de",
+        "project" : "Proyecto",
+        "work" : "Trabajar",
+        "contact" : "Contacto"  
+    },
+
+    "home" : {
+        "hi_key" : "Hola, soy Saurav.",
+        "home_info" : "Soy Ingeniero de Software especializado en crear experiencias digitales excepcionales, combinando mi experiencia técnica con habilidades de diseño. Diseño y construyo soluciones de software innovadoras para ayudar a las empresas a optimizar sus procesos y alcanzar sus objetivos.",
+        "resume_link" : "Reanudar"
+    }
+}

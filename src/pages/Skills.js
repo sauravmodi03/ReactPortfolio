@@ -22,20 +22,20 @@ function Skills() {
 
         for (let i = 0; i < leftList.length; i++) {
             if(innerHeight > getY(leftList[i]) + getHeight(leftList[i])/4){
-                leftList[i].style.animation = "skill-slideInLeft 1.5s forwards";
+                leftList[i].style.animation = "skill-slideInLeft 1s forwards";
                 leftList[i].children[1].children[0].style.width = skillMap.get(leftList[i].children[0].innerText);
             }
         }
 
         for (let i = 0; i < rightList.length; i++) {
             if(innerHeight > getY(rightList[i]) + getHeight(rightList[i])/4){
-                rightList[i].style.animation = "skill-slideInRight 1.5s forwards";
+                rightList[i].style.animation = "skill-slideInRight 1s forwards";
                 rightList[i].children[1].children[0].style.width = skillMap.get(rightList[i].children[0].innerText);
             }
         }
 
         if(innerHeight > getY(label) + getHeight(label) * 2/3){
-            label.style.animation = "labelSlideInTop 1.5s forwards";
+            label.style.animation = "labelSlideInTop 1s forwards";
         }
     });
     

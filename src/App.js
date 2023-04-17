@@ -47,7 +47,9 @@ export default function App() {
 
   const [darkTheme, setDarkTheme] = useState(false);
   const [loader, setLoader] = useState(false);
-  const [language, setLanguage] = useState(require('./lang/app_en.json'));
+  const [language, setLanguage] = useState('en');
+  const [translation, setTranslation] = useState(require('./lang/app_'+language+'.json'));
+
   
   const toggleTheme = () => {
     var element = document.querySelector(".App");
@@ -58,12 +60,12 @@ export default function App() {
   useEffect(() => function(){
     sleep(3000).then(() => {
       setLoader(false);
-    })
-
-    setLanguage(require('./lang/app_en.json'));
-    console.log(language.NavMenu.home);
-
-  });
+    });
+    console.log(language);
+    // if(language != undefined){
+    //   setTranslation(require('./lang/app_'+language+'.json'));
+    // }
+  },[language, translation]);
 
   const sleep = (time) => {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -76,7 +78,7 @@ export default function App() {
       :
       <div id="App" className="App" >
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <Flyer darkTheme={darkTheme} language={language}/>
+        <Flyer darkTheme={darkTheme}/>
         <div className="bg-bubbles">
           <div className="bg-square"></div>
           <div className="bg-square"></div>
@@ -86,10 +88,10 @@ export default function App() {
           <div className="bg-square"></div>
         </div>
         <div id="progress-bar-wrapper"><div id="progress-bar"></div></div>
-        <Header darkTheme={darkTheme} language={language}/>
+        <Header darkTheme={darkTheme} translation={translation} setTranslation={setTranslation}/>
         <main className='main'>
             <button className='toggle-theme' name='Theme' onClick={toggleTheme}><img src={darkTheme ? sun : moon} alt="Theme Logo"/></button>
-            <Home darkTheme={darkTheme} language={language}/>
+            <Home darkTheme={darkTheme} translation={translation}/>
             <About darkTheme={darkTheme}/>
             <Skills darkTheme={darkTheme}/>
             <Project darkTheme={darkTheme}/>
