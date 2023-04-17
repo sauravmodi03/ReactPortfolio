@@ -45,10 +45,10 @@ function NavMenu(props) {
             <Link activeClass="active" className="scale contact-nav --nav-font" to="contact" spy={true} smooth={true} duration={500}>
                 <span className='scale'>{props.translation.NavMenu.contact}</span>
             </Link>
-            <select onChange={e => handleTranslation(e.target.value)}>
+            {/* <select onChange={e => handleTranslation(e.target.value)}>
                 <option value="en">EN</option>
                 <option value="sp">SP</option>
-            </select>
+            </select> */}
         </nav>
     );
 }
