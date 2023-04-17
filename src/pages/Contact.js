@@ -7,6 +7,11 @@ import markerblack from '../img/marker-d.png';
 import mailblack from '../img/mail-d.png';
 import www from '../img/www-d.png';
 
+import phoneblackL from '../img/call-l.png';
+import markerblackL from '../img/marker-l.png';
+import mailblackL from '../img/mail-l.png';
+import wwwL from '../img/www-l.png';
+
 
 import emailjs from '@emailjs/browser';
 import {getY, getHeight} from './Utility.js';
@@ -114,19 +119,19 @@ class Contact extends React.Component {
                             <label className='slide-right'>Contact information.</label>
                             <article className='info-article'>
                                 <div className="contact-info slide-right">
-                                    <div><img src={markerblack} alt=''/></div>
+                                    <div><img src={this.props.darkTheme ? markerblackL : markerblack} alt=''/></div>
                                     <div className='info-val'>400 E 33RD ST, Chicago, Illinoi - 60616, USA</div>
                                 </div>
                                 <div className="contact-info slide-right">
-                                    <div><img src={mailblack} alt=''/></div>
+                                    <div><img src={this.props.darkTheme ? mailblackL :  mailblack} alt=''/></div>
                                     <div className='info-val'>sauravmodi03@gmail.com</div>
                                 </div>
                                 <div className="contact-info slide-right">
-                                    <div><img src={www} alt=''/></div>
+                                    <div><img src={this.props.darkTheme ? wwwL : www} alt=''/></div>
                                     <a href="https://www.smodi.co.in" className='info-val'>https://www.smodi.co.in</a>
                                 </div>
                                 <div className="contact-info slide-right">
-                                    <div><img src={phoneblack} alt=''/></div>
+                                    <div><img src={this.props.darkTheme ? phoneblackL :  phoneblack} alt=''/></div>
                                     <div className='info-val'>+1 312 478 1958</div>
                                 </div>
                             </article>

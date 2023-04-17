@@ -27,7 +27,6 @@ function Header(props) {
         let scrollPercentRounded = Math.round(scrollPercent * 100);
         
         document.getElementById("progress-bar").style.width = scrollPercentRounded + '%';
-        console.log(props);
       };
 
       window.matchMedia("only screen and (max-width: 480px) and (min-height:600px) and (orientation: portrait)").addEventListener("change", e=> 

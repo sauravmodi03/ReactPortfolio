@@ -61,10 +61,6 @@ export default function App() {
     sleep(3000).then(() => {
       setLoader(false);
     });
-    console.log(language);
-    // if(language != undefined){
-    //   setTranslation(require('./lang/app_'+language+'.json'));
-    // }
   },[language, translation]);
 
   const sleep = (time) => {
